@@ -21,12 +21,29 @@
           GitHub
         </a>
       </div>
+      <div>
+        <br />
+        <br />
+        <ul>
+          <li v-for="user in users" :key="user.id">
+            {{ user.id }} - {{ user.name }}
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  async asyncData({ $axios }) {
+    // Appel ajax simple via axios à notre api backend express
+    const users = await $axios.$get('/users')
+    return {
+      users,
+    }
+  },
+}
 </script>
 
 <style>

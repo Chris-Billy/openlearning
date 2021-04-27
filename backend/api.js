@@ -11,8 +11,23 @@ app.use(morgan('tiny'))
 app.use(express.urlencoded({ extended: true }))
 
 // Get Route for demo only
-app.get('/user', (req, res) => {
-  return res.json({ user: 'test' })
+app.get('/users', (req, res) => {
+  // ex de data à renvoyer :
+  const users = [
+    {
+      id: 1,
+      name: 'Walid',
+    },
+    {
+      id: 2,
+      name: 'MaëLLE',
+    },
+    {
+      id: 3,
+      name: 'Chris',
+    },
+  ]
+  return res.json(users)
 })
 
 module.exports = app
