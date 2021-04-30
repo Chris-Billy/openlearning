@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OpenLearning</title>
+    <link rel="stylesheet" href="tailwind.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logoOpenLearning.svg" />
+</head>
+<body>
+<video autoplay muted loop id="myVideo" class="h-auto w-full">
+    <source src="Internet%20Cafe%20-%20156.mp4" type="video/mp4">
+</video>
+<div class="content h-screen w-screen flex justify-center items-center">
+    <section class="text-gray-600 body-font w-full">
+        <div class="container mx-auto flex flex-col px-5 py-24 items-center">
+            <div class="w-full md:w-2/3 flex flex-col items-center text-center">
+                <div class="flex flex-row justify-center items-center">
+                    <img src="LogoOpenLearning_white.svg" id="logoOpen" class="mb-8">
+                    <h1 class="title-font sm:text-9xl text-9xl font-medium text-white">penLearning</h1>
+                </div>
+                <p class="punchline text-4xl mb-10 text-white leading-relaxed">L'accès au savoir n'importe où, n'importe quand, gratuitement.</p>
+                <div class="flex w-full justify-center items-end">
+                    <div class="relative mr-4 lg:w-2/3 xl:w-2/3 w-full md:w-full text-left">
+                        <label for="email" class="leading-7 text-md text-white">Découvrez en avant première la plus grande école du monde.</label>
+                        <form action="/signup" method="POST" class="flex flex-row">
+                            <input required type="email" name="email" id="email" placeholder="Entrez votre adresse e-mail" class="w-full bg-transparent bg-opacity-50 rounded focus:ring-2 focus:ring-indigo-200 focus:bg-transparent border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out focus:text-white">
+                            <button type="submit" class="ml-5 inline-flex text-gray-200 bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg">Valider</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-2/3 flex flex-col mt-10 items-center text-center">
+
+                <p id="timer" class="text-2xl text-white"></p>
+            </div>
+        </div>
+    </section>
+</div>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
