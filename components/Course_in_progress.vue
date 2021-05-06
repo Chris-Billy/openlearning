@@ -31,9 +31,10 @@ export default {
 		height: 200px;
 		border-radius: 20px;
 		margin-top: -20%;
+		font-family: 'DM Sans', sans-serif;
 	}
 	.card_title {
-		font-size: 14px;
+		font-size: 13px;
 		width: 100%;
 		height: 20%;
 		padding-top: 2%;
