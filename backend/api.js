@@ -18,19 +18,23 @@ app.get('/users/', (req, res) => {
   const users = [
     {
       id: 1,
-      name: 'Walid',
+      nom: 'Haddoury',
+      prenom: 'Walid',
     },
     {
       id: 2,
-      name: 'MaëLLE',
+      nom: 'Legrand',
+      prenom: 'Mael',
     },
     {
       id: 3,
-      name: 'Chris',
+      nom: 'Billy',
+      prenom: 'Chris',
     },
     {
       id: 4,
-      name: 'Endray',
+      nom: 'De Sousa',
+      prenom: 'Endray',
     },
   ]
   return res.json(users)
