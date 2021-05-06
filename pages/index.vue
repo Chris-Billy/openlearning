@@ -1,5 +1,8 @@
 <template>
-  <NuxtLink to="/home">HOME</NuxtLink>
+  <div>
+    <NuxtLink to="/home">HOME</NuxtLink>
+    <NuxtLink to="/logIn">Connexion</NuxtLink>
+  </div>
 </template>
 
 <script>
