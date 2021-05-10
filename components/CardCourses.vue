@@ -4,7 +4,8 @@
 			<div class="left_card">
 				<div class="card_title">
 					<p>{{ cardTitle }}</p>
-					ownerdiv> category class="card_infos">
+				</div>
+				<div class="card_infos">
 					<div class="card_stars">
 						<img src="~/static/star.png" />
 						<p>{{ nbStar }}</p>
@@ -12,13 +13,13 @@
 					<div class="card_owner">
 						<div class="separator"></div>
 						<div class="owner_text">
-							<p>Par {{ Owner }}</p>
+							<p>Par {{ owner }}</p>
 						</div>
 						<div class="separator"></div>
 					</div>
 					<div clas="card_cat">
 						<div class="catego">
-							<p>{{ Category }}</p>
+							<p>{{ category }}</p>
 						</div>
 					</div>
 				</div>
