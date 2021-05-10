@@ -1,16 +1,25 @@
 <template>
-	<div class="container">
-		<div class="container_top">
+	<div class="w-screen h-screen bg-gray-900">
+		<div
+			class="flex h-2/5 w-screen justify-center flex-col items-center text-center"
+		>
 			<img src="@/static/LogoOpenLearning2_1.png" alt="" />
-			<div class="punchline">
-				<h1>OpenLearning</h1>
-				<p>L'accès au savoir n'importe où, n'importe quand et gratuitement.</p>
+			<div
+				class="flex mt-5 flex-col items-center text-center text-white justify-evenly"
+			>
+				<h1 class="text-3xl">OpenLearning</h1>
+				<p class="mt-5 text-sm w-3/4">
+					L'accès au savoir n'importe où, n'importe quand et gratuitement.
+				</p>
 			</div>
 		</div>
-		<div class="container_bottom">
-			<form action="">
-				<div class="style">
+		<div
+			class="flex h-3/5 w-screen flex-col items-center rounded-tl-3xl rounded-tr-3xl px-6 pt-8 bg-gray-300"
+		>
+			<form class="flex flex-col w-5/6" action="">
+				<div class="relative bg-white border-none rounded-lg mb-5 style">
 					<svg
+						class="absolute top-1/2 ml-5"
 						width="20"
 						height="20"
 						viewBox="0 0 20 20"
@@ -31,10 +40,15 @@
 							fill="#FFD260"
 						/>
 					</svg>
-					<input type="text" placeholder="Email" />
+					<input
+						class="w-5/6 h-full border-none ml-12 bg-transparent outline-none"
+						type="text"
+						placeholder="Email"
+					/>
 				</div>
-				<div class="style">
+				<div class="relative bg-white border-none rounded-lg mb-5 style">
 					<svg
+						class="absolute top-1/2 ml-5"
 						width="20"
 						height="20"
 						viewBox="0 0 20 20"
@@ -54,13 +68,29 @@
 							fill="#FFD260"
 						/>
 					</svg>
-					<input type="password" placeholder="Mot de passe" />
+					<input
+						class="w-5/6 h-full border-none ml-12 bg-transparent outline-none"
+						type="password"
+						placeholder="Mot de passe"
+					/>
 				</div>
-				<button class="buttons" type="submit">Se connecter</button>
+				<button
+					class="border-none bg-yellow-400 mb-5 rounded-lg text-base style"
+					type="submit"
+				>
+					Se connecter
+				</button>
 			</form>
-			<button class="buttons google">Se connecter avec Google</button>
-			<button class="buttons newAcc">Je n'ai pas encore de compte</button>
-			<p class="copyright">© OpenLearning</p>
+			<button
+				class="border-none bg-pink-400 mb-5 rounded-lg text-base text-white w-5/6 style"
+			>
+				Se connecter avec Google
+			</button>
+			<button
+				class="border-none bg-gray-400 mb-5 rounded-lg text-xs text-white w-4/6 style"
+			>
+				Je n'ai pas encore de compte
+			</button>
 		</div>
 	</div>
 </template>
@@ -70,98 +100,11 @@ export default {}
 </script>
 
 <style scoped>
-.container {
-	height: 100vh;
-	width: 100vw;
-	background: rgb(117, 117, 117);
-}
-.container_top {
-	display: flex;
-	height: 40%;
-	width: 100vw;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-}
-.punchline {
-	margin-top: 5%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	color: white;
-	justify-content: space-evenly;
-}
-.punchline p {
-	margin-top: 5%;
-	font-size: 15px;
-	width: 75%;
-}
-.container_bottom {
-	display: flex;
-	height: 60%;
-	flex-direction: column;
-	width: 100vw;
-	background: #e6e6e6;
-	border-radius: 30px 30px 0 0;
-	align-items: center;
-	padding: 25px 25px 0 25px;
-	justify-content: center;
-}
-.container_bottom form {
-	display: flex;
-	flex-direction: column;
-	width: 85%;
-}
+/* background: rgb(117, 117, 117); */
 .style {
-	position: relative;
-	background-color: white;
 	height: 55px;
-	border: none;
-	border-radius: 10px;
-	margin-bottom: 20px;
-}
-.style input {
-	width: 85%;
-	height: 100%;
-	border: none;
-	margin-left: 50px;
-	background-color: transparent;
-	outline: none;
 }
 .style svg {
-	position: absolute;
-	top: 50%;
 	transform: translateY(-50%);
-	margin-left: 15px;
-}
-.buttons {
-	height: 55px;
-	border: none;
-	border-radius: 10px;
-	margin-bottom: 20px;
-	padding: 15px;
-	background-color: #ffd260;
-	color: #464646;
-	font-size: medium;
-	text-align: center;
-}
-.google {
-	width: 85%;
-	background-color: #ff8181;
-	color: white;
-}
-.newAcc {
-	background-color: #a0a0a0;
-	font-size: small;
-	color: white;
-}
-.copyright {
-	color: #91919f;
-	position: absolute;
-	bottom: 1%;
-	font-size: small;
 }
 </style>
