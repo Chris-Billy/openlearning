@@ -3,9 +3,8 @@
 		<div class="card">
 			<div class="left_card">
 				<div class="card_title">
-					<p>{{ CardTitle }}</p>
-				</div>
-				<div class="card_infos">
+					<p>{{ cardTitle }}</p>
+					ownerdiv> category class="card_infos">
 					<div class="card_stars">
 						<img src="~/static/star.png" />
 						<p>{{ nbStar }}</p>
@@ -33,7 +32,7 @@
 <script>
 export default {
 	name: 'RecommandedCards',
-	props: ['CardTitle', 'nbStar', 'Owner', 'Category']
+	props: ['cardTitle', 'nbStar', 'owner', 'category']
 }
 </script>
 <style scoped>

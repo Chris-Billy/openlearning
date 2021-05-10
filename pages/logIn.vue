@@ -8,7 +8,7 @@
 			</div>
 		</div>
 		<div class="container_bottom">
-			<form action="">
+			<form @submit.prevent="login">
 				<div class="style">
 					<svg
 						width="20"
@@ -31,7 +31,7 @@
 							fill="#FFD260"
 						/>
 					</svg>
-					<input type="text" placeholder="Email" />
+					<input v-model="email" type="text" placeholder="Email" />
 				</div>
 				<div class="style">
 					<svg
@@ -54,7 +54,14 @@
 							fill="#FFD260"
 						/>
 					</svg>
-					<input type="password" placeholder="Mot de passe" />
+					<input
+						v-model="password"
+						type="password"
+						placeholder="Mot de passe"
+					/>
+				</div>
+				<div v-if="error" class="text-red-500">
+					{{ error }}
 				</div>
 				<button class="buttons" type="submit">Se connecter</button>
 			</form>
@@ -66,7 +73,30 @@
 </template>
 
 <script>
-export default {}
+export default {
+	data() {
+		return {
+			email: '',
+			password: '',
+			error: ''
+		}
+	},
+	methods: {
+		async login() {
+			try {
+				await this.$auth.loginWith('local', {
+					data: {
+						email: this.email,
+						password: this.password
+					}
+				})
+				this.$router.push('/home')
+			} catch (e) {
+				this.error = e.response.data.message
+			}
+		}
+	}
+}
 </script>
 
 <style scoped>

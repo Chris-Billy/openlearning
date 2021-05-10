@@ -1,10 +1,10 @@
 <template lang="">
 	<div class="card_container"><div class="card"> <div class="card_title"> <p
-	class="card_text">{{ CardTitle }}</p> <img id="card_image"
+	class="card_text">{{ cardTitle }}</p> <img id="card_image"
 	src="~/static/template_image.png" alt="" /> </div> <div
 	class="advancement_card"> <img id="medal_card" src="~/static/medal.png"/> <div
 	class="medal_text"> <p id="avancement">Avancement</p> <p id="percentage">{{
-		Percentage
+		percentage
 	}}</p> </div> </div> <div class="advancement_bar"> <div class="bar_bg"> <div
 	class="bar_bar"> </div> </div> </div></div></div>
 </template>
@@ -12,7 +12,7 @@
 <script>
 export default {
 	name: 'CourseProgression',
-	props: ['CardTitle', 'Percentage']
+	props: ['cardTitle', 'percentage']
 }
 </script>
 

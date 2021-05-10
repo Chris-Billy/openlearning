@@ -1,3 +1,4 @@
+<!-- Template de la page d'accueil publique -->
 <template>
 	<div>
 		<NuxtLink to="/home">HOME</NuxtLink>
@@ -8,12 +9,6 @@
 
 <script>
 export default {
-	async asyncData({ $axios }) {
-		// Appel ajax simple via axios à notre api backend express
-		const users = await $axios.$get('/users')
-		return {
-			users
-		}
-	}
+	async asyncData({ $axios }) {}
 }
 </script>

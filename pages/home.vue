@@ -1,3 +1,4 @@
+<!-- Home Page for connected users -->
 <template>
 	<div class="container">
 		<div class="container_top">
@@ -6,8 +7,11 @@
 					<img id="profile_picture" src="@/static/stock_avatar.png" alt="" />
 					<div class="p_title">
 						<p class="wb">Heureux de vous revoir,</p>
-						<p class="names">{{ users[3].prenom }} {{ users[3].nom }}</p>
+						<p class="names">
+							{{ loggedInUser.firstname }} {{ loggedInUser.lastname }}
+						</p>
 					</div>
+					<div><button @click="logout">logout</button></div>
 				</div>
 				<img
 					class="bell"
@@ -29,7 +33,7 @@
 						:key="course.title"
 						:card-title="course.title"
 						:nb-star="course.star"
-						:owner="users[3].prenom + ' ' + users[3].nom"
+						:owner="loggedInUser.firstname + ' ' + loggedInUser.lastname"
 						:category="course.category"
 					/>
 				</div>
@@ -39,22 +43,32 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex' // vuex here only used for nuxt auth, otherwise, we use composition api for global store
 export default {
 	name: 'LoginPage',
-	async asyncData({ $axios }) {
-		// Appel ajax simple via axios à notre api backend express
-		const users = await $axios.$get('/users')
-		const mycourses = [
-			{
-				title: 'How to learn Agile with André',
-				star: '4.7',
-				category: 'Agile'
-			},
-			{ title: 'The Basics of IOS dev', star: '4.5', category: 'Swift' }
-		]
+	middleware: 'auth',
+	data() {
 		return {
-			users,
-			mycourses
+			mycourses: [
+				{
+					title: 'How to learn Agile with André',
+					star: '4.7',
+					category: 'Agile'
+				},
+				{ title: 'The Basics of IOS dev', star: '4.5', category: 'Swift' }
+			]
+		}
+	},
+	computed: {
+		...mapGetters(['isAuthenticated', 'loggedInUser'])
+	},
+	methods: {
+		async logout() {
+			try {
+				await this.$auth.logout()
+			} catch (e) {
+				this.error = e.response.data.message
+			}
 		}
 	}
 }
