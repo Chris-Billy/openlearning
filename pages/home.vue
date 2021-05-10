@@ -17,52 +17,46 @@
 			</div>
 		</div>
 		<div class="container_bottom">
-			<CourseProgression
-				:CardTitle="'Lorem ipsum dolor sit ametLorem ipsum dolor sit amet'"
-				:Percentage="'10%'"
+			<CourseInProgress
+				:card-title="'Lorem ipsum dolor sit ametLorem ipsum dolor sit amet'"
+				:percentage="'10%'"
 			/>
 			<div class="recommanded">
 				<p>Recommandations</p>
 				<div class="scrollable_part">
-					<RecommandedCards
-						:CardTitle="'How to learn Agile with André'"
-						:nbStar="'4.7'"
-						:Owner="users[3].prenom + ' ' + users[3].nom"
-						:Category="'Agile'"
-					/>
-					<RecommandedCards
-						:CardTitle="'Lorem ipsum dolor sit amet'"
-						:nbStar="'4.5'"
-						:Owner="users[3].prenom + ' ' + users[3].nom"
-						:Category="'Swift'"
+					<CardCourses
+						v-for="course in mycourses"
+						:key="course.title"
+						:card-title="course.title"
+						:nb-star="course.star"
+						:owner="users[3].prenom + ' ' + users[3].nom"
+						:category="course.category"
 					/>
 				</div>
 			</div>
 		</div>
-
-    <Navigation />
-  </div>
+	</div>
 </template>
 
 <script>
-import CourseProgression from '~/components/Course_in_progress.vue'
-import Navigation from '~/components/Navigation.vue'
-import RecommandedCards from '~/components/Card_courses.vue'
-
 export default {
-  name: 'LoginPage',
-  components: {
-    CourseProgression,
-    Navigation,
-    RecommandedCards
-  },
-  async asyncData({ $axios }) {
-    // Appel ajax simple via axios à notre api backend express
-    const users = await $axios.$get('/users')
-    return {
-      users
-    }
-  }
+	name: 'LoginPage',
+	async asyncData({ $axios }) {
+		// Appel ajax simple via axios à notre api backend express
+		const users = await $axios.$get('/users')
+		const mycourses = [
+			{
+				title: 'How to learn Agile with André',
+				star: '4.7',
+				category: 'Agile'
+			},
+			{ title: 'The Basics of IOS dev', star: '4.5', category: 'Swift' }
+		]
+		return {
+			users,
+			mycourses
+		}
+	}
 }
 </script>
 
