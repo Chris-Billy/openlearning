@@ -1,11 +1,38 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
-  theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
+	purge: [],
+	darkMode: false, // or 'media' or 'class'
+	theme: {
+		extend: {},
+		borderRadius: {
+			none: '0',
+
+			sm: '0.125rem',
+
+			DEFAULT: '0.25rem',
+
+			DEFAULT: '4px',
+
+			md: '0.375rem',
+
+			lg: '0.6rem',
+
+			full: '9999px',
+
+			large: '30px'
+		},
+    backgroundColor: theme => ({
+
+      ...theme('colors'),
+
+      'primary': '#757575',
+
+      'bg-card': '#f1f1fa',
+
+      'bg-button': '#ffd260',
+     })
+	},
+	variants: {
+		extend: {}
+	},
+	plugins: []
 }
