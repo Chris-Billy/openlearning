@@ -33,7 +33,7 @@
 						:key="course.title"
 						:card-title="course.title"
 						:nb-star="course.star"
-						:owner="loggedInUser.firstname + ' ' + loggedInUser.lastname"
+						:owner="user.firstname + ' ' + user.lastname"
 						:category="course.category"
 					/>
 				</div>
@@ -47,16 +47,13 @@ import { mapGetters } from 'vuex' // vuex here only used for nuxt auth, otherwis
 export default {
 	name: 'LoginPage',
 	middleware: 'auth',
-	data() {
+	async asyncData({ $axios }) {
+		// Appel ajax simple via axios à notre api backend express
+		const user = await $axios.$get('/user')
+		const mycourses = await $axios.$get('/user/' + user.id + '/courses')
 		return {
-			mycourses: [
-				{
-					title: 'How to learn Agile with André',
-					star: '4.7',
-					category: 'Agile'
-				},
-				{ title: 'The Basics of IOS dev', star: '4.5', category: 'Swift' }
-			]
+			user,
+			mycourses
 		}
 	},
 	computed: {
