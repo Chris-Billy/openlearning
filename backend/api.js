@@ -30,14 +30,16 @@ const courses = [
 		title: 'How to learn Agile with André',
 		star: '4.7',
 		category: 'Agile',
-		mediasId: [2, 7] // Ici on a que 2 médias pour le cours ci-dessus
+		mediasId: [2, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning' // openlearning ou contributeur externe
 	},
 	{
 		id: 84,
 		title: 'The Basics of IOS dev',
 		star: '4.5',
 		category: 'Swift',
-		mediasId: [340, 7] // Ici on a que 2 médias pour le cours ci-dessus
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning' // openlearning ou contributeur externe
 	}
 ]
 
