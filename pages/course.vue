@@ -22,14 +22,14 @@
 			<button
 				class="w-1/2 flex justify-center items-center focus:outline-none"
 				:class="{ 'not-focus': !defaulttab }"
-				@click="courseDetails"
+				@click="defaulttab = true"
 			>
 				Détails du cours
 			</button>
 			<button
 				class="w-1/2 flex justify-center items-center focus:outline-none"
 				:class="{ 'not-focus': defaulttab }"
-				@click="resourcesCourse"
+				@click="defaulttab = false"
 			>
 				Ressources cours
 			</button>
@@ -330,14 +330,6 @@ export default {
 	data() {
 		return {
 			defaulttab: true
-		}
-	},
-	methods: {
-		courseDetails(event) {
-			this.defaulttab = true
-		},
-		resourcesCourse(event) {
-			this.defaulttab = false
 		}
 	}
 }
