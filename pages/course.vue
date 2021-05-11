@@ -34,13 +34,13 @@
 		</div>
 		<div
 			class="h-full w-full flex flex-col bg-card-course p-4 overflow-scroll pb-14 details"
-			id="details"
+			v-if="defaulttab"
 		>
 			<h1>CECI EST UN TEST</h1>
 		</div>
 		<div
-			class="h-full w-full flex flex-col bg-card-course p-4 overflow-scroll pb-14 hidden"
-			id="resources"
+			class="h-full w-full flex flex-col bg-card-course p-4 overflow-scroll pb-14"
+			v-if="!defaulttab"
 		>
 			<!-- SECTION 1 : VIDEOS -->
 			<div>
@@ -320,8 +320,6 @@ export default {
 				this.defaulttab = true
 				event.target.classList.remove('not-focus')
 				event.path[1].children[1].classList.add('not-focus')
-				document.getElementById('details').classList.remove('hidden')
-				document.getElementById('resources').classList.add('hidden')
 			}
 		},
 		resourcesCourse(event) {
@@ -329,8 +327,6 @@ export default {
 				this.defaulttab = false
 				event.target.classList.remove('not-focus')
 				event.path[1].children[0].classList.add('not-focus')
-				document.getElementById('resources').classList.remove('hidden')
-				document.getElementById('details').classList.add('hidden')
 			}
 		}
 	}
