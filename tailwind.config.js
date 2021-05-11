@@ -20,16 +20,19 @@ module.exports = {
 
 			large: '30px'
 		},
-    backgroundColor: theme => ({
+		backgroundColor: (theme) => ({
+			...theme('colors'),
 
-      ...theme('colors'),
+			primary: '#757575',
 
-      'primary': '#757575',
+			'bg-card': '#f1f1fa',
 
-      'bg-card': '#f1f1fa',
+			'button-yellow': '#ffd260',
 
-      'bg-button': '#ffd260',
-     })
+			'button-google': '#FF8181',
+
+			'button-no-account': '#A0A0A0'
+		})
 	},
 	variants: {
 		extend: {}

@@ -1,5 +1,5 @@
 <template>
-	<div class="w-screen h-screen bg-gray-900">
+	<div class="w-screen h-screen">
 		<div
 			class="flex h-2/5 w-screen justify-center flex-col items-center text-center"
 		>
@@ -14,12 +14,12 @@
 			</div>
 		</div>
 		<div
-			class="flex h-3/5 w-screen flex-col items-center rounded-tl-3xl rounded-tr-3xl px-6 pt-8 bg-gray-300"
+			class="flex h-3/5 w-screen flex-col items-center rounded-t-large p-7 bg-bg-card"
 		>
-			<form class="flex flex-col w-5/6" @submit.prevent="login">
-				<div class="relative bg-white border-none rounded-lg mb-5 style">
+			<form class="flex flex-col w-full" @submit.prevent="login">
+				<div class="flex relative h-14 rounded-lg mb-4 bg-white">
 					<svg
-						class="absolute top-1/2 ml-5"
+						class="absolute top-1/2 ml-2.5 transform -translate-y-1/2"
 						width="20"
 						height="20"
 						viewBox="0 0 20 20"
@@ -42,14 +42,14 @@
 					</svg>
 					<input
 						v-model="email"
-						class="w-5/6 h-full border-none ml-12 bg-transparent outline-none"
+						class="h-full w-full border-none ml-10 outline-none bg-transparent pr-4"
 						type="text"
 						placeholder="Email"
 					/>
 				</div>
-				<div class="relative bg-white border-none rounded-lg mb-5 style">
+				<div class="flex relative h-14 rounded-lg mb-4 bg-white">
 					<svg
-						class="absolute top-1/2 ml-5"
+						class="absolute top-1/2 ml-2.5 transform -translate-y-1/2"
 						width="20"
 						height="20"
 						viewBox="0 0 20 20"
@@ -71,7 +71,7 @@
 					</svg>
 					<input
 						v-model="password"
-						class="w-5/6 h-full border-none ml-12 bg-transparent outline-none"
+						class="h-full w-full border-none ml-10 outline-none bg-transparent pr-4"
 						type="password"
 						placeholder="Mot de passe"
 					/>
@@ -80,22 +80,24 @@
 					{{ error }}
 				</div>
 				<button
-					class="border-none bg-yellow-400 mb-5 rounded-lg text-base style"
+					class="border-none bg-button-yellow mb-5 rounded-lg text-base h-14"
 					type="submit"
 				>
 					Se connecter
 				</button>
 			</form>
 			<button
-				class="border-none bg-pink-400 mb-5 rounded-lg text-base text-white w-5/6 style"
+				class="border-none bg-button-google mb-5 rounded-lg text-base text-white w-full h-14"
 			>
 				Se connecter avec Google
 			</button>
-			<button
-				class="border-none bg-gray-400 mb-5 rounded-lg text-xs text-white w-4/6 style"
-			>
-				Je n'ai pas encore de compte
-			</button>
+			<NuxtLink to="/signup" class="w-4/6">
+				<button
+					class="border-none bg-button-no-account mb-5 rounded-lg text-xs text-white w-full h-14"
+				>
+					Je n'ai pas encore de compte
+				</button>
+			</NuxtLink>
 		</div>
 	</div>
 </template>
@@ -126,13 +128,3 @@ export default {
 	}
 }
 </script>
-
-<style scoped>
-/* background: rgb(117, 117, 117); */
-.style {
-	height: 55px;
-}
-.style svg {
-	transform: translateY(-50%);
-}
-</style>
