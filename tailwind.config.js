@@ -27,6 +27,8 @@ module.exports = {
 
 			'bg-card': '#f1f1fa',
 
+			'bg-dark-card': '#161719',
+
 			'button-yellow': '#ffd260',
 
 			'button-google': '#FF8181',
