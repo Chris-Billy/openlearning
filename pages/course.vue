@@ -17,22 +17,35 @@
 			</svg>
 			<p class="ml-2.5 text-white">Cours</p>
 		</div>
-		<div class="w-full h-96 bg-black"></div>
-		<div class="w-full h-24 bg-card-course flex">
-			<div class="w-1/2 flex justify-center items-center">
-				<p>Détails du cours</p>
-			</div>
-			<div class="w-1/2 flex justify-center items-center">
-				<p>Ressources cours</p>
-			</div>
+		<div class="w-full h-96 bg-black hidden"></div>
+		<div class="w-full h-20 bg-card-course flex">
+			<button
+				class="w-1/2 flex justify-center items-center focus:outline-none"
+				@click="courseDetails"
+			>
+				Détails du cours
+			</button>
+			<button
+				class="w-1/2 flex justify-center items-center focus:outline-none not-focus"
+				@click="resourcesCourse"
+			>
+				Ressources cours
+			</button>
 		</div>
 		<div
-			class="h-full w-full flex flex-col bg-card-course p-4 overflow-scroll pb-14"
+			class="h-full w-full flex flex-col bg-card-course p-4 overflow-scroll pb-14 details"
+			id="details"
+		>
+			<h1>CECI EST UN TEST</h1>
+		</div>
+		<div
+			class="h-full w-full flex flex-col bg-card-course p-4 overflow-scroll pb-14 hidden"
+			id="resources"
 		>
 			<!-- SECTION 1 : VIDEOS -->
 			<div>
 				<div class="w-screen -mt-2 mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl ml-4">Section 1 : Vidéos</h4>
+					<h4 class="text-xl ml-4">Vidéos</h4>
 					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
 				</div>
 				<div class="flex justify-between items-center py-2">
@@ -61,7 +74,7 @@
 			<!-- SECTION 2 : COURS -->
 			<div class="mt-4">
 				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl ml-4">Section 2 : Cours</h4>
+					<h4 class="text-xl ml-4">Cours</h4>
 					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
 				</div>
 				<div class="flex justify-between items-center py-2">
@@ -90,7 +103,7 @@
 			<!-- SECTION 3 : ARTICLES -->
 			<div class="mt-4">
 				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl ml-4">Section 3 : Articles</h4>
+					<h4 class="text-xl ml-4">Articles</h4>
 					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
 				</div>
 				<div class="flex justify-between items-center py-2">
@@ -119,7 +132,7 @@
 			<!-- SECTION 4 : AUDIO -->
 			<div class="mt-4">
 				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl ml-4">Section 4 : Audio</h4>
+					<h4 class="text-xl ml-4">Audio</h4>
 					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
 				</div>
 				<div class="flex justify-between items-center py-2">
@@ -148,7 +161,7 @@
 			<!-- SECTION 5 : IVY LEAGUE -->
 			<div class="mt-4">
 				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl ml-4">Section 5 : Ivy League</h4>
+					<h4 class="text-xl ml-4">Ivy League</h4>
 					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
 				</div>
 				<div class="flex justify-between items-center py-2">
@@ -177,7 +190,7 @@
 			<!-- SECTION 6 : LIVRES -->
 			<div class="mt-4">
 				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl ml-4">Section 6 : Livres</h4>
+					<h4 class="text-xl ml-4">Livres</h4>
 					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
 				</div>
 				<div class="flex justify-between items-center py-2">
@@ -206,7 +219,7 @@
 			<!-- SECTION 7 : EXERCICES -->
 			<div class="mt-4">
 				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl ml-4">Section 7 : Exercices</h4>
+					<h4 class="text-xl ml-4">Exercices</h4>
 					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
 				</div>
 				<div class="flex justify-between items-center py-2">
@@ -235,7 +248,7 @@
 			<!-- SECTION 8 : CHEAT SHEET -->
 			<div class="mt-4">
 				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl ml-4">Section 8 : Cheat Sheet</h4>
+					<h4 class="text-xl ml-4">Cheat Sheet</h4>
 					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
 				</div>
 				<div class="flex justify-between items-center py-2">
@@ -264,7 +277,7 @@
 			<!-- SECTION 9 : OUTILS / MATERIEL -->
 			<div class="mt-4">
 				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl ml-4">Section 9 : Outils - Matériel</h4>
+					<h4 class="text-xl ml-4">Outils - Matériel</h4>
 					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
 				</div>
 				<div class="flex justify-between items-center py-2">
@@ -292,3 +305,64 @@
 		</div>
 	</div>
 </template>
+
+<script>
+export default {
+	async asyncData({ $axios }) {
+		const defaulttab = await $axios.$get('/defaulttab')
+		return {
+			defaulttab
+		}
+	},
+	methods: {
+		courseDetails(event) {
+			if (this.defaulttab !== true) {
+				this.defaulttab = true
+				event.target.classList.remove('not-focus')
+				event.path[1].children[1].classList.add('not-focus')
+				document.getElementById('details').classList.remove('hidden')
+				document.getElementById('resources').classList.add('hidden')
+			}
+		},
+		resourcesCourse(event) {
+			if (this.defaulttab !== false) {
+				this.defaulttab = false
+				event.target.classList.remove('not-focus')
+				event.path[1].children[0].classList.add('not-focus')
+				document.getElementById('resources').classList.remove('hidden')
+				document.getElementById('details').classList.add('hidden')
+			}
+		}
+	}
+}
+</script>
+
+<style scoped>
+.not-focus {
+	background-color: #91919f7e;
+	opacity: 0.5;
+}
+input[type='checkbox'] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+
+	border: 2px solid #71e76e;
+	border-radius: 5px;
+	position: relative;
+}
+input[type='checkbox']:checked {
+	background: #71e76e;
+}
+input[type='checkbox']:checked:before {
+	content: '\2713';
+	display: block;
+	color: rgb(255, 255, 255);
+	font-size: 1.2rem;
+	font-weight: bold;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+</style>
