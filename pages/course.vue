@@ -21,26 +21,45 @@
 		<div class="w-full h-20 bg-card-course flex">
 			<button
 				class="w-1/2 flex justify-center items-center focus:outline-none"
+				:class="{ 'not-focus': !defaulttab }"
 				@click="courseDetails"
 			>
 				Détails du cours
 			</button>
 			<button
-				class="w-1/2 flex justify-center items-center focus:outline-none not-focus"
+				class="w-1/2 flex justify-center items-center focus:outline-none"
+				:class="{ 'not-focus': defaulttab }"
 				@click="resourcesCourse"
 			>
 				Ressources cours
 			</button>
 		</div>
 		<div
-			class="h-full w-full flex flex-col bg-card-course p-4 overflow-scroll pb-14 details"
 			v-if="defaulttab"
+			class="
+				h-full
+				w-full
+				flex flex-col
+				bg-card-course
+				p-4
+				overflow-scroll
+				pb-14
+				details
+			"
 		>
 			<h1>CECI EST UN TEST</h1>
 		</div>
 		<div
-			class="h-full w-full flex flex-col bg-card-course p-4 overflow-scroll pb-14"
 			v-if="!defaulttab"
+			class="
+				h-full
+				w-full
+				flex flex-col
+				bg-card-course
+				p-4
+				overflow-scroll
+				pb-14
+			"
 		>
 			<!-- SECTION 1 : VIDEOS -->
 			<div>
@@ -308,26 +327,17 @@
 
 <script>
 export default {
-	async asyncData({ $axios }) {
-		const defaulttab = await $axios.$get('/defaulttab')
+	data() {
 		return {
-			defaulttab
+			defaulttab: true
 		}
 	},
 	methods: {
 		courseDetails(event) {
-			if (this.defaulttab !== true) {
-				this.defaulttab = true
-				event.target.classList.remove('not-focus')
-				event.path[1].children[1].classList.add('not-focus')
-			}
+			this.defaulttab = true
 		},
 		resourcesCourse(event) {
-			if (this.defaulttab !== false) {
-				this.defaulttab = false
-				event.target.classList.remove('not-focus')
-				event.path[1].children[0].classList.add('not-focus')
-			}
+			this.defaulttab = false
 		}
 	}
 }

@@ -53,7 +53,7 @@ const user = {
 	learnedmediasId: [7, 340, 2] // gestion de la progression (checkbox), medias terminés indépendamment d'un parcours de compétences ou métier
 }
 
-const defaulttab = true;
+const defaulttab = true
 
 // Get header bearer
 const extractBearerToken = (headerValue) => {
@@ -153,10 +153,6 @@ app.get('/user/:id/courses', checkToken, (req, res) => {
 			message: 'No favorites courses found for this user id in database'
 		})
 	}
-})
-
-app.get('/defaulttab', (req, res) => {
-	return res.json(defaulttab);
 })
 
 module.exports = app
