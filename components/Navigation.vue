@@ -56,7 +56,7 @@
 				/>
 			</svg>
 		</NuxtLink>
-		<NuxtLink to="">
+		<NuxtLink to="mycourses">
 			<svg
 				width="22"
 				height="22"

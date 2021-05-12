@@ -5,6 +5,7 @@
 		<NuxtLink to="/login">Connexion</NuxtLink>
 		<NuxtLink to="/signup">INSCRIPTION</NuxtLink>
 		<NuxtLink to="/search">Recherche</NuxtLink>
+		<NuxtLink to="/mycourses">mes cours</NuxtLink>
 	</div>
 </template>
 
