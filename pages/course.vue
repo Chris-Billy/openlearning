@@ -36,7 +36,16 @@
 		</div>
 		<div
 			v-if="defaulttab"
-			class="h-full w-full flex flex-col bg-card-course p-4 overflow-scroll pb-14 details"
+			class="
+				h-full
+				w-full
+				flex flex-col
+				bg-card-course
+				p-4
+				overflow-scroll
+				pb-14
+				details
+			"
 		>
 			<h1 class="font-bold text-3xl">DETAILS DU COURS CHOISI</h1>
 			<pre>{{ mycourse }}</pre>
@@ -46,7 +55,15 @@
 		</div>
 		<div
 			v-if="!defaulttab"
-			class="h-full w-full flex flex-col bg-card-course p-4 overflow-y-scroll pb-14"
+			class="
+				h-full
+				w-full
+				flex flex-col
+				bg-card-course
+				p-4
+				overflow-y-scroll
+				pb-14
+			"
 		>
 			<!-- SECTION 1 : VIDEOS -->
 			<div>
