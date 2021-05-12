@@ -1,6 +1,6 @@
 <!-- Home Page for connected users -->
 <template>
-	<div class="h-full w-full">
+	<div class="h-full w-full overflow-hidden">
 		<div class="h-1/4 flex justify-center items-center">
 			<div class="content w-full h-1/2">
 				<div class="pfp_title w-full flex justify-evenly">

@@ -2,7 +2,7 @@
 	<div class="flex justify-center">
 		<div
 			class="bg-white flex flex-col justify-evenly w-11/12 h-52 rounded-lg"
-			style="margin-top: -20px"
+			style="margin-top: -50px"
 		>
 			<div
 				class="
