@@ -60,7 +60,15 @@
 					<div class="scrollbars flex overflow-x-auto">
 						<div class="flex flex-row p-5">
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -81,7 +89,15 @@
 								</div>
 							</div>
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -102,7 +118,15 @@
 								</div>
 							</div>
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -123,7 +147,15 @@
 								</div>
 							</div>
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -144,7 +176,15 @@
 								</div>
 							</div>
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -172,7 +212,15 @@
 					<div class="scrollbars flex overflow-x-auto">
 						<div class="flex flex-row p-5">
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -193,7 +241,15 @@
 								</div>
 							</div>
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -214,7 +270,15 @@
 								</div>
 							</div>
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -235,7 +299,15 @@
 								</div>
 							</div>
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -256,7 +328,15 @@
 								</div>
 							</div>
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -284,7 +364,15 @@
 					<div class="scrollbars flex overflow-x-auto">
 						<div class="flex flex-row p-5">
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -305,7 +393,15 @@
 								</div>
 							</div>
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -326,7 +422,15 @@
 								</div>
 							</div>
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -347,7 +451,15 @@
 								</div>
 							</div>
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -368,7 +480,15 @@
 								</div>
 							</div>
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -396,7 +516,15 @@
 					<div class="scrollbars flex overflow-x-auto">
 						<div class="flex flex-row p-5">
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -417,7 +545,15 @@
 								</div>
 							</div>
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -438,7 +574,15 @@
 								</div>
 							</div>
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -459,7 +603,15 @@
 								</div>
 							</div>
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -480,7 +632,15 @@
 								</div>
 							</div>
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -508,7 +668,15 @@
 					<div class="scrollbars flex overflow-x-auto">
 						<div class="flex flex-row p-5">
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -529,7 +697,15 @@
 								</div>
 							</div>
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -550,7 +726,15 @@
 								</div>
 							</div>
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -571,7 +755,15 @@
 								</div>
 							</div>
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
@@ -592,7 +784,15 @@
 								</div>
 							</div>
 							<div
-								class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
+								class="
+									h-52
+									w-52
+									bg-white
+									rounded-large
+									text-center
+									justify-evenly
+									mr-3
+								"
 							>
 								<div class="h-4/6 flex justify-center items-center">
 									<img
