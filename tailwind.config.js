@@ -33,7 +33,9 @@ module.exports = {
 
 			'button-google': '#FF8181',
 
-			'button-no-account': '#A0A0A0'
+			'button-no-account': '#A0A0A0',
+
+			'card-course': '#FCFCFF'
 		})
 	},
 	variants: {
