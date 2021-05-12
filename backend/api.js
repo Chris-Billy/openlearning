@@ -21,6 +21,24 @@ const medias = [
 		type: 'video', // cas possibles : audio, video, book, cheatsheet,...
 		title: 'How to make french croissants',
 		link: 'https://www.youtube.com/watch?v=yw-4zNOYTjI'
+	},
+	{
+		id: 3,
+		type: 'cours', // cas possibles : audio, video, book, cheatsheet,...
+		title: 'How to learn Python',
+		link: 'https://courspython.com/introduction-python.html'
+	},
+	{
+		id: 7,
+		type: 'article', // cas possibles : audio, video, book, cheatsheet,...
+		title: 'All about Python',
+		link: 'https://www.lebigdata.fr/python-langage-definition'
+	},
+	{
+		id: 340,
+		type: 'cours', // cas possibles : audio, video, book, cheatsheet,...
+		title: 'How to learn Python',
+		link: 'https://courspython.com/introduction-python.html'
 	}
 ]
 
@@ -153,6 +171,29 @@ app.get('/user/:id/courses', checkToken, (req, res) => {
 			message: 'No favorites courses found for this user id in database'
 		})
 	}
+})
+
+// Route vers un cours sélectionné
+app.get('/course/:id', (req, res) => {
+	courses.forEach((course) => {
+		if (req.params.id == course.id) {
+			return res.json(course)
+		}
+	})
+})
+
+// Route vers les médias d'un cours sélectionné
+app.post('/medias', (req, res) => {
+	const allMedias = []
+	const idsMedias = req.body
+	idsMedias.forEach((id) => {
+		medias.forEach((media) => {
+			if (id == media.id) {
+				allMedias.push(media)
+			}
+		})
+	})
+	return res.json(allMedias)
 })
 
 module.exports = app

@@ -36,30 +36,17 @@
 		</div>
 		<div
 			v-if="defaulttab"
-			class="
-				h-full
-				w-full
-				flex flex-col
-				bg-card-course
-				p-4
-				overflow-scroll
-				pb-14
-				details
-			"
+			class="h-full w-full flex flex-col bg-card-course p-4 overflow-scroll pb-14 details"
 		>
-			<h1>CECI EST UN TEST</h1>
+			<h1 class="font-bold text-3xl">DETAILS DU COURS CHOISI</h1>
+			<pre>{{ mycourse }}</pre>
+			<br />
+			<h1 class="font-bold text-3xl">RESSOURCES LIÉES AU COURS</h1>
+			<pre>{{ medias }}</pre>
 		</div>
 		<div
 			v-if="!defaulttab"
-			class="
-				h-full
-				w-full
-				flex flex-col
-				bg-card-course
-				p-4
-				overflow-scroll
-				pb-14
-			"
+			class="h-full w-full flex flex-col bg-card-course p-4 overflow-y-scroll pb-14"
 		>
 			<!-- SECTION 1 : VIDEOS -->
 			<div>
@@ -330,6 +317,15 @@ export default {
 	data() {
 		return {
 			defaulttab: true
+		}
+	},
+	async asyncData({ $axios }) {
+		// Appel ajax simple via axios à notre api backend express
+		const mycourse = await $axios.$get('/course/127')
+		const medias = await $axios.$post('/medias', mycourse.mediasId)
+		return {
+			medias,
+			mycourse
 		}
 	}
 }

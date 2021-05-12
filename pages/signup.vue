@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col h-full justify-center">
+	<div class="flex flex-col h-full justify-center pb-14">
 		<div class="flex items-end py-4 px-2.5">
 			<svg
 				width="20"
@@ -17,7 +17,7 @@
 			</svg>
 			<p class="ml-2.5 text-white">Connexion</p>
 		</div>
-		<div class="w-full rounded-large p-7 mb-24 bg-bg-card">
+		<div class="w-full rounded-large p-7 bg-bg-card">
 			<form class="flex flex-col" action="#">
 				<div class="flex relative h-11 rounded-lg mb-4 bg-white">
 					<svg
