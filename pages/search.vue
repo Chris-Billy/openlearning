@@ -1,6 +1,6 @@
 <template>
 	<div class="w-screen h-screen overflow-hidden">
-		<div class="flex h-1/6 w-screen justify-center flex-col">
+		<div class="flex h-1/6 w-full justify-center flex-col">
 			<div class="w-full flex items-center ml-7">
 				<svg
 					width="20"
@@ -19,8 +19,10 @@
 				<p class="text-white ml-7">Explorer</p>
 			</div>
 		</div>
-		<div class="flex h-5/6 w-screen flex-col rounded-t-large p-7 bg-bg-card">
-			<form class="w-full items-center" action="">
+		<div
+			class="flex h-5/6 w-full flex-col rounded-t-large bg-bg-card items-center"
+		>
+			<form class="w-10/12 items-center mt-5" action="">
 				<div class="flex h-14 w-full rounded-lg bg-white items-center">
 					<input
 						class="h-full w-full border-none ml-5 outline-none bg-transparent"
@@ -50,17 +52,32 @@
 					</svg>
 				</div>
 			</form>
-			<div class="flex items-start flex-col">
-				<h1>EXPLORER</h1>
-				<!-- bloc -->
+			<div class="w-full h-full flex flex-col">
 				<div>
-					<h2>Compétences</h2>
-					<div class="flex overflow-x-scroll">
-						<div class="h-52 w-52 bg-white rounded-large text-center">
+					<p class="font-md">Explorer</p>
+				</div>
+				<div>
+					<p class="font-md">Compétences</p>
+				</div>
+				<div class="scrollbars flex overflow-x-auto">
+					<div class="flex flex-row">
+						<div class="ml-2 mr-2 h-52 w-52 bg-white rounded-large text-center">
 							<p>test1</p>
 						</div>
-						<div class="h-52 w-52 bg-white rounded-large ml-10 text-center">
+						<div class="ml-2 mr-2 h-52 w-52 bg-white rounded-large text-center">
 							<p>test2</p>
+						</div>
+						<div class="ml-2 mr-2 h-52 w-52 bg-white rounded-large text-center">
+							<p>test3</p>
+						</div>
+						<div class="ml-2 mr-2 h-52 w-52 bg-white rounded-large text-center">
+							<p>test4</p>
+						</div>
+						<div class="ml-2 mr-2 h-52 w-52 bg-white rounded-large text-center">
+							<p>test5</p>
+						</div>
+						<div class="ml-2 mr-2 h-52 w-52 bg-white rounded-large text-center">
+							<p>test6</p>
 						</div>
 					</div>
 				</div>
@@ -72,3 +89,16 @@
 <script>
 export default {}
 </script>
+
+<style scoped>
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbars::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbars {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+</style>

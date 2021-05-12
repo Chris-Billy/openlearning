@@ -1,6 +1,16 @@
 <template>
 	<div
-		class="fixed bottom-0 w-screen h-14 rounded-t-large flex items-center justify-evenly bg-white"
+		class="
+			fixed
+			bottom-0
+			w-screen
+			h-14
+			rounded-t-large
+			flex
+			items-center
+			justify-evenly
+			bg-white
+		"
 	>
 		<NuxtLink to="home">
 			<svg
@@ -24,7 +34,7 @@
 				/>
 			</svg>
 		</NuxtLink>
-		<NuxtLink to="">
+		<NuxtLink to="search">
 			<svg
 				width="22"
 				height="22"
