@@ -70,7 +70,7 @@
 			<!-- SECTION 2 : COURS -->
 			<div v-if="medias.allTypesOfMedias.includes('cours')" class="mt-4">
 				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl ml-4">Cours</h4>
+					<h4 class="text-xl font-semibold ml-4">Cours</h4>
 					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
 				</div>
 				<div v-for="media in medias.allMedias" :key="media.id">
@@ -90,7 +90,7 @@
 			<!-- SECTION 3 : ARTICLES -->
 			<div v-if="medias.allTypesOfMedias.includes('article')" class="mt-4">
 				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl ml-4">Articles</h4>
+					<h4 class="text-xl font-semibold ml-4">Articles</h4>
 					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
 				</div>
 				<div v-for="media in medias.allMedias" :key="media.id">
@@ -110,7 +110,7 @@
 			<!-- SECTION 4 : AUDIO -->
 			<div v-if="medias.allTypesOfMedias.includes('audio')" class="mt-4">
 				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl ml-4">Audio</h4>
+					<h4 class="text-xl font-semibold ml-4">Audio</h4>
 					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
 				</div>
 				<div v-for="media in medias.allMedias" :key="media.id">
@@ -130,7 +130,7 @@
 			<!-- SECTION 5 : IVY LEAGUE -->
 			<div v-if="medias.allTypesOfMedias.includes('ivy league')" class="mt-4">
 				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl ml-4">Ivy League</h4>
+					<h4 class="text-xl font-semibold ml-4">Ivy League</h4>
 					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
 				</div>
 				<div v-for="media in medias.allMedias" :key="media.id">
@@ -150,7 +150,7 @@
 			<!-- SECTION 6 : LIVRES -->
 			<div v-if="medias.allTypesOfMedias.includes('livre')" class="mt-4">
 				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl ml-4">Livres</h4>
+					<h4 class="text-xl font-semibold ml-4">Livres</h4>
 					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
 				</div>
 				<div v-for="media in medias.allMedias" :key="media.id">
@@ -170,7 +170,7 @@
 			<!-- SECTION 7 : EXERCICES -->
 			<div v-if="medias.allTypesOfMedias.includes('exercice')" class="mt-4">
 				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl ml-4">Exercices</h4>
+					<h4 class="text-xl font-semibold ml-4">Exercices</h4>
 					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
 				</div>
 				<div v-for="media in medias.allMedias" :key="media.id">
@@ -190,7 +190,7 @@
 			<!-- SECTION 8 : CHEAT SHEET -->
 			<div v-if="medias.allTypesOfMedias.includes('cheat sheet')" class="mt-4">
 				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl ml-4">Cheat Sheet</h4>
+					<h4 class="text-xl font-semibold ml-4">Cheat Sheet</h4>
 					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
 				</div>
 				<div v-for="media in medias.allMedias" :key="media.id">
@@ -210,7 +210,7 @@
 			<!-- SECTION 9 : OUTILS / MATERIEL -->
 			<div v-if="medias.allTypesOfMedias.includes('outil')" class="mt-4">
 				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl ml-4">Outils - Matériel</h4>
+					<h4 class="text-xl font-semibold ml-4">Outils - Matériel</h4>
 					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
 				</div>
 				<div v-for="media in medias.allMedias" :key="media.id">
