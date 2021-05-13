@@ -44,7 +44,15 @@
 					</svg>
 
 					<input
-						class="h-full w-full border-none ml-10 outline-none bg-transparent pr-4"
+						class="
+							h-full
+							w-full
+							border-none
+							ml-10
+							outline-none
+							bg-transparent
+							pr-4
+						"
 						type="text"
 						placeholder="E-mail"
 					/>
@@ -73,7 +81,15 @@
 					</svg>
 
 					<input
-						class="h-full w-full border-none ml-10 outline-none bg-transparent pr-4"
+						class="
+							h-full
+							w-full
+							border-none
+							ml-10
+							outline-none
+							bg-transparent
+							pr-4
+						"
 						type="text"
 						placeholder="Mot de passe"
 					/>
@@ -102,7 +118,15 @@
 					</svg>
 
 					<input
-						class="h-full w-full border-none ml-10 outline-none bg-transparent pr-4"
+						class="
+							h-full
+							w-full
+							border-none
+							ml-10
+							outline-none
+							bg-transparent
+							pr-4
+						"
 						type="text"
 						placeholder="Confirmation mot de passe"
 					/>
