@@ -36,7 +36,16 @@ module.exports = {
 			'button-no-account': '#A0A0A0',
 
 			'card-course': '#FCFCFF'
-		})
+		}),
+		maxWidth: {
+			'1/4': '25%',
+
+			'1/2': '50%',
+
+			'3/4': '75%',
+
+			'80/100': '80%'
+		}
 	},
 	variants: {
 		extend: {}

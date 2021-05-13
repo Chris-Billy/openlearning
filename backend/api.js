@@ -185,15 +185,17 @@ app.get('/course/:id', (req, res) => {
 // Route vers les médias d'un cours sélectionné
 app.post('/medias', (req, res) => {
 	const allMedias = []
+	const allTypesOfMedias = []
 	const idsMedias = req.body
 	idsMedias.forEach((id) => {
 		medias.forEach((media) => {
 			if (id == media.id) {
 				allMedias.push(media)
+				allTypesOfMedias.push(media.type)
 			}
 		})
 	})
-	return res.json(allMedias)
+	return res.json({ allMedias, allTypesOfMedias })
 })
 
 module.exports = app
