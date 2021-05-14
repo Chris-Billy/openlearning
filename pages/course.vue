@@ -41,189 +41,24 @@
 		>
 			<h1 class="font-bold text-3xl">DETAILS DU COURS CHOISI</h1>
 			<pre>{{ myCourse }}</pre>
+			<br />
+			<h1 class="font-bold text-3xl">TOUTES LES RESSOURCES RECUPEREES</h1>
+			<pre>{{ allMedias }}</pre>
 		</div>
 
 		<div
 			v-if="!defaulttab"
 			class="h-full w-full flex flex-col bg-card-course p-4 overflow-y-scroll pb-14"
 		>
-			<!-- SECTION 1 : VIDEOS -->
-			<div v-if="medias.allTypesOfMedias.includes('video')">
-				<div class="w-screen -mt-2 mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl font-semibold ml-4">Vidéos</h4>
-					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
-				</div>
-				<div v-for="media in medias.allMedias" :key="media.id">
-					<div
-						v-if="media.type === 'video'"
-						class="flex justify-between items-center py-2"
-					>
-						<div class="max-w-80/100">
-							<p>{{ media.title }}</p>
-							<p class="text-xs">Video - 5 min</p>
-						</div>
-						<input class="w-6 h-6 mr-2" type="checkbox" />
-					</div>
-				</div>
-			</div>
-
-			<!-- SECTION 2 : COURS -->
-			<div v-if="medias.allTypesOfMedias.includes('cours')" class="mt-4">
-				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl font-semibold ml-4">Cours</h4>
-					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
-				</div>
-				<div v-for="media in medias.allMedias" :key="media.id">
-					<div
-						v-if="media.type === 'video'"
-						class="flex justify-between items-center py-2"
-					>
-						<div class="max-w-80/100">
-							<p>{{ media.title }}</p>
-							<p class="text-xs">Cours - 5 min</p>
-						</div>
-						<input class="w-6 h-6 mr-2" type="checkbox" />
-					</div>
-				</div>
-			</div>
-
-			<!-- SECTION 3 : ARTICLES -->
-			<div v-if="medias.allTypesOfMedias.includes('article')" class="mt-4">
-				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl font-semibold ml-4">Articles</h4>
-					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
-				</div>
-				<div v-for="media in medias.allMedias" :key="media.id">
-					<div
-						v-if="media.type === 'article'"
-						class="flex justify-between items-center py-2"
-					>
-						<div class="max-w-80/100">
-							<p>{{ media.title }}</p>
-							<p class="text-xs">Article - 5 min</p>
-						</div>
-						<input class="w-6 h-6 mr-2" type="checkbox" />
-					</div>
-				</div>
-			</div>
-
-			<!-- SECTION 4 : AUDIO -->
-			<div v-if="medias.allTypesOfMedias.includes('audio')" class="mt-4">
-				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl font-semibold ml-4">Audio</h4>
-					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
-				</div>
-				<div v-for="media in medias.allMedias" :key="media.id">
-					<div
-						v-if="media.type === 'video'"
-						class="flex justify-between items-center py-2"
-					>
-						<div class="max-w-80/100">
-							<p>{{ media.title }}</p>
-							<p class="text-xs">Audio - 5 min</p>
-						</div>
-						<input class="w-6 h-6 mr-2" type="checkbox" />
-					</div>
-				</div>
-			</div>
-
-			<!-- SECTION 5 : IVY LEAGUE -->
-			<div v-if="medias.allTypesOfMedias.includes('ivy league')" class="mt-4">
-				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl font-semibold ml-4">Ivy League</h4>
-					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
-				</div>
-				<div v-for="media in medias.allMedias" :key="media.id">
-					<div
-						v-if="media.type === 'video'"
-						class="flex justify-between items-center py-2"
-					>
-						<div class="max-w-80/100">
-							<p>{{ media.title }}</p>
-							<p class="text-xs">Ivy League - 5 min</p>
-						</div>
-						<input class="w-6 h-6 mr-2" type="checkbox" />
-					</div>
-				</div>
-			</div>
-
-			<!-- SECTION 6 : LIVRES -->
-			<div v-if="medias.allTypesOfMedias.includes('livre')" class="mt-4">
-				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl font-semibold ml-4">Livres</h4>
-					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
-				</div>
-				<div v-for="media in medias.allMedias" :key="media.id">
-					<div
-						v-if="media.type === 'video'"
-						class="flex justify-between items-center py-2"
-					>
-						<div class="max-w-80/100">
-							<p>{{ media.title }}</p>
-							<p class="text-xs">Livre - 5 min</p>
-						</div>
-						<input class="w-6 h-6 mr-2" type="checkbox" />
-					</div>
-				</div>
-			</div>
-
-			<!-- SECTION 7 : EXERCICES -->
-			<div v-if="medias.allTypesOfMedias.includes('exercice')" class="mt-4">
-				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl font-semibold ml-4">Exercices</h4>
-					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
-				</div>
-				<div v-for="media in medias.allMedias" :key="media.id">
-					<div
-						v-if="media.type === 'video'"
-						class="flex justify-between items-center py-2"
-					>
-						<div class="max-w-80/100">
-							<p>{{ media.title }}</p>
-							<p class="text-xs">Exercice - 5 min</p>
-						</div>
-						<input class="w-6 h-6 mr-2" type="checkbox" />
-					</div>
-				</div>
-			</div>
-
-			<!-- SECTION 8 : CHEAT SHEET -->
-			<div v-if="medias.allTypesOfMedias.includes('cheat sheet')" class="mt-4">
-				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl font-semibold ml-4">Cheat Sheet</h4>
-					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
-				</div>
-				<div v-for="media in medias.allMedias" :key="media.id">
-					<div
-						v-if="media.type === 'video'"
-						class="flex justify-between items-center py-2"
-					>
-						<div class="max-w-80/100">
-							<p>{{ media.title }}</p>
-							<p class="text-xs">Cheat Sheet - 5 min</p>
-						</div>
-						<input class="w-6 h-6 mr-2" type="checkbox" />
-					</div>
-				</div>
-			</div>
-
-			<!-- SECTION 9 : OUTILS / MATERIEL -->
-			<div v-if="medias.allTypesOfMedias.includes('outil')" class="mt-4">
-				<div class="w-screen mb-2 border-b-2 border-gray-300 -ml-4">
-					<h4 class="text-xl font-semibold ml-4">Outils - Matériel</h4>
-					<p class="text-xs mb-2 ml-4">3 units - 15 min</p>
-				</div>
-				<div v-for="media in medias.allMedias" :key="media.id">
-					<div
-						v-if="media.type === 'video'"
-						class="flex justify-between items-center py-2"
-					>
-						<div class="max-w-80/100">
-							<p>{{ media.title }}</p>
-							<p class="text-xs">Outils - Matériel - 5 min</p>
-						</div>
-						<input class="w-6 h-6 mr-2" type="checkbox" />
-					</div>
+			<div v-for="(medias, key) in allMedias" :key="medias.id">
+				<div v-if="medias != false" class="mb-6">
+					<CategoryMedia :name="key + 's'" />
+					<SectionCourse
+						v-for="media in medias"
+						:key="media.id"
+						:title="media.title"
+						:category="key"
+					/>
 				</div>
 			</div>
 		</div>
@@ -240,16 +75,16 @@ export default {
 	async asyncData({ $axios }) {
 		// Appel ajax simple via axios à notre api backend express
 		const myCourse = await $axios.$get('/course/127')
-		const medias = await $axios.$post('/medias', myCourse.mediasId)
+		const allMedias = await $axios.$post('/medias', myCourse.mediasId)
 		return {
-			medias,
+			allMedias,
 			myCourse
 		}
 	}
 }
 </script>
 
-<style scoped>
+<style>
 .not-focus {
 	background-color: #91919f7e;
 	opacity: 0.5;

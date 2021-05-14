@@ -14,29 +14,41 @@ app.use(morgan('tiny'))
 app.use(bodyParser.json())
 app.use(express.urlencoded({ extended: true }))
 
+const typeMedia = [
+	'video',
+	'cours',
+	'article',
+	'audio',
+	'ivy league',
+	'livre',
+	'exercice',
+	'cheat sheet',
+	'outil'
+]
+
 // for testing purposes / mock tests @todo @fixme
 const medias = [
 	{
 		id: 2,
-		type: 'video', // cas possibles : audio, video, book, cheatsheet,...
+		type: typeMedia[0], // cas possibles : audio, video, book, cheatsheet,...
 		title: 'How to make french croissants',
 		link: 'https://www.youtube.com/watch?v=yw-4zNOYTjI'
 	},
 	{
 		id: 3,
-		type: 'cours', // cas possibles : audio, video, book, cheatsheet,...
+		type: typeMedia[1], // cas possibles : audio, video, book, cheatsheet,...
 		title: 'How to learn Python',
 		link: 'https://courspython.com/introduction-python.html'
 	},
 	{
 		id: 7,
-		type: 'article', // cas possibles : audio, video, book, cheatsheet,...
+		type: typeMedia[2], // cas possibles : audio, video, book, cheatsheet,...
 		title: 'All about Python',
 		link: 'https://www.lebigdata.fr/python-langage-definition'
 	},
 	{
 		id: 340,
-		type: 'cours', // cas possibles : audio, video, book, cheatsheet,...
+		type: typeMedia[1], // cas possibles : audio, video, book, cheatsheet,...
 		title: 'How to learn Python',
 		link: 'https://courspython.com/introduction-python.html'
 	}
@@ -48,7 +60,7 @@ const courses = [
 		title: 'How to learn Agile with André',
 		star: '4.7',
 		category: 'Agile',
-		mediasId: [2, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		mediasId: [2, 3, 7], // Ici on a que 2 médias pour le cours ci-dessus
 		source: 'openlearning' // openlearning ou contributeur externe
 	},
 	{
@@ -70,8 +82,6 @@ const user = {
 	myfavoritecoursesId: [127, 84],
 	learnedmediasId: [7, 340, 2] // gestion de la progression (checkbox), medias terminés indépendamment d'un parcours de compétences ou métier
 }
-
-const defaulttab = true
 
 // Get header bearer
 const extractBearerToken = (headerValue) => {
@@ -184,18 +194,22 @@ app.get('/course/:id', (req, res) => {
 
 // Route vers les médias d'un cours sélectionné
 app.post('/medias', (req, res) => {
-	const allMedias = []
-	const allTypesOfMedias = []
+	// Initialisation d'un objet qui contiendra tous les médias
+	const allMedias = {}
+	// On ajoute tous les types de médias
+	typeMedia.forEach((type) => {
+		allMedias[type] = []
+	})
+	// On envoie chaque média dans la catégorie qui lui correspond
 	const idsMedias = req.body
 	idsMedias.forEach((id) => {
 		medias.forEach((media) => {
 			if (id == media.id) {
-				allMedias.push(media)
-				allTypesOfMedias.push(media.type)
+				allMedias[media.type].push(media)
 			}
 		})
 	})
-	return res.json({ allMedias, allTypesOfMedias })
+	return res.json(allMedias)
 })
 
 module.exports = app
