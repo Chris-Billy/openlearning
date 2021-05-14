@@ -6,6 +6,7 @@ const morgan = require('morgan')
 const jwt = require('jsonwebtoken')
 const sha256 = require('js-sha256')
 const cors = require('cors')
+const { theme } = require('~/tailwind.config')
 const app = express()
 const secret = 'maelwalidchrisandre' // unique key for auth
 
@@ -49,7 +50,8 @@ const courses = [
 		star: '4.7',
 		category: 'Agile',
 		mediasId: [2, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning' // openlearning ou contributeur externe
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Skill' // type de parcours métier ou compétence
 	},
 	{
 		id: 84,
@@ -57,7 +59,107 @@ const courses = [
 		star: '4.5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning' // openlearning ou contributeur externe
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Skill' // type de parcours métier ou compétence
+	},
+	{
+		id: 74,
+		title: 'The Basics of JS',
+		star: '4.1',
+		category: 'Javascript',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job' // type de parcours métier ou compétence
+	},
+	{
+		id: 94,
+		title: 'The Basics of IOS dev',
+		star: '4.9',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Skill' // type de parcours métier ou compétence
+	},
+	{
+		id: 841,
+		title: 'The Basics of IOS dev',
+		star: '2.1',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Skill' // type de parcours métier ou compétence
+	},
+	{
+		id: 811,
+		title: 'The Basics of IOS dev',
+		star: '5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job' // type de parcours métier ou compétence
+	},
+	{
+		id: 89,
+		title: 'The Basics of IOS dev',
+		star: '4',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job' // type de parcours métier ou compétence
+	},
+	{
+		id: 1,
+		title: 'The Basics of IOS dev',
+		star: '1',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Skill' // type de parcours métier ou compétence
+	},
+	{
+		id: 12,
+		title: 'The Basics of IOS dev',
+		star: '4.5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job' // type de parcours métier ou compétence
+	},
+	{
+		id: 22,
+		title: 'The Basics of IOS dev',
+		star: '3.1',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Skill' // type de parcours métier ou compétence
+	},
+	{
+		id: 10,
+		title: 'The Basics of IOS dev',
+		star: '4.2',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job' // type de parcours métier ou compétence
+	},
+	{
+		id: 14,
+		title: 'The Basics of IOS dev',
+		star: '1.6',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Skill' // type de parcours métier ou compétence
+	},
+	{
+		id: 4,
+		title: 'The Basics of IOS dev',
+		star: '0.5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job' // type de parcours métier ou compétence
 	}
 ]
 
