@@ -29,7 +29,7 @@
 			<button
 				class="w-1/2 flex justify-center items-center focus:outline-none"
 				:class="{ 'not-focus': defaulttab, 'font-bold': !defaulttab }"
-				@click="defaulttab = false"
+				@click="checkAccess"
 			>
 				Ressources cours
 			</button>
@@ -41,9 +41,6 @@
 		>
 			<h1 class="font-bold text-3xl">DETAILS DU COURS CHOISI</h1>
 			<pre>{{ myCourse }}</pre>
-			<br />
-			<h1 class="font-bold text-3xl">TOUTES LES RESSOURCES RECUPEREES</h1>
-			<pre>{{ allMedias }}</pre>
 		</div>
 
 		<div
@@ -58,6 +55,8 @@
 						:key="media.id"
 						:title="media.title"
 						:category="key"
+						:idMedia="media.id"
+						:learnedMedias="learnedMedias.data"
 					/>
 				</div>
 			</div>
@@ -66,19 +65,35 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
 	data() {
 		return {
 			defaulttab: true
 		}
 	},
+	computed: {
+		...mapGetters(['isAuthenticated', 'loggedInUser'])
+	},
+	methods: {
+		checkAccess() {
+			if (this.defaulttab !== false) {
+				if (this.isAuthenticated) {
+					this.defaulttab = false
+				} else {
+					this.$router.push('/login')
+				}
+			}
+		}
+	},
 	async asyncData({ $axios }) {
-		// Appel ajax simple via axios à notre api backend express
 		const myCourse = await $axios.$get('/course/127')
 		const allMedias = await $axios.$post('/medias', myCourse.mediasId)
+		const learnedMedias = await $axios.get('/user/150/courses')
 		return {
+			myCourse,
 			allMedias,
-			myCourse
+			learnedMedias
 		}
 	}
 }

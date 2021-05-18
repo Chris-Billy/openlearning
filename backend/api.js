@@ -175,7 +175,7 @@ app.get('/user/:id/courses', checkToken, (req, res) => {
 	// query mongodb with decoded.userid to retrieve all user favorite courses
 	if (req.params.id == decoded.userid) {
 		// TODO mongoose query, for now just a mock from courses
-		return res.json(courses)
+		return res.json(user.learnedmediasId)
 	} else {
 		return res.json({
 			message: 'No favorites courses found for this user id in database'
