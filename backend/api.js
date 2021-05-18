@@ -56,20 +56,294 @@ const medias = [
 
 const courses = [
 	{
-		id: 127,
-		title: 'How to learn Agile with André',
-		star: '4.7',
-		category: 'Agile',
-		mediasId: [2, 3, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning' // openlearning ou contributeur externe
-	},
-	{
 		id: 84,
-		title: 'The Basics of IOS dev',
+		title: 'The Basics of IOS dev (2)',
 		star: '4.5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning' // openlearning ou contributeur externe
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Skill', // type de parcours métier ou compétence
+		nbFav: 90,
+		createdAt: 1620518400
+	},
+	{
+		id: 74,
+		title: 'The Basics of JS (3)',
+		star: '4.1',
+		category: 'Javascript',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 80,
+		createdAt: 1620604800
+	},
+	{
+		id: 94,
+		title: 'The Basics of IOS dev (4)',
+		star: '4.9',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Skill', // type de parcours métier ou compétence
+		nbFav: 70,
+		createdAt: 1620691200
+	},
+	{
+		id: 841,
+		title: 'The Basics of IOS dev (5)',
+		star: '2.1',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Skill', // type de parcours métier ou compétence
+		nbFav: 60,
+		createdAt: 1620777600
+	},
+	{
+		id: 811,
+		title: 'The Basics of IOS dev (6)',
+		star: '5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 50,
+		createdAt: 1620864000
+	},
+	{
+		id: 89,
+		title: 'The Basics of IOS dev (7)',
+		star: '4',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 40,
+		createdAt: 1620950400
+	},
+	{
+		id: 1,
+		title: 'The Basics of IOS dev (8)',
+		star: '1',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Skill', // type de parcours métier ou compétence
+		nbFav: 30,
+		createdAt: 1621036800
+	},
+	{
+		id: 12,
+		title: 'The Basics of IOS dev (9)',
+		star: '4.5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 20,
+		createdAt: 1621123200
+	},
+	{
+		id: 22,
+		title: 'The Basics of IOS dev (10)',
+		star: '3.1',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Skill', // type de parcours métier ou compétence
+		nbFav: 10,
+		createdAt: 1621209600
+	},
+	{
+		id: 10,
+		title: 'The Basics of IOS dev',
+		star: '4.2',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 0
+	},
+	{
+		id: 14,
+		title: 'The Basics of IOS dev',
+		star: '1.6',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Skill', // type de parcours métier ou compétence
+		nbFav: 0
+	},
+	{
+		id: 4,
+		title: 'The Basics of IOS dev',
+		star: '0.5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 0
+	},
+	{
+		id: 811,
+		title: 'The Basics of IOS dev',
+		star: '5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 0
+	},
+	{
+		id: 811,
+		title: 'The Basics of IOS dev',
+		star: '5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 0
+	},
+	{
+		id: 811,
+		title: 'The Basics of IOS dev',
+		star: '5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 0
+	},
+	{
+		id: 811,
+		title: 'The Basics of IOS dev',
+		star: '5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 0
+	},
+	{
+		id: 811,
+		title: 'The Basics of IOS dev',
+		star: '5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 0
+	},
+	{
+		id: 811,
+		title: 'The Basics of IOS dev',
+		star: '5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 0
+	},
+	{
+		id: 811,
+		title: 'The Basics of IOS dev',
+		star: '5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 0
+	},
+	{
+		id: 811,
+		title: 'The Basics of IOS dev',
+		star: '5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 0
+	},
+	{
+		id: 811,
+		title: 'The Basics of IOS dev',
+		star: '5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 0
+	},
+	{
+		id: 811,
+		title: 'The Basics of IOS dev',
+		star: '5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 0
+	},
+	{
+		id: 811,
+		title: 'The Basics of IOS dev',
+		star: '5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 0
+	},
+	{
+		id: 811,
+		title: 'The Basics of IOS dev',
+		star: '5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 0
+	},
+	{
+		id: 811,
+		title: 'The Basics of IOS dev',
+		star: '5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 0
+	},
+	{
+		id: 811,
+		title: 'The Basics of IOS dev',
+		star: '5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 0
+	},
+	{
+		id: 811,
+		title: 'The Basics of IOS dev',
+		star: '5',
+		category: 'Swift',
+		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Job', // type de parcours métier ou compétence
+		nbFav: 0
+	},
+	{
+		id: 127,
+		title: 'How to learn Agile with André (1)',
+		star: '4.7',
+		category: 'Agile',
+		mediasId: [2, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		source: 'openlearning', // openlearning ou contributeur externe
+		theme: 'Skill', // type de parcours métier ou compétence
+		nbFav: 100,
+		createdAt: 1620259200
 	}
 ]
 
@@ -210,6 +484,11 @@ app.post('/medias', (req, res) => {
 		})
 	})
 	return res.json(allMedias)
+})
+
+// Les cours les plus populaires
+app.get('/allCourses', (req, res) => {
+	return res.json(courses)
 })
 
 module.exports = app
