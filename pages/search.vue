@@ -55,306 +55,30 @@
 			<div class="w-full h-full mt-5 pb-14 overflow-auto">
 				<div class="w-full h-full flex flex-col">
 					<div class="w-full flex justify-center flex-col">
-						<h2 class="text-lg ml-5">Les plus populaires</h2>
+						<h2 class="text-lg ml-5">Les mieux notés</h2>
 						<div class="scrollbars flex overflow-x-auto">
 							<div class="flex flex-row p-5">
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
+								<CardSearch
+									v-for="course in bestGradeCoursesArray"
+									:key="course.id"
+									:title="course.title"
+									:stars="course.star"
+									:source="course.source"
+								/>
 							</div>
 						</div>
 					</div>
 					<div>
-						<h2 class="text-lg ml-5">Les mieux notés</h2>
+						<h2 class="text-lg ml-5">Les plus populaires</h2>
 						<div class="scrollbars flex overflow-x-auto">
 							<div class="flex flex-row p-5">
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
+								<CardSearch
+									v-for="course in popularCoursesArray"
+									:key="course.id"
+									:title="course.title"
+									:stars="course.star"
+									:source="course.source"
+								/>
 							</div>
 						</div>
 					</div>
@@ -362,151 +86,13 @@
 						<h2 class="text-lg ml-5">Les plus récents</h2>
 						<div class="scrollbars flex overflow-x-auto">
 							<div class="flex flex-row p-5">
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
+								<CardSearch
+									v-for="course in mostRecentCoursesArray"
+									:key="course.id"
+									:title="course.title"
+									:stars="course.star"
+									:source="course.source"
+								/>
 							</div>
 						</div>
 					</div>
@@ -514,151 +100,7 @@
 						<h2 class="text-lg ml-5">Métiers tendances</h2>
 						<div class="scrollbars flex overflow-x-auto">
 							<div class="flex flex-row p-5">
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
+								<h1>test</h1>
 							</div>
 						</div>
 					</div>
@@ -666,151 +108,7 @@
 						<h2 class="text-lg ml-5">Compétences tendances</h2>
 						<div class="scrollbars flex overflow-x-auto">
 							<div class="flex flex-row p-5">
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
-								<div
-									class="
-										h-52
-										w-52
-										bg-white
-										rounded-large
-										text-center
-										justify-evenly
-										mr-3
-									"
-								>
-									<div class="h-4/6 flex justify-center items-center">
-										<img
-											class="rounded-lg"
-											src="@/static/template_image2.png"
-											alt=""
-										/>
-									</div>
-									<div class="h-2/6">
-										<div class="h-1/2">
-											<h3>Cours de Javascript</h3>
-										</div>
-										<div class="flex justify-center h-1/2">
-											<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
-											<h4 class="text-xs ml-3 mr-3">4.5</h4>
-											<p class="text-xs">Par André De Sousa</p>
-										</div>
-									</div>
-								</div>
+								<h1>test</h1>
 							</div>
 						</div>
 					</div>
@@ -821,7 +119,37 @@
 </template>
 
 <script>
-export default {}
+export default {
+	async asyncData({ $axios }) {
+		// Appel ajax simple via axios à notre api backend express
+		const allCourses = await $axios.$get('/allCourses')
+		return {
+			allCourses
+		}
+	},
+	data() {
+		return {
+			maxCards: 10
+		}
+	},
+	computed: {
+		bestGradeCoursesArray() {
+			return this.allCourses.slice(0, this.maxCards).sort((a, b) => {
+				return b.star - a.star
+			})
+		},
+		popularCoursesArray() {
+			return this.allCourses.slice(0, this.maxCards).sort((a, b) => {
+				return b.nbfav - a.nbfav
+			})
+		},
+		mostRecentCoursesArray() {
+			return this.allCourses.slice(0, this.maxCards).sort((a, b) => {
+				return new Date(b.createdAt * 1000) - new Date(a.createdAt * 1000)
+			})
+		}
+	}
+}
 </script>
 
 <style scoped>
