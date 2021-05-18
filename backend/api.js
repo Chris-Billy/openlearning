@@ -71,8 +71,6 @@ const user = {
 	learnedmediasId: [7, 340, 2] // gestion de la progression (checkbox), medias terminés indépendamment d'un parcours de compétences ou métier
 }
 
-const defaulttab = true
-
 // Get header bearer
 const extractBearerToken = (headerValue) => {
 	if (typeof headerValue !== 'string') {

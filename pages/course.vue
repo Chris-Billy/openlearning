@@ -37,7 +37,15 @@
 
 		<div
 			v-if="defaulttab"
-			class="h-full w-full flex flex-col bg-card-course p-4 overflow-scroll pb-14"
+			class="
+				h-full
+				w-full
+				flex flex-col
+				bg-card-course
+				p-4
+				overflow-scroll
+				pb-14
+			"
 		>
 			<h1 class="font-bold text-3xl">DETAILS DU COURS CHOISI</h1>
 			<pre>{{ myCourse }}</pre>
@@ -45,7 +53,15 @@
 
 		<div
 			v-if="!defaulttab"
-			class="h-full w-full flex flex-col bg-card-course p-4 overflow-y-scroll pb-14"
+			class="
+				h-full
+				w-full
+				flex flex-col
+				bg-card-course
+				p-4
+				overflow-y-scroll
+				pb-14
+			"
 		>
 			<!-- SECTION 1 : VIDEOS -->
 			<div v-if="medias.allTypesOfMedias.includes('video')">
@@ -232,11 +248,6 @@
 
 <script>
 export default {
-	data() {
-		return {
-			defaulttab: true
-		}
-	},
 	async asyncData({ $axios }) {
 		// Appel ajax simple via axios à notre api backend express
 		const myCourse = await $axios.$get('/course/127')
@@ -244,6 +255,11 @@ export default {
 		return {
 			medias,
 			myCourse
+		}
+	},
+	data() {
+		return {
+			defaulttab: true
 		}
 	}
 }
