@@ -13,12 +13,7 @@
 					<div class="flex flex-row justify-center items-center">
 						<div class="h-1 w-1 rounded-full bg-gray-400 mr-1"></div>
 						<div
-							class="
-								text-xs text-gray-400
-								flex flex-row
-								whitespace-nowrap
-								overflow-x-auto
-							"
+							class="text-xs text-gray-400 flex flex-row whitespace-nowrap overflow-x-auto"
 						>
 							<p>Par {{ owner }}</p>
 						</div>
@@ -26,12 +21,7 @@
 					</div>
 					<div clas="flex justify-center items-center">
 						<div
-							class="
-								text-xs text-gray-400
-								flex flex-row
-								justify-center
-								items-center
-							"
+							class="text-xs text-gray-400 flex flex-row justify-center items-center"
 						>
 							<p class="mt-1">{{ category }}</p>
 						</div>

@@ -1,47 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
-body{
-    overflow: hidden;
+body {
+	overflow: hidden;
 }
 
 #myVideo {
-    position: fixed;
-    min-width: 100%;
-    min-height: 100%;
-    filter:brightness(40%);
+	position: fixed;
+	min-width: 100%;
+	min-height: 100%;
+	filter: brightness(40%);
 }
 
 /* Add some content at the bottom of the video/page */
 .content {
-    position: fixed;
+	position: fixed;
 }
 
-#logoOpen{
-    height:150px;
-    width: 150px;
-    transform: scaleX(-1);
-    padding:0;
-    margin-right:-20px;
+#logoOpen {
+	height: 150px;
+	width: 150px;
+	transform: scaleX(-1);
+	padding: 0;
+	margin-right: -20px;
 }
 
-@media (min-width: 888px) and (max-width: 1600px){
-    #myVideo{
-        display:none;
-    }
-    .content{
-        background: url("public/Screenshot_1.png");
-        background-size: cover;
-    }
+@media (min-width: 888px) and (max-width: 1600px) {
+	#myVideo {
+		display: none;
+	}
+	.content {
+		background: url('Screenshot_1.png');
+		background-size: cover;
+	}
 }
-.title-font{
-    font-family: 'Lato', sans-serif;
+.title-font {
+	font-family: 'Lato', sans-serif;
 }
-.punchline{
-    font-family: 'Lato', sans-serif;
+.punchline {
+	font-family: 'Lato', sans-serif;
 }
-#timer{
-    font-family: 'Lato', sans-serif;
+#timer {
+	font-family: 'Lato', sans-serif;
 }
-.relative{
-    font-family: 'Lato', sans-serif;
+.relative {
+	font-family: 'Lato', sans-serif;
 }
