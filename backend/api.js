@@ -353,7 +353,16 @@ const user = {
 	password: '61be55a8e2f6b4e172338bddf184d6dbee29c98853e0a0485ecee7f27b9af0b4', // aaaa
 	firstname: 'Endray',
 	lastname: 'De Sousa',
-	myfavoritecoursesId: [127, 84],
+	myfavoritecoursesId: [
+		{
+			id: 127,
+			done: false
+		},
+		{
+			id: 84,
+			done: true
+		}
+	],
 	learnedmediasId: [7, 340, 2] // gestion de la progression (checkbox), medias terminés indépendamment d'un parcours de compétences ou métier
 }
 
@@ -484,6 +493,31 @@ app.post('/medias', (req, res) => {
 		})
 	})
 	return res.json(allMedias)
+})
+
+app.post('/courses/actuals', (req, res) => {
+	const allCourses = []
+	const idsCourses = req.body
+	courses.forEach((cours) => {
+		idsCourses.forEach((pos) => {
+			if (cours.id == pos.id && !pos.done) {
+				allCourses.push(cours)
+			}
+		})
+	})
+	return res.json(allCourses)
+})
+app.post('/courses/done', (req, res) => {
+	const allCourses = []
+	const idsCourses = req.body
+	courses.forEach((cours) => {
+		idsCourses.forEach((pos) => {
+			if (cours.id == pos.id && pos.done) {
+				allCourses.push(cours)
+			}
+		})
+	})
+	return res.json(allCourses)
 })
 
 // Les cours les plus populaires

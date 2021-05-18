@@ -63,18 +63,31 @@
 				class="mt-5 h-full w-full flex overflow-scroll flex-col"
 			>
 				<CardCourses
-					:key="''"
-					:card-title="'Lorem ipsum dolor sit ametLorem ipsum dolor sit amet'"
-					:nb-star="'4'"
-					:owner="'Nom Prénom'"
-					:category="'Catégorie'"
+					v-for="course in unfinishedCourses"
+					:key="course.id"
+					:card-title="course.title"
+					:nb-star="course.star"
+					:owner="course.source"
+					:category="course.category"
 				/>
 			</div>
 			<div
 				v-if="!actualTab"
-				class="h-full w-full flex justify-center items-center"
+				class="mt-5 h-full w-full flex overflow-scroll flex-col"
 			>
-				<p>Vous n'avez encore terminé aucun cours.</p>
+				<div v-if="false" class="flex justify-center items-center">
+					<p>Vous n'avez encore terminé aucun cours.</p>
+				</div>
+				<div v-else>
+					<CardCourses
+						v-for="course in doneCourses"
+						:key="course.id"
+						:card-title="course.title"
+						:nb-star="course.star"
+						:owner="course.source"
+						:category="course.category"
+					/>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -93,9 +106,19 @@ export default {
 		// Appel ajax simple via axios à notre api backend express
 		const user = await $axios.$get('/user')
 		const mycourses = await $axios.$get('/user/' + user.id + '/courses')
+		const unfinishedCourses = await $axios.$post(
+			'/courses/actuals',
+			user.myfavoritecoursesId
+		)
+		const doneCourses = await $axios.$post(
+			'/courses/done',
+			user.myfavoritecoursesId
+		)
 		return {
 			user,
-			mycourses
+			mycourses,
+			unfinishedCourses,
+			doneCourses
 		}
 	}
 }

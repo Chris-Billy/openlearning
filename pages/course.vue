@@ -37,7 +37,15 @@
 
 		<div
 			v-if="defaulttab"
-			class="h-full w-full flex flex-col bg-card-course p-4 overflow-scroll pb-14"
+			class="
+				h-full
+				w-full
+				flex flex-col
+				bg-card-course
+				p-4
+				overflow-scroll
+				pb-14
+			"
 		>
 			<h1 class="font-bold text-3xl">DETAILS DU COURS CHOISI</h1>
 			<pre>{{ myCourse }}</pre>
@@ -45,7 +53,15 @@
 
 		<div
 			v-if="!defaulttab"
-			class="h-full w-full flex flex-col bg-card-course p-4 overflow-y-scroll pb-14"
+			class="
+				h-full
+				w-full
+				flex flex-col
+				bg-card-course
+				p-4
+				overflow-y-scroll
+				pb-14
+			"
 		>
 			<div v-for="(medias, key) in allMedias" :key="medias.id">
 				<div v-if="medias != false" class="mb-6">

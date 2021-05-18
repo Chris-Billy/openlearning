@@ -13,7 +13,7 @@
 						<div class="h-1/2">
 							<p class="wb text-white">Heureux de vous revoir,</p>
 							<p class="names text-white font-bold">
-								{{ loggedInUser.firstname }} {{ loggedInUser.lastname }}
+								{{ user.firstname }} {{ user.lastname }}
 							</p>
 						</div>
 					</div>
@@ -34,11 +34,11 @@
 				<p class="text-lg font-medium m-5">Recommandations</p>
 				<div class="h-3/4 w-full overflow-scroll flex flex-col">
 					<CardCourses
-						v-for="course in mycourses"
+						v-for="course in allCourses"
 						:key="course.title"
 						:card-title="course.title"
 						:nb-star="course.star"
-						:owner="user.firstname + ' ' + user.lastname"
+						:owner="course.source"
 						:category="course.category"
 					/>
 				</div>
@@ -56,9 +56,11 @@ export default {
 		// Appel ajax simple via axios à notre api backend express
 		const user = await $axios.$get('/user')
 		const mycourses = await $axios.$get('/user/' + user.id + '/courses')
+		const allCourses = await $axios.$get('/allCourses')
 		return {
 			user,
-			mycourses
+			mycourses,
+			allCourses
 		}
 	},
 	computed: {
