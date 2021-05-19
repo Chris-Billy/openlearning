@@ -78,7 +78,7 @@
 				/>
 			</svg>
 		</NuxtLink>
-		<NuxtLink to="">
+		<NuxtLink to="settingspage">
 			<svg
 				width="22"
 				height="22"
