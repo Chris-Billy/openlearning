@@ -134,19 +134,25 @@ export default {
 	},
 	computed: {
 		bestGradeCoursesArray() {
-			return this.allCourses.slice(0, this.maxCards).sort((a, b) => {
-				return b.star - a.star
-			})
+			return this.allCourses
+				.sort((a, b) => {
+					return b.star - a.star
+				})
+				.slice(0, this.maxCards)
 		},
 		popularCoursesArray() {
-			return this.allCourses.slice(0, this.maxCards).sort((a, b) => {
-				return b.nbfav - a.nbfav
-			})
+			return this.allCourses
+				.sort((a, b) => {
+					return b.nbfav - a.nbfav
+				})
+				.slice(0, this.maxCards)
 		},
 		mostRecentCoursesArray() {
-			return this.allCourses.slice(0, this.maxCards).sort((a, b) => {
-				return new Date(b.createdAt * 1000) - new Date(a.createdAt * 1000)
-			})
+			return this.allCourses
+				.sort((a, b) => {
+					return new Date(b.createdAt * 1000) - new Date(a.createdAt * 1000)
+				})
+				.slice(0, this.maxCards)
 		}
 	}
 }
