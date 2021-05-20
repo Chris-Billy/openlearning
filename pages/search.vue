@@ -59,7 +59,7 @@
 						<div class="scrollbars flex overflow-x-auto">
 							<div class="flex flex-row p-5">
 								<CardSearch
-									v-for="course in bestGradeCoursesArray"
+									v-for="course in mostRatedCourses"
 									:key="course.id"
 									:title="course.title"
 									:stars="course.star"
@@ -73,42 +73,26 @@
 						<div class="scrollbars flex overflow-x-auto">
 							<div class="flex flex-row p-5">
 								<CardSearch
-									v-for="course in popularCoursesArray"
+									v-for="course in mostPopularCourses"
 									:key="course.id"
 									:title="course.title"
 									:stars="course.star"
 									:source="course.source"
 								/>
-							</div>
-						</div>
-					</div>
-					<div>
-						<h2 class="text-lg ml-5">Les plus récents</h2>
-						<div class="scrollbars flex overflow-x-auto">
-							<div class="flex flex-row p-5">
-								<CardSearch
-									v-for="course in mostRecentCoursesArray"
-									:key="course.id"
-									:title="course.title"
-									:stars="course.star"
-									:source="course.source"
-								/>
-							</div>
-						</div>
-					</div>
-					<div>
-						<h2 class="text-lg ml-5">Métiers tendances</h2>
-						<div class="scrollbars flex overflow-x-auto">
-							<div class="flex flex-row p-5">
-								<h1>test</h1>
 							</div>
 						</div>
 					</div>
 					<div class="pb-14">
-						<h2 class="text-lg ml-5">Compétences tendances</h2>
+						<h2 class="text-lg ml-5">Les plus récents</h2>
 						<div class="scrollbars flex overflow-x-auto">
 							<div class="flex flex-row p-5">
-								<h1>test</h1>
+								<CardSearch
+									v-for="course in mostRecentCourses"
+									:key="course.id"
+									:title="course.title"
+									:stars="course.star"
+									:source="course.source"
+								/>
 							</div>
 						</div>
 					</div>
@@ -122,37 +106,13 @@
 export default {
 	async asyncData({ $axios }) {
 		// Appel ajax simple via axios à notre api backend express
-		const allCourses = await $axios.$get('/allCourses')
+		const mostRatedCourses = await $axios.$get('/mostRatedCourses')
+		const mostPopularCourses = await $axios.$get('/mostPopularCourses')
+		const mostRecentCourses = await $axios.$get('/mostRecentCourses')
 		return {
-			allCourses
-		}
-	},
-	data() {
-		return {
-			maxCards: 10
-		}
-	},
-	computed: {
-		bestGradeCoursesArray() {
-			return this.allCourses
-				.sort((a, b) => {
-					return b.star - a.star
-				})
-				.slice(0, this.maxCards)
-		},
-		popularCoursesArray() {
-			return this.allCourses
-				.sort((a, b) => {
-					return b.nbfav - a.nbfav
-				})
-				.slice(0, this.maxCards)
-		},
-		mostRecentCoursesArray() {
-			return this.allCourses
-				.sort((a, b) => {
-					return new Date(b.createdAt * 1000) - new Date(a.createdAt * 1000)
-				})
-				.slice(0, this.maxCards)
+			mostRatedCourses,
+			mostPopularCourses,
+			mostRecentCourses
 		}
 	}
 }
