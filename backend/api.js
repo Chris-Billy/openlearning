@@ -8,11 +8,35 @@ const sha256 = require('js-sha256')
 const cors = require('cors')
 const app = express()
 const secret = 'maelwalidchrisandre' // unique key for auth
+const mongoose = require('mongoose')
 
+require('dotenv').config()
 app.use(cors())
 app.use(morgan('tiny'))
 app.use(bodyParser.json())
 app.use(express.urlencoded({ extended: true }))
+
+// Connexion to Mongodb database
+try {
+	mongoose.connect(
+		'mongodb://' +
+			process.env.DB_USER +
+			':' +
+			process.env.DB_PASS +
+			'@' +
+			process.env.DB_HOST +
+			':' +
+			process.env.DB_PORT +
+			'/' +
+			process.env.DB_NAME,
+		{
+			useNewUrlParser: true,
+			useUnifiedTopology: true
+		}
+	)
+} catch (error) {
+	console.log(error)
+}
 
 const typeMedia = [
 	'video',

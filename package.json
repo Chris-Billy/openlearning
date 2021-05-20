@@ -16,9 +16,11 @@
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.9.1",
     "cors": "^2.8.5",
+    "dotenv": "^9.0.2",
     "express": "^4.17.1",
     "js-sha256": "^0.9.0",
     "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.10",
     "morgan": "^1.10.0",
     "nuxt": "^2.15.5"
   },
