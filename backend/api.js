@@ -593,4 +593,8 @@ app.get('/mostRecentCourses', (req, res) => {
 	return res.json(recent)
 })
 
+app.get('/allCourses', (req, res) => {
+	return res.json(courses)
+})
+
 module.exports = app

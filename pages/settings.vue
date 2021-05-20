@@ -43,7 +43,7 @@
 				</div>
 				<div class="h-1/5 w-full flex items-center">
 					<div class="w-full flex items-center justify-between">
-						<p>Sécurité du compte</p>
+						<NuxtLink to="account"><p>Modifier mon compte</p></NuxtLink>
 						<svg
 							width="8"
 							height="12"
@@ -173,17 +173,13 @@
 
 <script>
 export default {
-	name: 'SettingsPage',
+	name: 'Settings',
 	middleware: 'auth',
 	async asyncData({ $axios }) {
 		// Appel ajax simple via axios à notre api backend express
 		const user = await $axios.$get('/user')
-		const mycourses = await $axios.$get('/user/' + user.id + '/courses')
-		const allCourses = await $axios.$get('/allCourses')
 		return {
-			user,
-			mycourses,
-			allCourses
+			user
 		}
 	}
 }
