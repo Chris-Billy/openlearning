@@ -41,7 +41,6 @@
 		>
 			<h1 class="font-bold text-3xl">DETAILS DU COURS CHOISI</h1>
 			<pre>{{ myCourse }}</pre>
-			<!-- <pre>{{ this.$route.params }}</pre> -->
 		</div>
 
 		<div
