@@ -22,6 +22,11 @@
 
 <script>
 export default {
-	props: ['id', 'title', 'stars', 'source']
+	props: {
+		id: { type: Number, default: 0 },
+		title: { type: String, default: '' },
+		stars: { type: Number, default: 0 },
+		source: { type: String, default: '' }
+	}
 }
 </script>
