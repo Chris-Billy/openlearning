@@ -66,7 +66,10 @@
 			<p class="mb-4">selected langue = {{ selectedLanguage }}</p>
 
 			<div v-for="(medias, key) in allMedias" :key="medias.id">
-				<div v-if="medias != false" class="mb-6">
+				<div
+					v-if="medias != false && displayCategorie(medias, selectedLanguage)"
+					class="mb-6"
+				>
 					<CategoryMedia :name="key + 's'" />
 					<SectionCourse
 						v-for="media in medias"
@@ -99,8 +102,7 @@ export default {
 			allMedias: '',
 			learnedMedias: '',
 			message: false,
-			selectedLanguage: 'fr-en',
-			test: ''
+			selectedLanguage: 'fr-en'
 		}
 	},
 	computed: {
@@ -121,6 +123,15 @@ export default {
 				}
 				this.defaulttab = false
 			}
+		},
+		displayCategorie(medias, selectedLanguage) {
+			let display = false
+			medias.forEach((media) => {
+				if (selectedLanguage.includes(media.language)) {
+					display = true
+				}
+			})
+			return display
 		}
 	}
 }
