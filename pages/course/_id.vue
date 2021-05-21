@@ -90,6 +90,12 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
+	async asyncData({ params, $axios }) {
+		const myCourse = await $axios.$get('/course/' + params.id)
+		return {
+			myCourse
+		}
+	},
 	data() {
 		return {
 			defaulttab: true,
@@ -97,12 +103,6 @@ export default {
 			learnedMedias: '',
 			message: false,
 			selectedLanguage: 'fr-en'
-		}
-	},
-	async asyncData({ params, $axios }) {
-		const myCourse = await $axios.$get('/course/' + params.id)
-		return {
-			myCourse
 		}
 	},
 	computed: {

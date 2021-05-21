@@ -25,7 +25,7 @@ export default {
 	props: {
 		id: { type: Number, default: 0 },
 		title: { type: String, default: '' },
-		stars: { type: Number, default: 0 },
+		stars: { type: String, default: '' },
 		source: { type: String, default: '' }
 	}
 }
