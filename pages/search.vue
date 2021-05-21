@@ -66,6 +66,7 @@
 							<div class="flex flex-row p-5">
 								<CardSearch
 									v-for="course in mostRatedCourses"
+									:id="course.id"
 									:key="course.id"
 									:title="course.title"
 									:stars="course.star"
@@ -80,6 +81,7 @@
 							<div class="flex flex-row p-5">
 								<CardSearch
 									v-for="course in mostPopularCourses"
+									:id="course.id"
 									:key="course.id"
 									:title="course.title"
 									:stars="course.star"
@@ -94,6 +96,7 @@
 							<div class="flex flex-row p-5">
 								<CardSearch
 									v-for="course in mostRecentCourses"
+									:id="course.id"
 									:key="course.id"
 									:title="course.title"
 									:stars="course.star"
