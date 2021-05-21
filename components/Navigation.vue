@@ -46,7 +46,7 @@
 				/>
 			</svg>
 		</NuxtLink>
-		<NuxtLink to="/mycourses">
+		<NuxtLink v-if="isAuthenticated" to="/mycourses">
 			<svg
 				width="22"
 				height="22"
@@ -100,7 +100,12 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex' // vuex here only used for nuxt auth, otherwise, we use composition api for global store
 export default {
-	name: 'Navigation'
+	name: 'Navigation',
+	middleware: 'auth',
+	computed: {
+		...mapGetters(['isAuthenticated', 'loggedInUser'])
+	}
 }
 </script>
