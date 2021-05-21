@@ -2,7 +2,7 @@
 	<div
 		class="fixed bottom-0 w-screen h-14 rounded-t-large flex items-center justify-evenly bg-white"
 	>
-		<NuxtLink to="home">
+		<NuxtLink to="/home">
 			<svg
 				width="22"
 				height="22"
@@ -24,7 +24,7 @@
 				/>
 			</svg>
 		</NuxtLink>
-		<NuxtLink to="search">
+		<NuxtLink to="/search">
 			<svg
 				width="22"
 				height="22"
@@ -46,7 +46,7 @@
 				/>
 			</svg>
 		</NuxtLink>
-		<NuxtLink to="mycourses">
+		<NuxtLink to="/mycourses">
 			<svg
 				width="22"
 				height="22"
@@ -68,7 +68,7 @@
 				/>
 			</svg>
 		</NuxtLink>
-		<NuxtLink to="settingspage">
+		<NuxtLink to="/settings">
 			<svg
 				width="22"
 				height="22"

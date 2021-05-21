@@ -567,7 +567,7 @@ app.post('/courses/done', (req, res) => {
 	return res.json(allCourses)
 })
 
-// Les cours les plus populaires
+// Get the 10 most rated courses
 app.get('/mostRatedCourses', (req, res) => {
 	const rated = courses
 		.slice()
@@ -578,6 +578,7 @@ app.get('/mostRatedCourses', (req, res) => {
 	return res.json(rated)
 })
 
+// Get the 10 most popular courses
 app.get('/mostPopularCourses', (req, res) => {
 	const popular = courses
 		.slice()
@@ -588,6 +589,7 @@ app.get('/mostPopularCourses', (req, res) => {
 	return res.json(popular)
 })
 
+// Get the 10 most recent courses
 app.get('/mostRecentCourses', (req, res) => {
 	const recent = courses
 		.slice()
@@ -599,7 +601,11 @@ app.get('/mostRecentCourses', (req, res) => {
 })
 
 app.get('/allCourses', (req, res) => {
+<<<<<<< HEAD
     return res.json(courses)
+=======
+	return res.json(courses)
+>>>>>>> 4897e517622f8efcd16ffb8dc6fca70b276ee626
 })
 
 module.exports = app

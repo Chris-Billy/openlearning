@@ -22,12 +22,18 @@
 		<div
 			class="flex h-5/6 w-full flex-col rounded-t-large bg-bg-card items-center"
 		>
-			<form class="w-10/12 items-center mt-5" action="">
+			<form
+				class="w-10/12 items-center mt-5"
+				action=""
+				@submit.prevent="onSubmit()"
+			>
 				<div class="flex h-14 w-full rounded-lg bg-white items-center">
 					<input
+						v-model="inputSearch"
 						class="h-full w-full border-none ml-5 outline-none bg-transparent"
 						type="text"
 						placeholder="Métier ou compétences"
+						@input="checkDefault()"
 					/>
 					<svg
 						class="mr-5 ml-5"
@@ -54,7 +60,7 @@
 			</form>
 			<div class="w-full h-full mt-5 pb-14 overflow-auto">
 				<div class="w-full h-full flex flex-col">
-					<div class="w-full flex justify-center flex-col">
+					<div v-if="defaultScreen" class="w-full flex justify-center flex-col">
 						<h2 class="text-lg ml-5">Les mieux notés</h2>
 						<div class="scrollbars flex overflow-x-auto">
 							<div class="flex flex-row p-5">
@@ -68,7 +74,7 @@
 							</div>
 						</div>
 					</div>
-					<div>
+					<div v-if="defaultScreen">
 						<h2 class="text-lg ml-5">Les plus populaires</h2>
 						<div class="scrollbars flex overflow-x-auto">
 							<div class="flex flex-row p-5">
@@ -82,7 +88,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="pb-14">
+					<div v-if="defaultScreen" class="pb-14">
 						<h2 class="text-lg ml-5">Les plus récents</h2>
 						<div class="scrollbars flex overflow-x-auto">
 							<div class="flex flex-row p-5">
@@ -93,6 +99,25 @@
 									:stars="course.star"
 									:source="course.source"
 								/>
+							</div>
+						</div>
+					</div>
+					<div
+						v-if="!defaultScreen"
+						class="w-full flex justify-center flex-col"
+					>
+						<h2 class="text-lg ml-5">Métier</h2>
+						<div class="scrollbars flex overflow-x-auto">
+							<div class="flex flex-row p-5">
+								{{ inputSearch }}
+							</div>
+						</div>
+					</div>
+					<div v-if="!defaultScreen">
+						<h2 class="text-lg ml-5">Compétences</h2>
+						<div class="scrollbars flex overflow-x-auto">
+							<div class="flex flex-row p-5">
+								{{ inputSearch }}
 							</div>
 						</div>
 					</div>
@@ -109,10 +134,25 @@ export default {
 		const mostRatedCourses = await $axios.$get('/mostRatedCourses')
 		const mostPopularCourses = await $axios.$get('/mostPopularCourses')
 		const mostRecentCourses = await $axios.$get('/mostRecentCourses')
+		// const jobCoursesByKeyword = await $axios.get('')
+		// const skillCourseByKeyword = await $axios.get('')
 		return {
 			mostRatedCourses,
 			mostPopularCourses,
 			mostRecentCourses
+		}
+	},
+	data() {
+		return {
+			inputSearch: '',
+			defaultScreen: true
+		}
+	},
+	methods: {
+		checkDefault() {
+			if (this.defaultScreen !== false) {
+				this.defaultScreen = false
+			}
 		}
 	}
 }
