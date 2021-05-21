@@ -1,5 +1,5 @@
 <template>
-	<nuxt-link to="/course">
+	<router-link :to="'/course/' + id">
 		<div
 			class="h-52 w-52 bg-white rounded-large text-center justify-evenly mr-3"
 		>
@@ -8,7 +8,7 @@
 			</div>
 			<div class="h-2/6">
 				<div class="h-1/2 leading-none">
-					<h3>{{ title }}</h3>
+					<h3>{{ title }} {{ id }}</h3>
 				</div>
 				<div class="flex justify-center h-1/2">
 					<img class="h-3.5 w-3.5" src="@/static/star.png" alt="" />
@@ -17,7 +17,7 @@
 				</div>
 			</div>
 		</div>
-	</nuxt-link>
+	</router-link>
 </template>
 
 <script>

@@ -35,7 +35,7 @@
 				<div class="h-3/4 w-full overflow-scroll flex flex-col">
 					<CardCourses
 						v-for="course in allCourses"
-						:key="course.title"
+						:key="course.id"
 						:card-title="course.title"
 						:nb-star="course.star"
 						:owner="course.source"

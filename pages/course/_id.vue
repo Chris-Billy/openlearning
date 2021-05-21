@@ -41,6 +41,7 @@
 		>
 			<h1 class="font-bold text-3xl">DETAILS DU COURS CHOISI</h1>
 			<pre>{{ myCourse }}</pre>
+			<!-- <pre>{{ this.$route.params }}</pre> -->
 		</div>
 
 		<div
@@ -90,12 +91,6 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
-	async asyncData({ $axios }) {
-		const myCourse = await $axios.$get('/course/127')
-		return {
-			myCourse
-		}
-	},
 	data() {
 		return {
 			defaulttab: true,
@@ -103,6 +98,12 @@ export default {
 			learnedMedias: '',
 			message: false,
 			selectedLanguage: 'fr-en'
+		}
+	},
+	async asyncData({ params, $axios }) {
+		const myCourse = await $axios.$get('/course/' + params.id)
+		return {
+			myCourse
 		}
 	},
 	computed: {

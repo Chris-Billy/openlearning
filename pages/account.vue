@@ -29,57 +29,26 @@
 				<div class="h-4/5 w-11/12 flex flex-col">
 					<form class="w-full flex flex-col" action="">
 						<input
-							class="
-								w-full
-								border-none
-								outline-none
-								bg-white
-								p-2
-								mb-2
-								rounded-md
-							"
+							class="w-full border-none outline-none bg-white p-2 mb-2 rounded-md"
 							type="text"
 							name="name"
 							placeholder="Modifier votre nom"
 						/>
 						<input
-							class="
-								w-full
-								border-none
-								outline-none
-								bg-white
-								p-2
-								mb-2
-								rounded-md
-							"
+							class="w-full border-none outline-none bg-white p-2 mb-2 rounded-md"
 							type="text"
 							name="email"
 							placeholder="Modifier votre email"
 						/>
 						<input
-							class="
-								w-full
-								border-none
-								outline-none
-								bg-white
-								p-2
-								mb-2
-								rounded-md
-							"
+							class="w-full border-none outline-none bg-white p-2 mb-2 rounded-md"
 							type="text"
 							name="email"
 							placeholder="Lien pour une image de profil"
 						/>
 					</form>
 					<button
-						class="
-							bg-yellow-400
-							h-9
-							w-auto
-							rounded-lg
-							focus:bg-yellow-500
-							focus:outline-none
-						"
+						class="bg-yellow-400 h-9 w-auto rounded-lg focus:bg-yellow-500 focus:outline-none"
 					>
 						Modifier
 					</button>
