@@ -601,11 +601,7 @@ app.get('/mostRecentCourses', (req, res) => {
 })
 
 app.get('/allCourses', (req, res) => {
-<<<<<<< HEAD
-    return res.json(courses)
-=======
 	return res.json(courses)
->>>>>>> 4897e517622f8efcd16ffb8dc6fca70b276ee626
 })
 
 module.exports = app
