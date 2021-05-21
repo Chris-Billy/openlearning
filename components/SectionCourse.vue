@@ -1,5 +1,8 @@
 <template>
-	<div class="flex justify-between items-center py-2">
+	<div
+		v-if="selectedLanguage.includes(language)"
+		class="flex justify-between items-center py-2"
+	>
 		<div class="max-w-80/100">
 			<p>{{ title }}</p>
 			<p class="text-xs">
@@ -9,7 +12,7 @@
 				- 5 min
 			</p>
 			<p>id = {{ idMedia }}</p>
-			<p>id cours checked = {{ learnedMedias }}</p>
+			<p>langue = {{ language }}</p>
 		</div>
 		<input
 			class="w-6 h-6 mr-2 cursor-pointer"
@@ -22,7 +25,14 @@
 
 <script>
 export default {
-	props: ['title', 'category', 'idMedia', 'learnedMedias'],
+	props: [
+		'title',
+		'category',
+		'idMedia',
+		'learnedMedias',
+		'language',
+		'selectedLanguage'
+	],
 	methods: {
 		changeStatus(idMedia) {
 			const learnedMedias = this.learnedMedias

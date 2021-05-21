@@ -56,25 +56,29 @@ const medias = [
 		id: 2,
 		type: typeMedia[0], // cas possibles : audio, video, book, cheatsheet,...
 		title: 'How to make french croissants',
-		link: 'https://www.youtube.com/watch?v=yw-4zNOYTjI'
+		link: 'https://www.youtube.com/watch?v=yw-4zNOYTjI',
+		language: 'fr'
 	},
 	{
 		id: 3,
 		type: typeMedia[1], // cas possibles : audio, video, book, cheatsheet,...
 		title: 'How to learn Python',
-		link: 'https://courspython.com/introduction-python.html'
+		link: 'https://courspython.com/introduction-python.html',
+		language: 'en'
 	},
 	{
 		id: 7,
 		type: typeMedia[2], // cas possibles : audio, video, book, cheatsheet,...
 		title: 'All about Python',
-		link: 'https://www.lebigdata.fr/python-langage-definition'
+		link: 'https://www.lebigdata.fr/python-langage-definition',
+		language: 'fr'
 	},
 	{
 		id: 340,
 		type: typeMedia[1], // cas possibles : audio, video, book, cheatsheet,...
 		title: 'How to learn Python',
-		link: 'https://courspython.com/introduction-python.html'
+		link: 'https://courspython.com/introduction-python.html',
+		language: 'en'
 	}
 ]
 
@@ -381,7 +385,7 @@ const courses = [
 		title: 'How to learn Agile with André (1)',
 		star: '4.7',
 		category: 'Agile',
-		mediasId: [2, 7], // Ici on a que 2 médias pour le cours ci-dessus
+		mediasId: [2, 7, 3], // Ici on a que 2 médias pour le cours ci-dessus
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Skill', // type de parcours métier ou compétence
 		nbFav: 100,
@@ -549,6 +553,7 @@ app.post('/courses/actuals', (req, res) => {
 	})
 	return res.json(allCourses)
 })
+
 app.post('/courses/done', (req, res) => {
 	const allCourses = []
 	const idsCourses = req.body
@@ -591,6 +596,10 @@ app.get('/mostRecentCourses', (req, res) => {
 		})
 		.slice(0, 10)
 	return res.json(recent)
+})
+
+app.get('/allCourses', (req, res) => {
+    return res.json(courses)
 })
 
 module.exports = app

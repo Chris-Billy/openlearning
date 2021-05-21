@@ -37,15 +37,7 @@
 
 		<div
 			v-if="defaulttab"
-			class="
-				h-full
-				w-full
-				flex flex-col
-				bg-card-course
-				p-4
-				overflow-scroll
-				pb-14
-			"
+			class="h-full w-full flex flex-col bg-card-course p-4 overflow-scroll pb-14"
 		>
 			<h1 class="font-bold text-3xl">DETAILS DU COURS CHOISI</h1>
 			<pre>{{ myCourse }}</pre>
@@ -53,17 +45,26 @@
 
 		<div
 			v-if="!defaulttab"
-			class="
-				h-full
-				w-full
-				flex flex-col
-				bg-card-course
-				p-4
-				overflow-y-scroll
-				pb-14
-			"
+			class="h-full w-full flex flex-col bg-card-course p-4 overflow-y-scroll pb-14"
 		>
-			<div v-if="message">{{ message }}</div>
+			<div
+				v-if="message"
+				class="flex justify-center items-center w-full h-full text-3xl text-center"
+			>
+				{{ message }}
+			</div>
+			<div>
+				<label for="lang">Langue des cours à afficher</label>
+				<select v-model="selectedLanguage" class="mb-4" name="lang">
+					<option :value="'fr-en'">Français et Anglais</option>
+					<option :value="'fr'">Français</option>
+					<option :value="'en'">Anglais</option>
+				</select>
+			</div>
+
+			<p>id cours checked = {{ learnedMedias.data }}</p>
+			<p class="mb-4">selected langue = {{ selectedLanguage }}</p>
+
 			<div v-for="(medias, key) in allMedias" :key="medias.id">
 				<div v-if="medias != false" class="mb-6">
 					<CategoryMedia :name="key + 's'" />
@@ -74,6 +75,8 @@
 						:category="key"
 						:id-media="media.id"
 						:learned-medias="learnedMedias.data"
+						:language="media.language"
+						:selected-language="selectedLanguage"
 					/>
 				</div>
 			</div>
@@ -86,12 +89,8 @@ import { mapGetters } from 'vuex'
 export default {
 	async asyncData({ $axios }) {
 		const myCourse = await $axios.$get('/course/127')
-		// const allMedias = await $axios.$post('/medias', myCourse.mediasId)
-		// const learnedMedias = await $axios.get('/user/150/courses')
 		return {
 			myCourse
-			// allMedias,
-			// learnedMedias
 		}
 	},
 	data() {
@@ -99,7 +98,9 @@ export default {
 			defaulttab: true,
 			allMedias: '',
 			learnedMedias: '',
-			message: false
+			message: false,
+			selectedLanguage: 'fr-en',
+			test: ''
 		}
 	},
 	computed: {
@@ -116,8 +117,7 @@ export default {
 					this.learnedMedias = await this.$axios.get('/user/150/courses')
 				} else {
 					this.message =
-						'Merci de vous connecter pour accéder aux détails du cours (message de test à améliorer)'
-					// this.$router.push('/login')
+						'Merci de vous connecter pour accéder aux détails du cours.'
 				}
 				this.defaulttab = false
 			}
