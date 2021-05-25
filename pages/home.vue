@@ -39,6 +39,7 @@
 						:card-title="course.title"
 						:nb-star="course.star"
 						:owner="course.source"
+						:id="course.id"
 						:category="course.category"
 					/>
 				</div>
