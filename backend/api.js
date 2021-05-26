@@ -86,6 +86,7 @@ const courses = [
 	{
 		id: 818,
 		title: 'The Basics of IOS dev',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -108,6 +109,7 @@ const courses = [
 	{
 		id: 84,
 		title: 'The Basics of IOS dev (2)',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '4.5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -129,6 +131,7 @@ const courses = [
 	{
 		id: 74,
 		title: 'The Basics of JS (3)',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '4.1',
 		category: 'Javascript',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -150,6 +153,7 @@ const courses = [
 	{
 		id: 94,
 		title: 'The Basics of IOS dev (4)',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '4.9',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -171,6 +175,7 @@ const courses = [
 	{
 		id: 841,
 		title: 'The Basics of IOS dev (5)',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '2.1',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -192,6 +197,7 @@ const courses = [
 	{
 		id: 811,
 		title: 'The Basics of IOS dev (6)',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -213,6 +219,7 @@ const courses = [
 	{
 		id: 89,
 		title: 'The Basics of IOS dev (7)',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '4',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -234,6 +241,7 @@ const courses = [
 	{
 		id: 1,
 		title: 'The Basics of IOS dev (8)',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '1',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -255,6 +263,7 @@ const courses = [
 	{
 		id: 12,
 		title: 'The Basics of IOS dev (9)',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '4.5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -276,6 +285,7 @@ const courses = [
 	{
 		id: 22,
 		title: 'The Basics of IOS dev (10)',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '3.1',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -297,6 +307,7 @@ const courses = [
 	{
 		id: 10,
 		title: 'The Basics of IOS dev',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '4.2',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -318,6 +329,7 @@ const courses = [
 	{
 		id: 14,
 		title: 'The Basics of IOS dev',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '1.6',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -339,6 +351,7 @@ const courses = [
 	{
 		id: 4,
 		title: 'The Basics of IOS dev',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '0.5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -360,6 +373,7 @@ const courses = [
 	{
 		id: 819,
 		title: 'The Basics of IOS dev',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -381,6 +395,7 @@ const courses = [
 	{
 		id: 817,
 		title: 'The Basics of IOS dev',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -402,6 +417,7 @@ const courses = [
 	{
 		id: 816,
 		title: 'The Basics of IOS dev',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -423,6 +439,7 @@ const courses = [
 	{
 		id: 815,
 		title: 'The Basics of IOS dev',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -444,6 +461,7 @@ const courses = [
 	{
 		id: 814,
 		title: 'The Basics of IOS dev',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -465,6 +483,7 @@ const courses = [
 	{
 		id: 813,
 		title: 'The Basics of IOS dev',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -486,6 +505,7 @@ const courses = [
 	{
 		id: 812,
 		title: 'The Basics of IOS dev',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -507,6 +527,7 @@ const courses = [
 	{
 		id: 822,
 		title: 'The Basics of IOS dev',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -528,6 +549,7 @@ const courses = [
 	{
 		id: 821,
 		title: 'The Basics of IOS dev',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -549,6 +571,7 @@ const courses = [
 	{
 		id: 890,
 		title: 'The Basics of IOS dev',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -570,6 +593,7 @@ const courses = [
 	{
 		id: 891,
 		title: 'The Basics of IOS dev',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -591,6 +615,7 @@ const courses = [
 	{
 		id: 893,
 		title: 'The Basics of IOS dev',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -612,6 +637,7 @@ const courses = [
 	{
 		id: 895,
 		title: 'The Basics of IOS dev',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -633,6 +659,7 @@ const courses = [
 	{
 		id: 899,
 		title: 'The Basics of IOS dev',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '5',
 		category: 'Swift',
 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
@@ -654,6 +681,7 @@ const courses = [
 	{
 		id: 127,
 		title: 'How to learn Agile with André (1)',
+		description: 'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
 		star: '4.7',
 		category: 'Agile',
 		mediasId: [2, 7, 3], // Ici on a que 2 médias pour le cours ci-dessus

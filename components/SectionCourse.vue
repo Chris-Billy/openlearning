@@ -11,8 +11,6 @@
 				}}</span>
 				- 5 min
 			</p>
-			<p>id = {{ idMedia }}</p>
-			<p>langue = {{ language }}</p>
 		</div>
 		<input
 			class="w-6 h-6 mr-2 cursor-pointer"
@@ -25,14 +23,14 @@
 
 <script>
 export default {
-	props: [
-		'title',
-		'category',
-		'idMedia',
-		'learnedMedias',
-		'language',
-		'selectedLanguage'
-	],
+	props: {
+		title: { type: String, default: '' },
+		category: { type: String, default: '' },
+		idMedia: { type: Number, default: 0 },
+		learnedMedias: { type: Array, default: null },
+		language: { type: String, default: '' },
+		selectedLanguage: { type: String, default: '' }
+	},
 	methods: {
 		changeStatus(idMedia) {
 			const learnedMedias = this.learnedMedias
