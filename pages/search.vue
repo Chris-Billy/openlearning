@@ -109,10 +109,7 @@
 					>
 						<h2 class="text-lg ml-5">Métier</h2>
 						<div class="scrollbars flex overflow-x-auto">
-							<div
-								v-if="this.jobResult.data != false"
-								class="flex flex-row p-5"
-							>
+							<div v-if="jobResult.data != false" class="flex flex-row p-5">
 								<CardSearch
 									v-for="course in jobResult.data"
 									:id="course.id"
@@ -123,17 +120,23 @@
 								/>
 							</div>
 							<div v-else class="flex flex-row p-5">
-								<p>Aucun cours n'est disponible pour le métier rechercher</p>
+								<div
+									class="flex flex-col justify-center items-center text-center"
+								>
+									<img
+										class="rounded-lg h-32 w-32"
+										src="@/static/noresult.png"
+										alt=""
+									/>
+									<p>Aucun cours n'est disponible pour le métier rechercher</p>
+								</div>
 							</div>
 						</div>
 					</div>
 					<div v-if="!defaultScreen" class="pb-14">
 						<h2 class="text-lg ml-5">Compétences</h2>
 						<div class="scrollbars flex overflow-x-auto">
-							<div
-								v-if="this.skillResult.data != false"
-								class="flex flex-row p-5"
-							>
+							<div v-if="skillResult.data != false" class="flex flex-row p-5">
 								<CardSearch
 									v-for="course in skillResult.data"
 									:id="course.id"
@@ -144,9 +147,18 @@
 								/>
 							</div>
 							<div v-else class="flex flex-row p-5">
-								<p>
-									Aucun cours n'est disponible pour la compétence rechercher
-								</p>
+								<div
+									class="flex flex-col justify-center items-center text-center"
+								>
+									<img
+										class="rounded-lg h-32 w-32"
+										src="@/static/noresult.png"
+										alt=""
+									/>
+									<p>
+										Aucun cours n'est disponible pour la compétence rechercher
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
