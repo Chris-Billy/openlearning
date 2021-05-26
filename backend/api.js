@@ -909,7 +909,7 @@ app.post('/searchBySkill', (req, res) => {
 	const input = Object.keys(req.body)
 	const skillCourses = []
 	courses.forEach((x) => {
-		if (x.theme.includes('Job')) {
+		if (x.theme.includes('Skill')) {
 			skillCourses.push(x)
 		}
 	})
