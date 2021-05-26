@@ -1,86 +1,134 @@
 <template>
-	<div class="flex flex-col h-full justify-center">
-		<div class="flex items-end py-4 px-2.5">
-			<svg
-				width="20"
-				height="20"
-				viewBox="0 0 20 20"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-			>
-				<path
-					fill-rule="evenodd"
-					clip-rule="evenodd"
-					d="M13.0893 4.4107C13.4148 4.73614 13.4148 5.26378 13.0893 5.58922L8.67859 9.99996L13.0893 14.4107C13.4148 14.7361 13.4148 15.2638 13.0893 15.5892C12.7639 15.9147 12.2363 15.9147 11.9108 15.5892L6.91083 10.5892C6.58539 10.2638 6.58539 9.73614 6.91083 9.4107L11.9108 4.4107C12.2363 4.08527 12.7639 4.08527 13.0893 4.4107Z"
-					fill="#FCFCFF"
-				/>
-			</svg>
-			<p class="ml-2.5 text-white">Cours</p>
-		</div>
-		<div class="w-full h-96 bg-black hidden"></div>
-		<div class="w-full h-20 bg-card-course flex">
-			<button
-				class="w-1/2 flex justify-center items-center focus:outline-none"
-				:class="{ 'not-focus': !defaulttab, 'font-bold': defaulttab }"
-				@click="defaulttab = true"
-			>
-				Détails du cours
-			</button>
-			<button
-				class="w-1/2 flex justify-center items-center focus:outline-none"
-				:class="{ 'not-focus': defaulttab, 'font-bold': !defaulttab }"
-				@click="checkAccess"
-			>
-				Ressources cours
-			</button>
-		</div>
-
-		<div
-			v-if="defaulttab"
-			class="h-full w-full flex flex-col bg-card-course p-4 overflow-scroll pb-14"
-		>
-			<h1 class="font-bold text-3xl">DETAILS DU COURS CHOISI</h1>
-			<pre>{{ myCourse }}</pre>
-		</div>
-
-		<div
-			v-if="!defaulttab"
-			class="h-full w-full flex flex-col bg-card-course p-4 overflow-y-scroll pb-14"
-		>
+	<div class="flex flex-col h-full w-full justify-center overflow-hidden">
+		<div class="flex h-1/6 w-full justify-center flex-col">
 			<div
-				v-if="message"
-				class="flex justify-center items-center w-full h-full text-3xl text-center"
+				class="flex h-1/6 items-center py-4 ml-7 cursor-pointer w-min"
+				@click="$router.go(-1)"
 			>
-				{{ message }}
-			</div>
-			<div>
-				<label for="lang">Langue des cours à afficher</label>
-				<select v-model="selectedLanguage" class="mb-4" name="lang">
-					<option :value="'fr-en'">Français et Anglais</option>
-					<option :value="'fr'">Français</option>
-					<option :value="'en'">Anglais</option>
-				</select>
-			</div>
-
-			<p>id cours checked = {{ learnedMedias.data }}</p>
-			<p class="mb-4">selected langue = {{ selectedLanguage }}</p>
-
-			<div v-for="(medias, key) in allMedias" :key="medias.id">
-				<div
-					v-if="medias != false && displayCategorie(medias, selectedLanguage)"
-					class="mb-6"
+				<svg
+					width="20"
+					height="20"
+					viewBox="0 0 20 20"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
 				>
-					<CategoryMedia :name="key + 's'" />
-					<SectionCourse
-						v-for="media in medias"
-						:key="media.id"
-						:title="media.title"
-						:category="key"
-						:id-media="media.id"
-						:learned-medias="learnedMedias.data"
-						:language="media.language"
-						:selected-language="selectedLanguage"
+					<path
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M13.0893 4.4107C13.4148 4.73614 13.4148 5.26378 13.0893 5.58922L8.67859 9.99996L13.0893 14.4107C13.4148 14.7361 13.4148 15.2638 13.0893 15.5892C12.7639 15.9147 12.2363 15.9147 11.9108 15.5892L6.91083 10.5892C6.58539 10.2638 6.58539 9.73614 6.91083 9.4107L11.9108 4.4107C12.2363 4.08527 12.7639 4.08527 13.0893 4.4107Z"
+						fill="#FCFCFF"
 					/>
+				</svg>
+				<p class="ml-7 text-white">Cours</p>
+			</div>
+		</div>
+		<div class="h-5/6 w-full bg-bg-card rounded-t-large pb-16">
+			<div class="w-full h-56 bg-black hidden"></div>
+			<div class="w-full h-16 flex rounded-t-large">
+				<button
+					class="w-1/2 flex justify-center items-center focus:outline-none rounded-tl-large text-gray-400"
+					:class="{
+						'font-bold text-gray-600': defaulttab
+					}"
+					@click="defaulttab = true"
+				>
+					Détails du cours
+				</button>
+				<button
+					class="w-1/2 flex justify-center items-center focus:outline-none rounded-tr-large text-gray-400"
+					:class="{
+						'font-bold text-gray-600': !defaulttab
+					}"
+					@click="checkAccess"
+				>
+					Ressources cours
+				</button>
+			</div>
+
+			<div
+				v-if="defaulttab"
+				class="h-full w-full flex flex-col px-6 overflow-scroll pb-14"
+			>
+				<div>
+					<div class="relative h-48 flex justify-center items-end rounded-lg2">
+						<div
+							class="absolute h-full w-full rounded-lg2 bg-agile bg-cover filter brightness-50 z-0"
+						></div>
+						<h3
+							class="relative w-full text-xl text-white text-center font-bold z-1 p-3"
+						>
+							{{ myCourse.title }}
+						</h3>
+					</div>
+
+					<div class="flex justify-between py-3 px-1 font-medium">
+						<p>{{ myCourse.theme }}</p>
+						<div class="flex items-center">
+							<p class="mr-2">{{ myCourse.star }}</p>
+							<img class="h-4 w-4" src="@/static/star.png" />
+							<img class="h-4 w-4" src="@/static/star.png" />
+							<img class="h-4 w-4" src="@/static/star.png" />
+							<img class="h-4 w-4" src="@/static/star.png" />
+							<img class="h-4 w-4" src="@/static/star.png" />
+						</div>
+					</div>
+
+					<div class="flex flex-col">
+						<h3 class="font-bold text-gray-800 py-3">Description du cours :</h3>
+						<p>
+							{{ myCourse.description }}
+						</p>
+					</div>
+
+					<div class="mt-6">
+						<p>
+							<span class="font-bold text-gray-800">Mots-Clés :</span>
+							{{ myCourse.keyWord }}
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div
+				v-if="!defaulttab"
+				class="h-full w-full flex flex-col px-4 overflow-y-scroll pb-14"
+			>
+				<div
+					v-if="message"
+					class="flex justify-center items-center w-full h-full text-3xl text-center"
+				>
+					{{ message }}
+				</div>
+				<div v-if="!message" class="flex flex-col justify-center items-center">
+					<label for="lang" class="mb-2">Langue des cours à afficher</label>
+					<select
+						v-model="selectedLanguage"
+						class="mb-6 w-2/4 rounded-sm"
+						name="lang"
+					>
+						<option :value="'fr-en'">Français et Anglais</option>
+						<option :value="'fr'">Français</option>
+						<option :value="'en'">Anglais</option>
+					</select>
+				</div>
+
+				<div v-for="(medias, key) in allMedias" :key="medias.id">
+					<div
+						v-if="medias != false && displayCategorie(medias, selectedLanguage)"
+						class="mb-6"
+					>
+						<CategoryMedia :name="key + 's'" />
+						<SectionCourse
+							v-for="media in medias"
+							:key="media.id"
+							:title="media.title"
+							:category="key"
+							:id-media="media.id"
+							:learned-medias="learnedMedias.data"
+							:language="media.language"
+							:selected-language="selectedLanguage"
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -138,10 +186,6 @@ export default {
 </script>
 
 <style>
-.not-focus {
-	background-color: #91919f7e;
-	opacity: 0.5;
-}
 input[type='checkbox'] {
 	-webkit-appearance: none;
 	-moz-appearance: none;

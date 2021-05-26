@@ -1,7 +1,7 @@
 <template>
 	<div class="w-screen h-screen overflow-hidden">
 		<div class="flex h-1/6 w-full justify-center flex-col">
-			<div class="w-full flex items-center ml-7">
+			<div class="w-full flex items-center ml-7" @click="$router.go(-1)">
 				<svg
 					width="20"
 					height="20"
