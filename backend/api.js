@@ -92,7 +92,18 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 0,
-		createdAt: 1611134752
+		createdAt: 1611134752,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios',
+			'test'
+		]
 	},
 	{
 		id: 84,
@@ -103,7 +114,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Skill', // type de parcours métier ou compétence
 		nbFav: 90,
-		createdAt: 1620518400
+		createdAt: 1620518400,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 74,
@@ -114,7 +135,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 80,
-		createdAt: 1620604800
+		createdAt: 1620604800,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 94,
@@ -125,7 +156,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Skill', // type de parcours métier ou compétence
 		nbFav: 70,
-		createdAt: 1620691200
+		createdAt: 1620691200,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 841,
@@ -136,7 +177,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Skill', // type de parcours métier ou compétence
 		nbFav: 60,
-		createdAt: 1620777600
+		createdAt: 1620777600,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 811,
@@ -147,7 +198,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 50,
-		createdAt: 1620864000
+		createdAt: 1620864000,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 89,
@@ -158,7 +219,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 40,
-		createdAt: 1620950400
+		createdAt: 1620950400,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 1,
@@ -169,7 +240,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Skill', // type de parcours métier ou compétence
 		nbFav: 30,
-		createdAt: 1621036800
+		createdAt: 1621036800,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 12,
@@ -180,7 +261,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 20,
-		createdAt: 1621123200
+		createdAt: 1621123200,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 22,
@@ -191,7 +282,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Skill', // type de parcours métier ou compétence
 		nbFav: 10,
-		createdAt: 1621209600
+		createdAt: 1621209600,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 10,
@@ -202,7 +303,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 0,
-		createdAt: 1611134752
+		createdAt: 1611134752,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 14,
@@ -213,7 +324,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Skill', // type de parcours métier ou compétence
 		nbFav: 0,
-		createdAt: 1611134752
+		createdAt: 1611134752,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 4,
@@ -224,7 +345,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 0,
-		createdAt: 1611134752
+		createdAt: 1611134752,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 819,
@@ -235,7 +366,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 0,
-		createdAt: 1611134752
+		createdAt: 1611134752,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 817,
@@ -246,7 +387,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 0,
-		createdAt: 1611134752
+		createdAt: 1611134752,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 816,
@@ -257,7 +408,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 0,
-		createdAt: 1611134752
+		createdAt: 1611134752,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 815,
@@ -268,7 +429,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 0,
-		createdAt: 1611134752
+		createdAt: 1611134752,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 814,
@@ -279,7 +450,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 0,
-		createdAt: 1611134752
+		createdAt: 1611134752,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 813,
@@ -290,7 +471,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 0,
-		createdAt: 1611134752
+		createdAt: 1611134752,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 812,
@@ -301,7 +492,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 0,
-		createdAt: 1611134752
+		createdAt: 1611134752,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 822,
@@ -312,7 +513,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 0,
-		createdAt: 1611134752
+		createdAt: 1611134752,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 821,
@@ -323,7 +534,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 0,
-		createdAt: 1611134752
+		createdAt: 1611134752,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 890,
@@ -334,7 +555,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 0,
-		createdAt: 1611134752
+		createdAt: 1611134752,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 891,
@@ -345,7 +576,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 0,
-		createdAt: 1611134752
+		createdAt: 1611134752,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 893,
@@ -356,7 +597,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 0,
-		createdAt: 1611134752
+		createdAt: 1611134752,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 895,
@@ -367,7 +618,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 0,
-		createdAt: 1611134752
+		createdAt: 1611134752,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 899,
@@ -378,7 +639,17 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Job', // type de parcours métier ou compétence
 		nbFav: 0,
-		createdAt: 1611134752
+		createdAt: 1611134752,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios'
+		]
 	},
 	{
 		id: 127,
@@ -389,7 +660,18 @@ const courses = [
 		source: 'openlearning', // openlearning ou contributeur externe
 		theme: 'Skill', // type de parcours métier ou compétence
 		nbFav: 100,
-		createdAt: 1620259200
+		createdAt: 1620259200,
+		keyWord: [
+			'vuejs',
+			'nodejs',
+			'swift',
+			'javascript',
+			'html',
+			'css',
+			'mobile',
+			'ios',
+			'test'
+		]
 	}
 ]
 
@@ -598,6 +880,46 @@ app.get('/mostRecentCourses', (req, res) => {
 		})
 		.slice(0, 10)
 	return res.json(recent)
+})
+
+app.post('/searchByJob', (req, res) => {
+	// Initialisation d'un objet qui contiendra tous les médias
+	const jobResult = []
+	// On envoie chaque média dans la catégorie qui lui correspond
+	const input = Object.keys(req.body)
+	const jobCourses = []
+	courses.forEach((x) => {
+		if (x.theme.includes('Job')) {
+			jobCourses.push(x)
+		}
+	})
+	jobCourses.forEach((course) => {
+		// console.log(course.keyWord)
+		if (course.keyWord.includes(input[0])) {
+			jobResult.push(course)
+		}
+	})
+	return res.json(jobResult)
+})
+
+app.post('/searchBySkill', (req, res) => {
+	// Initialisation d'un objet qui contiendra tous les médias
+	const skillResult = []
+	// On envoie chaque média dans la catégorie qui lui correspond
+	const input = Object.keys(req.body)
+	const skillCourses = []
+	courses.forEach((x) => {
+		if (x.theme.includes('Job')) {
+			skillCourses.push(x)
+		}
+	})
+	skillCourses.forEach((course) => {
+		// console.log(course.keyWord)
+		if (course.keyWord.includes(input[0])) {
+			skillResult.push(course)
+		}
+	})
+	return res.json(skillResult)
 })
 
 app.get('/allCourses', (req, res) => {

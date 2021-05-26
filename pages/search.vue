@@ -24,8 +24,7 @@
 		>
 			<form
 				class="w-10/12 items-center mt-5"
-				action=""
-				@submit.prevent="onSubmit()"
+				@submit.prevent="getResultInput(), checkDefault()"
 			>
 				<div class="flex h-14 w-full rounded-lg bg-white items-center">
 					<input
@@ -33,7 +32,6 @@
 						class="h-full w-full border-none ml-5 outline-none bg-transparent"
 						type="text"
 						placeholder="Métier ou compétences"
-						@input="checkDefault()"
 					/>
 					<svg
 						class="mr-5 ml-5"
@@ -111,16 +109,44 @@
 					>
 						<h2 class="text-lg ml-5">Métier</h2>
 						<div class="scrollbars flex overflow-x-auto">
-							<div class="flex flex-row p-5">
-								{{ inputSearch }}
+							<div
+								v-if="this.jobResult.data != false"
+								class="flex flex-row p-5"
+							>
+								<CardSearch
+									v-for="course in jobResult.data"
+									:id="course.id"
+									:key="course.id"
+									:title="course.title"
+									:stars="course.star"
+									:source="course.source"
+								/>
+							</div>
+							<div v-else class="flex flex-row p-5">
+								<p>Aucun cours n'est disponible pour le métier rechercher</p>
 							</div>
 						</div>
 					</div>
-					<div v-if="!defaultScreen">
+					<div v-if="!defaultScreen" class="pb-14">
 						<h2 class="text-lg ml-5">Compétences</h2>
 						<div class="scrollbars flex overflow-x-auto">
-							<div class="flex flex-row p-5">
-								{{ inputSearch }}
+							<div
+								v-if="this.skillResult.data != false"
+								class="flex flex-row p-5"
+							>
+								<CardSearch
+									v-for="course in skillResult.data"
+									:id="course.id"
+									:key="course.id"
+									:title="course.title"
+									:stars="course.star"
+									:source="course.source"
+								/>
+							</div>
+							<div v-else class="flex flex-row p-5">
+								<p>
+									Aucun cours n'est disponible pour la compétence rechercher
+								</p>
 							</div>
 						</div>
 					</div>
@@ -148,7 +174,9 @@ export default {
 	data() {
 		return {
 			inputSearch: '',
-			defaultScreen: true
+			defaultScreen: true,
+			jobResult: [],
+			skillResult: []
 		}
 	},
 	methods: {
@@ -156,6 +184,13 @@ export default {
 			if (this.defaultScreen !== false) {
 				this.defaultScreen = false
 			}
+		},
+		async getResultInput() {
+			this.jobResult = await this.$axios.post('/searchByJob', this.inputSearch)
+			this.skillResult = await this.$axios.post(
+				'/searchBySkill',
+				this.inputSearch
+			)
 		}
 	}
 }
