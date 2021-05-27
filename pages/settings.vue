@@ -1,6 +1,6 @@
 <template>
 	<div class="flex flex-col h-full w-full">
-		<div class="h-1/2 w-full flex flex-col justify-center">
+		<div class="h-2/6 w-full flex flex-col justify-center">
 			<div class="flex items-end py-4 px-2.5">
 				<svg
 					width="20"
@@ -22,151 +22,76 @@
 				<div class="h-3/4 w-full flex justify-center items-center">
 					<img
 						class="h-32 w-32 rounded-full"
-						src="~/static/stock_avatar.png"
+						src="@/static/stock_avatar.png"
 						alt=""
 					/>
-				</div>
-				<div class="h-1/4 w-full flex flex-col justify-center items-center">
-					<p class="font-bold text-white">
-						{{ user.firstname }} {{ user.lastname }}
-					</p>
-					<p class="text-gray-300">{{ user.email }}</p>
 				</div>
 			</div>
 		</div>
 		<div
-			class="h-3/4 w-full bg-bg-card rounded-t-large flex flex-col items-center"
+			class="h-4/6 w-full bg-bg-card rounded-t-large flex flex-col items-center p-7"
 		>
-			<div class="h-1/2 w-11/12 flex flex-col flex items-center justify-center">
-				<div class="text-gray-400 flex flex-col justify-center w-full text-sm">
-					<p>Paramètres du compte</p>
-				</div>
-				<div class="h-1/5 w-full flex items-center">
-					<div class="w-full flex items-center justify-between">
-						<NuxtLink to="account"><p>Modifier mon compte</p></NuxtLink>
-						<svg
-							width="8"
-							height="12"
-							viewBox="0 0 8 12"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
+			<form
+				class="h-full w-11/12 flex flex-col flex items-center scrollbars flex overflow-x-auto"
+				action=""
+			>
+				<div class="w-full">
+					<div class="text-black flex flex-col justify-center w-full text-lg">
+						<p>Paramètres du compte</p>
+					</div>
+					<div class="h-1/5 w-full flex items-center">
+						<div
+							class="h-3/4 bg-bg-card w-full rounded-t-large flex flex-col items-center"
 						>
-							<path
-								d="M1.5 11L6.5 6L1.5 1"
-								stroke="#91919F"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
+							<input
+								class="w-full border-l border-r bg-transparent border-black outline-none p-2 mb-4 mt-4"
+								type="text"
+								name="name"
+								:placeholder="user.lastname"
 							/>
-						</svg>
+							<input
+								class="w-full border-l border-r bg-transparent border-black outline-none p-2 mb-4 mt-4"
+								type="text"
+								name="email"
+								:placeholder="user.firstname"
+							/>
+							<select
+								class="w-full border-l border-r bg-transparent border-black outline-none p-2 mb-4 mt-4"
+							>
+								<option value="">Langues</option>
+								<option>Français</option>
+								<option>Anglais</option>
+								<option>Espagnol</option>
+								<option>Chinois</option>
+								<option>Allemand</option>
+							</select>
+						</div>
 					</div>
 				</div>
-				<div class="h-1/5 w-full flex items-center">
-					<div class="w-full flex items-center justify-between">
+				<div class="w-full mt-6">
+					<div class="text-black flex flex-col justify-center w-full text-lg">
 						<p>Préférences e-mail</p>
-						<svg
-							width="8"
-							height="12"
-							viewBox="0 0 8 12"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
+					</div>
+					<div class="w-full flex items-center">
+						<div
+							class="bg-bg-card w-full rounded-t-large flex flex-col items-center"
 						>
-							<path
-								d="M1.5 11L6.5 6L1.5 1"
-								stroke="#91919F"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
+							<input
+								class="w-full border-l border-r bg-transparent border-black outline-none p-2 mb-4 mt-4"
+								type="text"
+								name="e-mail"
+								:placeholder="user.email"
 							/>
-						</svg>
+						</div>
 					</div>
 				</div>
-				<div class="h-1/5 w-full flex items-center">
-					<div class="w-full flex items-center justify-between">
-						<p>Notifications</p>
-						<svg
-							width="8"
-							height="12"
-							viewBox="0 0 8 12"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								d="M1.5 11L6.5 6L1.5 1"
-								stroke="#91919F"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							/>
-						</svg>
-					</div>
-				</div>
-			</div>
-			<div class="h-1/2 w-11/12 flex flex-col flex items-center">
-				<div class="text-gray-400 flex flex-col justify-center w-full text-sm">
-					<p>Support</p>
-				</div>
-				<div class="h-1/5 w-full flex items-center">
-					<div class="w-full flex items-center justify-between">
-						<p>A Propos</p>
-						<svg
-							width="8"
-							height="12"
-							viewBox="0 0 8 12"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								d="M1.5 11L6.5 6L1.5 1"
-								stroke="#91919F"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							/>
-						</svg>
-					</div>
-				</div>
-				<div class="h-1/5 w-full flex items-center">
-					<div class="w-full flex items-center justify-between">
-						<p>Questions Fréquentes</p>
-						<svg
-							width="8"
-							height="12"
-							viewBox="0 0 8 12"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								d="M1.5 11L6.5 6L1.5 1"
-								stroke="#91919F"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							/>
-						</svg>
-					</div>
-				</div>
-				<div class="h-1/5 w-full flex items-center">
-					<div class="w-full flex items-center justify-between">
-						<p>Partager l'application</p>
-						<svg
-							width="8"
-							height="12"
-							viewBox="0 0 8 12"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								d="M1.5 11L6.5 6L1.5 1"
-								stroke="#91919F"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							/>
-						</svg>
-					</div>
-				</div>
-			</div>
+				<button
+					class="border-none bg-button-google mb-5 rounded-lg text-base text-white w-full h-14 mt-6"
+					type="submit"
+				>
+					enregistrer les modifications
+				</button>
+			</form>
 		</div>
 	</div>
 </template>
@@ -184,3 +109,16 @@ export default {
 	}
 }
 </script>
+
+<style scoped>
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbars::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbars {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+</style>
