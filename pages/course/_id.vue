@@ -49,7 +49,7 @@
 				v-if="defaulttab"
 				class="h-full w-full flex flex-col px-6 overflow-scroll pb-14"
 			>
-				<div>
+				<div class="pb-4">
 					<div class="relative h-48 flex justify-center items-end rounded-lg2">
 						<div
 							class="absolute h-full w-full rounded-lg2 bg-agile bg-cover filter brightness-50 z-0"
@@ -65,11 +65,31 @@
 						<p>{{ myCourse.theme }}</p>
 						<div class="flex items-center">
 							<p class="mr-2">{{ myCourse.star }}</p>
-							<img class="h-4 w-4" src="@/static/star.png" />
-							<img class="h-4 w-4" src="@/static/star.png" />
-							<img class="h-4 w-4" src="@/static/star.png" />
-							<img class="h-4 w-4" src="@/static/star.png" />
-							<img class="h-4 w-4" src="@/static/star.png" />
+							<img
+								v-if="myCourse.star >= 1"
+								class="h-4 w-4"
+								src="@/static/star.png"
+							/>
+							<img
+								v-if="myCourse.star >= 2"
+								class="h-4 w-4"
+								src="@/static/star.png"
+							/>
+							<img
+								v-if="myCourse.star >= 3"
+								class="h-4 w-4"
+								src="@/static/star.png"
+							/>
+							<img
+								v-if="myCourse.star >= 4"
+								class="h-4 w-4"
+								src="@/static/star.png"
+							/>
+							<img
+								v-if="myCourse.star == 5"
+								class="h-4 w-4"
+								src="@/static/star.png"
+							/>
 						</div>
 					</div>
 
@@ -83,7 +103,7 @@
 					<div class="mt-6">
 						<p>
 							<span class="font-bold text-gray-800">Mots-Clés :</span>
-							{{ myCourse.keyWord }}
+							{{ getKeywords() }}
 						</p>
 					</div>
 				</div>
@@ -150,7 +170,8 @@ export default {
 			allMedias: '',
 			learnedMedias: '',
 			message: false,
-			selectedLanguage: 'fr-en'
+			selectedLanguage: 'fr-en',
+			test: '<img class="h-4 w-4" src="@/static/star.png" />'
 		}
 	},
 	computed: {
@@ -180,6 +201,16 @@ export default {
 				}
 			})
 			return display
+		},
+		getKeywords() {
+			let keywords = ''
+			this.myCourse.keyWord.forEach((word, index) => {
+				keywords += word
+				if (index !== this.myCourse.keyWord.length - 1) {
+					keywords += ', '
+				}
+			})
+			return keywords
 		}
 	}
 }
