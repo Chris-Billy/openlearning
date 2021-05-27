@@ -62,8 +62,8 @@
 				</div>
 			</form>
 			<div class="w-full h-full mt-5 pb-14 overflow-auto">
-				<div class="w-full h-full flex flex-col">
-					<div v-if="defaultScreen" class="w-full flex justify-center flex-col">
+				<div v-if="defaultScreen" class="w-full h-full flex flex-col">
+					<div class="w-full flex justify-center flex-col">
 						<h2 class="text-lg ml-5">Les mieux notés</h2>
 						<div class="scrollbars flex overflow-x-auto">
 							<div class="flex flex-row p-5">
@@ -78,7 +78,7 @@
 							</div>
 						</div>
 					</div>
-					<div v-if="defaultScreen">
+					<div>
 						<h2 class="text-lg ml-5">Les plus populaires</h2>
 						<div class="scrollbars flex overflow-x-auto">
 							<div class="flex flex-row p-5">
@@ -93,7 +93,7 @@
 							</div>
 						</div>
 					</div>
-					<div v-if="defaultScreen" class="pb-14">
+					<div class="pb-14">
 						<h2 class="text-lg ml-5">Les plus récents</h2>
 						<div class="scrollbars flex overflow-x-auto">
 							<div class="flex flex-row p-5">
@@ -108,13 +108,15 @@
 							</div>
 						</div>
 					</div>
+				</div>
+				<div v-else class="w-full h-full flex flex-col">
 					<div
-						v-if="!defaultScreen"
+						v-if="jobResult.data != false"
 						class="w-full flex justify-center flex-col"
 					>
 						<h2 class="text-lg ml-5">Métier</h2>
 						<div class="scrollbars flex overflow-x-auto">
-							<div v-if="jobResult.data != false" class="flex flex-row p-5">
+							<div class="flex flex-row p-5">
 								<CardSearch
 									v-for="course in jobResult.data"
 									:id="course.id"
@@ -124,24 +126,12 @@
 									:source="course.source"
 								/>
 							</div>
-							<div v-else class="flex flex-row p-5">
-								<div
-									class="flex flex-col justify-center items-center text-center"
-								>
-									<img
-										class="rounded-lg h-32 w-32"
-										src="@/static/noresult.png"
-										alt=""
-									/>
-									<p>Aucun cours n'est disponible pour le métier rechercher</p>
-								</div>
-							</div>
 						</div>
 					</div>
-					<div v-if="!defaultScreen" class="pb-14">
+					<div v-if="skillResult.data != false" class="pb-14">
 						<h2 class="text-lg ml-5">Compétences</h2>
 						<div class="scrollbars flex overflow-x-auto">
-							<div v-if="skillResult.data != false" class="flex flex-row p-5">
+							<div class="flex flex-row p-5">
 								<CardSearch
 									v-for="course in skillResult.data"
 									:id="course.id"
@@ -151,7 +141,11 @@
 									:source="course.source"
 								/>
 							</div>
-							<div v-else class="flex flex-row p-5">
+						</div>
+					</div>
+					<div v-else>
+						<div class="scrollbars flex overflow-x-auto">
+							<div class="flex flex-row p-5">
 								<div
 									class="flex flex-col justify-center items-center text-center"
 								>
@@ -160,9 +154,7 @@
 										src="@/static/noresult.png"
 										alt=""
 									/>
-									<p>
-										Aucun cours n'est disponible pour la compétence rechercher
-									</p>
+									<p>Aucun cours n'est disponible pour votre recherche</p>
 								</div>
 							</div>
 						</div>

@@ -103,8 +103,7 @@ const courses = [
 			'html',
 			'css',
 			'mobile',
-			'ios',
-			'test'
+			'ios'
 		]
 	},
 	{
