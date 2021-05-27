@@ -47,11 +47,7 @@ module.exports = {
 			'3/4': '75%',
 
 			'80/100': '80%'
-		},
-		backgroundImage: (theme) => ({
-			agile:
-				"url('https://res.cloudinary.com/execed/automap/2021/02/formation-continue-lausanne-management-agile.png')"
-		})
+		}
 	},
 	variants: {
 		extend: {}
