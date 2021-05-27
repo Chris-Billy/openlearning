@@ -52,8 +52,14 @@
 				<div class="pb-4">
 					<div class="relative h-48 flex justify-center items-end rounded-lg2">
 						<div
-							class="absolute h-full w-full rounded-lg2 bg-agile bg-cover filter brightness-50 z-0"
-						></div>
+							class="absolute h-full w-full rounded-lg2 filter brightness-50 z-0"
+						>
+							<img
+								class="h-full rounded-lg2"
+								src="https://res.cloudinary.com/execed/automap/2021/02/formation-continue-lausanne-management-agile.png"
+								alt=""
+							/>
+						</div>
 						<h3
 							class="relative w-full text-xl text-white text-center font-bold z-1 p-3"
 						>
