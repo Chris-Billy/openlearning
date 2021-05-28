@@ -1,7 +1,15 @@
 <template>
 	<div class="w-screen h-screen">
 		<div
-			class="flex h-2/5 w-screen justify-center flex-col items-center text-center"
+			class="
+				flex
+				h-2/5
+				w-screen
+				justify-center
+				flex-col
+				items-center
+				text-center
+			"
 		>
 			<svg
 				width="72"
@@ -34,7 +42,14 @@
 				/>
 			</svg>
 			<div
-				class="flex mt-5 flex-col items-center text-center text-white justify-evenly"
+				class="
+					flex
+					mt-5
+					flex-col
+					items-center
+					text-center text-white
+					justify-evenly
+				"
 			>
 				<h1 class="text-3xl">OpenLearning</h1>
 				<p class="mt-5 text-sm w-3/4">
@@ -43,7 +58,16 @@
 			</div>
 		</div>
 		<div
-			class="flex h-3/5 w-screen flex-col items-center rounded-t-large p-7 bg-bg-card"
+			class="
+				flex
+				h-3/5
+				w-screen
+				flex-col
+				items-center
+				rounded-t-large
+				p-7
+				bg-bg-card
+			"
 		>
 			<form class="flex flex-col w-full" @submit.prevent="login">
 				<div class="flex relative h-14 rounded-lg mb-4 bg-white">
@@ -71,7 +95,15 @@
 					</svg>
 					<input
 						v-model="email"
-						class="h-full w-full border-none ml-10 outline-none bg-transparent pr-4"
+						class="
+							h-full
+							w-full
+							border-none
+							ml-10
+							outline-none
+							bg-transparent
+							pr-4
+						"
 						type="text"
 						placeholder="Email"
 					/>
@@ -100,7 +132,15 @@
 					</svg>
 					<input
 						v-model="password"
-						class="h-full w-full border-none ml-10 outline-none bg-transparent pr-4"
+						class="
+							h-full
+							w-full
+							border-none
+							ml-10
+							outline-none
+							bg-transparent
+							pr-4
+						"
 						type="password"
 						placeholder="Mot de passe"
 					/>
@@ -116,13 +156,29 @@
 				</button>
 			</form>
 			<button
-				class="border-none bg-button-google mb-5 rounded-lg text-base text-white w-full h-14"
+				class="
+					border-none
+					bg-button-google
+					mb-5
+					rounded-lg
+					text-base text-white
+					w-full
+					h-14
+				"
 			>
 				Se connecter avec Google
 			</button>
 			<NuxtLink to="/signup" class="w-4/6">
 				<button
-					class="border-none bg-button-no-account mb-5 rounded-lg text-xs text-white w-full h-14"
+					class="
+						border-none
+						bg-button-no-account
+						mb-5
+						rounded-lg
+						text-xs text-white
+						w-full
+						h-14
+					"
 				>
 					Je n'ai pas encore de compte
 				</button>
