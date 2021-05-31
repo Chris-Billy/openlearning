@@ -22,15 +22,7 @@
 		<div class="h-5/6 w-full bg-bg-card rounded-t-large">
 			<div class="h-16 w-full flex flex-row">
 				<button
-					class="
-						text-gray-400
-						focus:outline-none
-						h-full
-						w-1/2
-						flex
-						justify-center
-						items-center
-					"
+					class="text-gray-400 focus:outline-none h-full w-1/2 flex justify-center items-center"
 					:class="{ 'not-focus': !actualTab }"
 					@click="actualTab = true"
 				>
@@ -39,15 +31,7 @@
 					</div>
 				</button>
 				<button
-					class="
-						text-gray-400
-						focus:outline-none
-						h-full
-						w-1/2
-						flex
-						justify-center
-						items-center
-					"
+					class="text-gray-400 focus:outline-none h-full w-1/2 flex justify-center items-center"
 					:class="{ 'not-focus': !actualTab }"
 					@click="actualTab = false"
 				>
