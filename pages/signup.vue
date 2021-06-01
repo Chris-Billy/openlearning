@@ -1,25 +1,61 @@
 <template>
-	<div class="flex flex-col h-full justify-center pb-14">
-		<div class="flex items-end py-4 px-2.5">
-			<svg
-				width="20"
-				height="20"
-				viewBox="0 0 20 20"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-			>
-				<path
-					fill-rule="evenodd"
-					clip-rule="evenodd"
-					d="M13.0893 4.4107C13.4148 4.73614 13.4148 5.26378 13.0893 5.58922L8.67859 9.99996L13.0893 14.4107C13.4148 14.7361 13.4148 15.2638 13.0893 15.5892C12.7639 15.9147 12.2363 15.9147 11.9108 15.5892L6.91083 10.5892C6.58539 10.2638 6.58539 9.73614 6.91083 9.4107L11.9108 4.4107C12.2363 4.08527 12.7639 4.08527 13.0893 4.4107Z"
-					fill="#FCFCFF"
-				/>
-			</svg>
-			<p class="ml-2.5 text-white">Connexion</p>
+	<div class="flex flex-col h-full w-full overflow-hidden">
+		<div class="h-1/6 w-full flex flex-col justify-evenly">
+			<div class="w-full flex items-center ml-7" @click="$router.go(-1)">
+				<svg
+					width="20"
+					height="20"
+					viewBox="0 0 20 20"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M13.0893 4.41083C13.4148 4.73626 13.4148 5.2639 13.0893 5.58934L8.67859 10.0001L13.0893 14.4108C13.4148 14.7363 13.4148 15.2639 13.0893 15.5893C12.7639 15.9148 12.2363 15.9148 11.9108 15.5893L6.91083 10.5893C6.58539 10.2639 6.58539 9.73626 6.91083 9.41083L11.9108 4.41083C12.2363 4.08539 12.7639 4.08539 13.0893 4.41083Z"
+						fill="#FCFCFF"
+					/>
+				</svg>
+				<h1 class="text-white ml-7">Retour</h1>
+			</div>
 		</div>
-		<div class="w-full rounded-large p-7 bg-bg-card">
-			<form class="flex flex-col" action="#">
-				<div class="flex relative h-11 rounded-lg mb-4 bg-white">
+		<div
+			class="h-5/6 w-full bg-bg-card rounded-t-large flex flex-col items-center p-7 justify-evenly"
+		>
+			<div>
+				<svg
+					width="72"
+					height="83"
+					viewBox="0 0 72 83"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M54.584 37.8688C57.8724 41.5546 60.0078 46.1129 60.7289 50.9856C61.4499 55.8583 60.7253 60.8342 58.6438 65.3042C56.5622 69.7742 53.214 73.5444 49.0088 76.1535C44.8037 78.7626 39.924 80.0974 34.9671 79.9945C30.0102 79.8915 25.1909 78.3554 21.0992 75.574C17.0075 72.7927 13.8208 68.8867 11.9291 64.3342C10.0374 59.7817 9.52272 54.7801 10.4481 49.9416C11.3735 45.1031 13.6988 40.6375 17.1394 37.0913C17.4853 36.7377 54.2507 37.5001 54.584 37.8688Z"
+						stroke="black"
+						stroke-width="5"
+					/>
+					<path
+						d="M15.0002 36.9417V24.7715C15.0005 24.6479 15.0273 24.5262 15.0784 24.4166C15.1294 24.3069 15.2032 24.2126 15.2936 24.1413C15.384 24.0701 15.4883 24.0242 15.5979 24.0073C15.7074 23.9904 15.819 24.0031 15.9233 24.0442L34.4078 31.727C34.4814 31.7588 34.5596 31.7754 34.6386 31.776H38.0309C38.1094 31.7757 38.1874 31.7609 38.2616 31.7322L56.0769 24.6735C56.1812 24.6323 56.2928 24.6196 56.4023 24.6365C56.5119 24.6534 56.6162 24.6994 56.7066 24.7706C56.797 24.8418 56.8708 24.9362 56.9218 25.0458C56.9729 25.1555 56.9997 25.2772 57 25.4008V36.9443C56.9997 37.0842 56.9654 37.2215 56.9008 37.3414C56.8361 37.4613 56.7436 37.5593 56.6331 37.6251C40.2901 47.2859 22.5832 41.7876 15.3602 37.6251C15.2491 37.5601 15.1565 37.4617 15.0928 37.3409C15.0292 37.2201 14.9971 37.0818 15.0002 36.9417Z"
+						fill="black"
+					/>
+					<path
+						d="M0.914466 14.8244C0.643206 14.7234 0.409921 14.5421 0.246324 14.3052C0.0827266 14.0682 -0.00324578 13.7871 9.37285e-05 13.5001C0.00343324 13.213 0.0959228 12.9339 0.264989 12.7008C0.434055 12.4676 0.671496 12.2917 0.945034 12.197L36.0036 0.079929C36.3079 -0.026643 36.6398 -0.026643 36.9441 0.079929L71.0715 12.2109C71.3406 12.3079 71.5735 12.4837 71.7394 12.715C71.9052 12.9462 71.996 13.222 71.9999 13.5056C72.0037 13.7892 71.9203 14.0673 71.7608 14.3029C71.6013 14.5384 71.3732 14.7203 71.1068 14.8244L36.977 27.9081C36.653 28.0306 36.2947 28.0306 35.9707 27.9081L0.914466 14.8244Z"
+						fill="black"
+					/>
+					<path
+						d="M67 34.3749C67 34.1537 67.0582 33.9359 67.1696 33.7398C67.281 33.5437 67.4424 33.3752 67.64 33.2486C67.8647 33.1043 68.1283 33.0194 68.402 33.0029C68.6757 32.9865 68.9491 33.0392 69.1924 33.1553C69.4357 33.2715 69.6397 33.4465 69.782 33.6616C69.9244 33.8766 69.9998 34.1233 70 34.3749V60.6242C70 60.9891 69.842 61.339 69.5607 61.5971C69.2794 61.8551 68.8978 62 68.5 62C68.1022 62 67.7206 61.8551 67.4393 61.5971C67.158 61.339 67 60.9891 67 60.6242V34.3749Z"
+						fill="#FFD600"
+					/>
+					<path d="M67 24.0353L70 22V54H67V24.0353Z" fill="#FFD600" />
+					<path
+						d="M68.5 49C70.433 49 72 47.433 72 45.5C72 43.567 70.433 42 68.5 42C66.567 42 65 43.567 65 45.5C65 47.433 66.567 49 68.5 49Z"
+						fill="#FFD600"
+					/>
+				</svg>
+			</div>
+			<form class="flex flex-col w-full" action="#">
+				<div class="flex relative h-14 rounded-lg mb-4 bg-white">
 					<svg
 						class="absolute top-1/2 ml-2.5 transform -translate-y-1/2"
 						width="20"
@@ -42,22 +78,14 @@
 							fill="#FFD260"
 						/>
 					</svg>
-
 					<input
-						class="
-							h-full
-							w-full
-							border-none
-							ml-10
-							outline-none
-							bg-transparent
-							pr-4
-						"
+						v-model="email"
+						class="h-full w-full border-none ml-10 outline-none bg-transparent pr-4"
 						type="text"
-						placeholder="E-mail"
+						placeholder="Email"
 					/>
 				</div>
-				<div class="flex relative h-11 rounded-lg mb-4 bg-white">
+				<div class="flex relative h-14 rounded-lg mb-4 bg-white">
 					<svg
 						class="absolute top-1/2 ml-2.5 transform -translate-y-1/2"
 						width="20"
@@ -79,22 +107,14 @@
 							fill="#FFD260"
 						/>
 					</svg>
-
 					<input
-						class="
-							h-full
-							w-full
-							border-none
-							ml-10
-							outline-none
-							bg-transparent
-							pr-4
-						"
-						type="text"
+						v-model="password"
+						class="h-full w-full border-none ml-10 outline-none bg-transparent pr-4"
+						type="password"
 						placeholder="Mot de passe"
 					/>
 				</div>
-				<div class="flex relative h-11 rounded-lg mb-4 bg-white">
+				<div class="flex relative h-14 rounded-lg mb-4 bg-white">
 					<svg
 						class="absolute top-1/2 ml-2.5 transform -translate-y-1/2"
 						width="20"
@@ -116,22 +136,13 @@
 							fill="#FFD260"
 						/>
 					</svg>
-
 					<input
-						class="
-							h-full
-							w-full
-							border-none
-							ml-10
-							outline-none
-							bg-transparent
-							pr-4
-						"
-						type="text"
+						v-model="password"
+						class="h-full w-full border-none ml-10 outline-none bg-transparent pr-4"
+						type="password"
 						placeholder="Confirmation mot de passe"
 					/>
 				</div>
-
 				<svg
 					class="self-center mb-4"
 					width="300"
@@ -196,8 +207,8 @@
 				</svg>
 
 				<button
+					class="border-none bg-button-yellow mb-5 rounded-lg text-base h-14"
 					type="submit"
-					class="h-11 rounded-lg bg-button-yellow border-none"
 				>
 					S'inscrire
 				</button>

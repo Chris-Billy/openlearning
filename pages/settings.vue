@@ -16,7 +16,7 @@
 						fill="#FCFCFF"
 					/>
 				</svg>
-				<h1 class="text-white ml-7">Cours</h1>
+				<h1 class="text-white ml-7">Retour</h1>
 			</div>
 			<div class="flex flex-col justify-center items-center w-full">
 				<div class="w-full flex justify-center items-center">
