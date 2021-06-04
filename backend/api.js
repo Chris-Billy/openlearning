@@ -1,5 +1,4 @@
 // Simple Express Backend to manage API calls for Mongo Database
-
 const bodyParser = require('body-parser')
 const express = require('express')
 const morgan = require('morgan')
@@ -37,6 +36,12 @@ try {
 } catch (error) {
 	console.log(error)
 }
+
+// Import de nos Schémas mongoose
+// const TypeMedia = require('./models/MediasType')
+// const Medias = require('./models/Medias')
+// const Courses = require('./models/Courses')
+const User = require('./models/User')
 
 const typeMedia = [
 	'video',
@@ -762,24 +767,24 @@ const courses = [
 	}
 ]
 
-const user = {
-	id: 150, // id bidon pour répliquer le comportement d'une bdd nosql
-	email: 'a@a.fr',
-	password: '61be55a8e2f6b4e172338bddf184d6dbee29c98853e0a0485ecee7f27b9af0b4', // aaaa
-	firstname: 'Endray',
-	lastname: 'De Sousa',
-	myfavoritecoursesId: [
-		{
-			id: 127,
-			done: false
-		},
-		{
-			id: 84,
-			done: true
-		}
-	],
-	learnedmediasId: [7, 340, 2] // gestion de la progression (checkbox), medias terminés indépendamment d'un parcours de compétences ou métier
-}
+// const user = {
+// 	id: 150, // id bidon pour répliquer le comportement d'une bdd nosql
+// 	email: 'a@a.fr',
+// 	password: '61be55a8e2f6b4e172338bddf184d6dbee29c98853e0a0485ecee7f27b9af0b4', // aaaa
+// 	firstname: 'Endray',
+// 	lastname: 'De Sousa',
+// 	myfavoritecoursesId: [
+// 		{
+// 			id: 127,
+// 			done: false
+// 		},
+// 		{
+// 			id: 84,
+// 			done: true
+// 		}
+// 	],
+// 	learnedmediasId: [7, 340, 2] // gestion de la progression (checkbox), medias terminés indépendamment d'un parcours de compétences ou métier
+// }
 
 // Get header bearer
 const extractBearerToken = (headerValue) => {
@@ -847,20 +852,43 @@ app.get('/userauth', checkToken, (req, res) => {
 	return res.json({ user: decoded })
 })
 
+// Create user in database
+app.post('/user', (req, res) => {
+	const user = new User({
+		...req.body
+	})
+	user
+		.save()
+		.then(() => res.status(201).json({ message: 'Utilisateur créé !' }))
+		.catch((error) => res.status(400).json({ error }))
+})
+
 // api route to get user information,favorite courses, course progression
-app.get('/user', checkToken, (req, res) => {
-	// Get token
-	const token =
-		req.headers.authorization && extractBearerToken(req.headers.authorization)
-	// Decode token to retrieve id of user connected
-	const decoded = jwt.decode(token, { complete: false })
-	// query mongodb with decoded.userid to retrieve all user connected information
-	if (user.id === decoded.userid) {
-		// TODO mongoose query, for now just a mock from user
-		return res.json(user)
-	} else {
-		return res.json({ message: 'This user id does not exist in database' })
-	}
+app.get('/user/:email', checkToken, (req, res) => {
+	User.findOne({ email: req.params.email })
+		.then((user) => {
+			// Get token
+			const token =
+				req.headers.authorization && extractBearerToken(req.headers.authorization)
+			// Decode token to retrieve id of user connected
+			const decoded = jwt.decode(token, { complete: false })
+			// query mongodb with decoded.userid to retrieve all user connected information
+			if (user._id === decoded.userid) {
+				// TODO mongoose query, for now just a mock from user
+				return res.status(200).json(user)
+			} else {
+				return res
+					.status(404)
+					.json({ message: 'This user id does not exist in database' })
+			}})
+		.catch((error) => res.status(404).json({ error }))
+})
+
+// Get all users from database
+app.get('/user', (req, res) => {
+	User.find()
+		.then((users) => res.status(200).json(users))
+		.catch((error) => res.status(400).json({ error }))
 })
 
 // api route to get all user favorite courses from the user connected

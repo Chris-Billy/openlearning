@@ -70,7 +70,7 @@
 						</p>
 					</div>
 				</div>
-				<div class="mt-7">
+				<div class="mt-7 w-3/5">
 					<h2 class="text-center text-xl border-b-2 border-black mt-7">
 						F.A.Q
 					</h2>

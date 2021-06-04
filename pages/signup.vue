@@ -54,7 +54,11 @@
 					/>
 				</svg>
 			</div>
-			<form class="flex flex-col w-full" action="#">
+			<form
+				class="flex flex-col w-full"
+				method="POST"
+				@submit.prevent="createUser"
+			>
 				<div class="flex relative h-14 rounded-lg mb-4 bg-white">
 					<svg
 						class="absolute top-1/2 ml-2.5 transform -translate-y-1/2"
@@ -81,7 +85,7 @@
 					<input
 						v-model="email"
 						class="h-full w-full border-none ml-10 outline-none bg-transparent pr-4"
-						type="text"
+						type="email"
 						placeholder="Email"
 					/>
 				</div>
@@ -137,7 +141,7 @@
 						/>
 					</svg>
 					<input
-						v-model="password"
+						v-model="confirmPassword"
 						class="h-full w-full border-none ml-10 outline-none bg-transparent pr-4"
 						type="password"
 						placeholder="Confirmation mot de passe"
@@ -216,3 +220,37 @@
 		</div>
 	</div>
 </template>
+
+<script>
+export default {
+	data() {
+		return {
+			email: '',
+			password: '',
+			confirmPassword: ''
+		}
+	},
+	methods: {
+		createUser() {
+			if (
+				this.password === this.confirmPassword &&
+				this.password !== '' &&
+				this.confirmPassword !== ''
+			) {
+				try {
+					this.$axios.$post('/user', {
+						email: this.email,
+						password: this.password
+					})
+					console.log('Utilisateur créé')
+					this.$router.push('/home')
+				} catch (e) {
+					this.error = e.response.data.message
+				}
+			} else {
+				console.log('Mot de passe non identiques')
+			}
+		}
+	}
+}
+</script>
