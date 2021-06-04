@@ -1,12 +1,11 @@
 const mongoose = require('mongoose')
 
 const MediasSchema = new mongoose.Schema({
-	id: Number,
-	type: String,
-	title: String,
-	link: String,
-	language: String,
-	level: Number
+	type: { type: String, required: true },
+	title: { type: String, required: true },
+	link: { type: String, required: true },
+	language: { type: String, required: true },
+	level: { type: Number, required: true }
 })
 
-module.exports = mongoose.model('Medias', MediasSchema, 'Medias')
+module.exports = mongoose.model('Medias', MediasSchema)

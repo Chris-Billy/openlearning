@@ -45,6 +45,7 @@
 				</div>
 			</div>
 		</div>
+		<p>{{ user }}</p>
 	</div>
 </template>
 
