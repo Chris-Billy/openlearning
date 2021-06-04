@@ -54,7 +54,13 @@
 					/>
 				</svg>
 			</div>
-			<form class="flex flex-col w-full" action="#">
+			<form
+				class="flex flex-col w-full"
+				id="signup"
+				@submit="checkForm"
+				action="https://google.com/"
+				method="post"
+			>
 				<div class="flex relative h-14 rounded-lg mb-4 bg-white">
 					<svg
 						class="absolute top-1/2 ml-2.5 transform -translate-y-1/2"
