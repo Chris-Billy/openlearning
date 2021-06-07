@@ -819,12 +819,12 @@ const checkToken = (req, res, next) => {
 }
 
 app.post('/login', (req, res) => {
-	User.find({ email: req.body.email, password: sha256(req.body.password) })
+	User.findOne({ email: req.body.email, password: sha256(req.body.password) })
 		.then((user) => {
 			// Check identifiants
 			if (
-				req.body.email === user[0].email &&
-				sha256(req.body.password) === user[0].password
+				req.body.email === user.email &&
+				sha256(req.body.password) === user.password
 			) {
 				// If ids ok, generate token and user data
 				const token = jwt.sign(
@@ -876,7 +876,7 @@ app.get('/user', checkToken, (req, res) => {
 	// Decode token to retrieve id of user connected
 	const decoded = jwt.decode(token, { complete: false })
 	// query mongodb with decoded.userid to retrieve all user connected information
-	User.find({ _id: decoded.userid })
+	User.findOne({ _id: decoded.userid })
 		.then((user) => {
 			if (user.id === decoded.userid) {
 				// TODO mongoose query, for now just a mock from user
@@ -897,8 +897,7 @@ app.get('/users', (req, res) => {
 
 // api route to get all user favorite courses from the user connected
 app.get('/user/:id/courses', checkToken, (req, res) => {
-	// console.log('TESSSSSSSSSSSSSSSSSSSSSST')
-	User.find({ _id: req.params.id })
+	User.findOne({ _id: req.params.id })
 		.then((user) => {
 			// Get token
 			const token =
@@ -908,7 +907,7 @@ app.get('/user/:id/courses', checkToken, (req, res) => {
 			// query mongodb with decoded.userid to retrieve all user favorite courses
 			if (req.params.id == decoded.userid) {
 				// TODO mongoose query, for now just a mock from courses
-				return res.status(201).json(user.learnedmediasId)
+				return res.status(201).json(user.learnedMediasId)
 			} else {
 				return res.json({
 					message: 'No favorites courses found for this user id in database'

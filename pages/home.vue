@@ -30,6 +30,8 @@
 				:card-title="'Lorem ipsum dolor sit ametLorem ipsum dolor sit amet'"
 				:percentage="'10'"
 			/>
+			<pre>
+			<p>{{ user }}</p></pre>
 			<div class="h-3/4 flex flex-col">
 				<p class="text-lg font-medium m-5">Recommandations</p>
 				<div class="h-3/4 w-full overflow-scroll flex flex-col">
@@ -45,7 +47,6 @@
 				</div>
 			</div>
 		</div>
-		<p>{{ user }}</p>
 	</div>
 </template>
 
@@ -57,12 +58,12 @@ export default {
 	async asyncData({ $axios }) {
 		// Appel ajax simple via axios à notre api backend express
 		const user = await $axios.$get('/user')
-		const mycourses = await $axios.$get('/user/' + user.id + '/courses')
-		const allCourses = await $axios.$get('/allCourses')
+		// const mycourses = await $axios.$get('/user/' + user._id + '/courses')
+		// const allCourses = await $axios.$get('/allCourses')
 		return {
-			user,
-			mycourses,
-			allCourses
+			user
+			// mycourses
+			// allCourses
 		}
 	},
 	computed: {
