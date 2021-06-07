@@ -1,12 +1,6 @@
 <template>
 	<div
-		class="
-			example
-			h-full
-			w-screen
-			overflow-y-scroll overflow-x-hidden
-			flex flex-col
-		"
+		class="example h-full w-screen overflow-y-scroll overflow-x-hidden flex flex-col"
 	>
 		<div class="img-bg h-1/4 w-full">
 			<div class="top_bar w-full h-1/5 flex flex-row justify-around">
@@ -45,16 +39,7 @@
 				</div>
 				<div class="login_search h-full w-1/3 flex items-center justify-center">
 					<div
-						class="
-							search_btn
-							rounded-full
-							bg-white
-							h-10
-							w-10
-							flex
-							justify-center
-							items-center
-						"
+						class="search_btn rounded-full bg-white h-10 w-10 flex justify-center items-center"
 					>
 						<svg
 							width="22"
@@ -71,16 +56,7 @@
 						</svg>
 					</div>
 					<div
-						class="
-							bg-white
-							h-10
-							w-60
-							rounded-full
-							ml-5
-							flex
-							justify-center
-							items-center
-						"
+						class="bg-white h-10 w-60 rounded-full ml-5 flex justify-center items-center"
 					>
 						<p class="font-semibold">Connectez-vous !</p>
 					</div>
@@ -96,15 +72,7 @@
 						publiés par les plus grands experts.
 					</p>
 					<div
-						class="
-							h-24
-							w-64
-							rounded-lg
-							bg-white
-							flex
-							items-center
-							justify-center
-						"
+						class="h-24 w-64 rounded-lg bg-white flex items-center justify-center"
 					>
 						<p class="font-semibold text-xl text-center">
 							Inscrivez-vous dès maintenant !

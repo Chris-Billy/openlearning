@@ -819,8 +819,7 @@ const checkToken = (req, res, next) => {
 }
 
 app.post('/login', (req, res) => {
-	User.find({ email: req.body.email, 
-				password: sha256(req.body.password) })
+	User.find({ email: req.body.email, password: sha256(req.body.password) })
 		.then((user) => {
 			// Check identifiants
 			if (
@@ -870,23 +869,27 @@ app.post('/user', (req, res) => {
 })
 
 // api route to get user information,favorite courses, course progression
-app.get('/user/:id', checkToken, (req, res) => {
+app.get('/user', checkToken, (req, res) => {
 	// Get token
 	const token =
 		req.headers.authorization && extractBearerToken(req.headers.authorization)
 	// Decode token to retrieve id of user connected
 	const decoded = jwt.decode(token, { complete: false })
 	// query mongodb with decoded.userid to retrieve all user connected information
-	if (user.id === decoded.userid) {
-		// TODO mongoose query, for now just a mock from user
-		return res.json(user)
-	} else {
-		return res.json({ message: 'This user id does not exist in database' })
-	}
+	User.find({ _id: decoded.userid })
+		.then((user) => {
+			if (user.id === decoded.userid) {
+				// TODO mongoose query, for now just a mock from user
+				return res.status(201).json(user)
+			} else {
+				return res.json({ message: 'This user id does not exist in database' })
+			}
+		})
+		.catch((error) => res.status.apply(401).json({ error }))
 })
 
 // Get all users from database
-app.get('/user', (req, res) => {
+app.get('/users', (req, res) => {
 	User.find()
 		.then((users) => res.status(200).json(users))
 		.catch((error) => res.status(400).json({ error }))
@@ -894,20 +897,25 @@ app.get('/user', (req, res) => {
 
 // api route to get all user favorite courses from the user connected
 app.get('/user/:id/courses', checkToken, (req, res) => {
-	// Get token
-	const token =
-		req.headers.authorization && extractBearerToken(req.headers.authorization)
-	// Decode token to retrieve id of user connected
-	const decoded = jwt.decode(token, { complete: false })
-	// query mongodb with decoded.userid to retrieve all user favorite courses
-	if (req.params.id == decoded.userid) {
-		// TODO mongoose query, for now just a mock from courses
-		return res.json(user.learnedmediasId)
-	} else {
-		return res.json({
-			message: 'No favorites courses found for this user id in database'
+	// console.log('TESSSSSSSSSSSSSSSSSSSSSST')
+	User.find({ _id: req.params.id })
+		.then((user) => {
+			// Get token
+			const token =
+				req.headers.authorization && extractBearerToken(req.headers.authorization)
+			// Decode token to retrieve id of user connected
+			const decoded = jwt.decode(token, { complete: false })
+			// query mongodb with decoded.userid to retrieve all user favorite courses
+			if (req.params.id == decoded.userid) {
+				// TODO mongoose query, for now just a mock from courses
+				return res.status(201).json(user.learnedmediasId)
+			} else {
+				return res.json({
+					message: 'No favorites courses found for this user id in database'
+				})
+			}
 		})
-	}
+		.catch(res.status(400).json({ error }))
 })
 
 // Route vers un cours sélectionné
