@@ -819,27 +819,31 @@ const checkToken = (req, res, next) => {
 }
 
 app.post('/login', (req, res) => {
-	// Check identifiants
-	if (
-		req.body.email === user.email &&
-		sha256(req.body.password) === user.password
-	) {
-		// If ids ok, generate token and user data
-		const token = jwt.sign(
-			{
-				userid: user.id
-			},
-			secret,
-			{ expiresIn: '3 hours' }
-		)
-		res.json({ access_token: token })
-	}
-	// If Ids wrong, send bad authentification information
-	else {
-		res.status(400).json({
-			message: 'Mauvais mot de passe ou email'
+	User.findOne({ email: req.body.email, password: sha256(req.body.password) })
+		.then((user) => {
+			// Check identifiants
+			if (
+				req.body.email === user.email &&
+				sha256(req.body.password) === user.password
+			) {
+				// If ids ok, generate token and user data
+				const token = jwt.sign(
+					{
+						userid: user.id
+					},
+					secret,
+					{ expiresIn: '3 hours' }
+				)
+				res.json({ access_token: token })
+			}
+			// If Ids wrong, send bad authentification information
+			else {
+				res.status(400).json({
+					message: 'Mauvais mot de passe ou email'
+				})
+			}
 		})
-	}
+		.catch((error) => res.status(404).json({ error }))
 })
 
 // nuxt auth user Route, provides userdata for vuex store, after nuxt auth login
@@ -855,7 +859,8 @@ app.get('/userauth', checkToken, (req, res) => {
 // Create user in database
 app.post('/user', (req, res) => {
 	const user = new User({
-		...req.body
+		email: req.body.email,
+		password: sha256(req.body.password)
 	})
 	user
 		.save()
@@ -864,28 +869,27 @@ app.post('/user', (req, res) => {
 })
 
 // api route to get user information,favorite courses, course progression
-app.get('/user/:email', checkToken, (req, res) => {
-	User.findOne({ email: req.params.email })
+app.get('/user', checkToken, (req, res) => {
+	// Get token
+	const token =
+		req.headers.authorization && extractBearerToken(req.headers.authorization)
+	// Decode token to retrieve id of user connected
+	const decoded = jwt.decode(token, { complete: false })
+	// query mongodb with decoded.userid to retrieve all user connected information
+	User.findOne({ _id: decoded.userid })
 		.then((user) => {
-			// Get token
-			const token =
-				req.headers.authorization && extractBearerToken(req.headers.authorization)
-			// Decode token to retrieve id of user connected
-			const decoded = jwt.decode(token, { complete: false })
-			// query mongodb with decoded.userid to retrieve all user connected information
-			if (user._id === decoded.userid) {
+			if (user.id === decoded.userid) {
 				// TODO mongoose query, for now just a mock from user
-				return res.status(200).json(user)
+				return res.status(201).json(user)
 			} else {
-				return res
-					.status(404)
-					.json({ message: 'This user id does not exist in database' })
-			}})
-		.catch((error) => res.status(404).json({ error }))
+				return res.json({ message: 'This user id does not exist in database' })
+			}
+		})
+		.catch((error) => res.status.apply(401).json({ error }))
 })
 
 // Get all users from database
-app.get('/user', (req, res) => {
+app.get('/users', (req, res) => {
 	User.find()
 		.then((users) => res.status(200).json(users))
 		.catch((error) => res.status(400).json({ error }))
@@ -893,20 +897,24 @@ app.get('/user', (req, res) => {
 
 // api route to get all user favorite courses from the user connected
 app.get('/user/:id/courses', checkToken, (req, res) => {
-	// Get token
-	const token =
-		req.headers.authorization && extractBearerToken(req.headers.authorization)
-	// Decode token to retrieve id of user connected
-	const decoded = jwt.decode(token, { complete: false })
-	// query mongodb with decoded.userid to retrieve all user favorite courses
-	if (req.params.id == decoded.userid) {
-		// TODO mongoose query, for now just a mock from courses
-		return res.json(user.learnedmediasId)
-	} else {
-		return res.json({
-			message: 'No favorites courses found for this user id in database'
+	User.findOne({ _id: req.params.id })
+		.then((user) => {
+			// Get token
+			const token =
+				req.headers.authorization && extractBearerToken(req.headers.authorization)
+			// Decode token to retrieve id of user connected
+			const decoded = jwt.decode(token, { complete: false })
+			// query mongodb with decoded.userid to retrieve all user favorite courses
+			if (req.params.id == decoded.userid) {
+				// TODO mongoose query, for now just a mock from courses
+				return res.status(201).json(user.learnedMediasId)
+			} else {
+				return res.json({
+					message: 'No favorites courses found for this user id in database'
+				})
+			}
 		})
-	}
+		.catch(res.status(400).json({ error }))
 })
 
 // Route vers un cours sélectionné
