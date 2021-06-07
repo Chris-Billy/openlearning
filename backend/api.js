@@ -819,27 +819,32 @@ const checkToken = (req, res, next) => {
 }
 
 app.post('/login', (req, res) => {
-	// Check identifiants
-	if (
-		req.body.email === user.email &&
-		sha256(req.body.password) === user.password
-	) {
-		// If ids ok, generate token and user data
-		const token = jwt.sign(
-			{
-				userid: user.id
-			},
-			secret,
-			{ expiresIn: '3 hours' }
-		)
-		res.json({ access_token: token })
-	}
-	// If Ids wrong, send bad authentification information
-	else {
-		res.status(400).json({
-			message: 'Mauvais mot de passe ou email'
+	User.find({ email: req.body.email, 
+				password: sha256(req.body.password) })
+		.then((user) => {
+			// Check identifiants
+			if (
+				req.body.email === user[0].email &&
+				sha256(req.body.password) === user[0].password
+			) {
+				// If ids ok, generate token and user data
+				const token = jwt.sign(
+					{
+						userid: user.id
+					},
+					secret,
+					{ expiresIn: '3 hours' }
+				)
+				res.json({ access_token: token })
+			}
+			// If Ids wrong, send bad authentification information
+			else {
+				res.status(400).json({
+					message: 'Mauvais mot de passe ou email'
+				})
+			}
 		})
-	}
+		.catch((error) => res.status(404).json({ error }))
 })
 
 // nuxt auth user Route, provides userdata for vuex store, after nuxt auth login
@@ -855,7 +860,8 @@ app.get('/userauth', checkToken, (req, res) => {
 // Create user in database
 app.post('/user', (req, res) => {
 	const user = new User({
-		...req.body
+		email: req.body.email,
+		password: sha256(req.body.password)
 	})
 	user
 		.save()
@@ -864,24 +870,19 @@ app.post('/user', (req, res) => {
 })
 
 // api route to get user information,favorite courses, course progression
-app.get('/user/:email', checkToken, (req, res) => {
-	User.findOne({ email: req.params.email })
-		.then((user) => {
-			// Get token
-			const token =
-				req.headers.authorization && extractBearerToken(req.headers.authorization)
-			// Decode token to retrieve id of user connected
-			const decoded = jwt.decode(token, { complete: false })
-			// query mongodb with decoded.userid to retrieve all user connected information
-			if (user._id === decoded.userid) {
-				// TODO mongoose query, for now just a mock from user
-				return res.status(200).json(user)
-			} else {
-				return res
-					.status(404)
-					.json({ message: 'This user id does not exist in database' })
-			}})
-		.catch((error) => res.status(404).json({ error }))
+app.get('/user/:id', checkToken, (req, res) => {
+	// Get token
+	const token =
+		req.headers.authorization && extractBearerToken(req.headers.authorization)
+	// Decode token to retrieve id of user connected
+	const decoded = jwt.decode(token, { complete: false })
+	// query mongodb with decoded.userid to retrieve all user connected information
+	if (user.id === decoded.userid) {
+		// TODO mongoose query, for now just a mock from user
+		return res.json(user)
+	} else {
+		return res.json({ message: 'This user id does not exist in database' })
+	}
 })
 
 // Get all users from database

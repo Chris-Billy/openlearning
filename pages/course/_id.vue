@@ -52,7 +52,7 @@
 				<div class="pb-4">
 					<div class="relative h-48 flex justify-center items-end rounded-lg2">
 						<div
-							class="absolute h-full w-full rounded-lg2 filter brightness-50 z-0"
+							class="absolute flex justify-center h-full w-full rounded-lg2 filter brightness-50 z-0"
 						>
 							<img
 								class="h-full rounded-lg2"

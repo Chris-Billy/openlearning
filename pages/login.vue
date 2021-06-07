@@ -45,7 +45,7 @@
 		<div
 			class="flex h-3/5 w-screen flex-col items-center rounded-t-large p-7 bg-bg-card"
 		>
-			<form class="flex flex-col w-full" method="GET" @submit.prevent="login">
+			<form class="flex flex-col w-full" method="POST" @submit.prevent="login">
 				<div class="flex relative h-14 rounded-lg mb-4 bg-white">
 					<svg
 						class="absolute top-1/2 ml-2.5 transform -translate-y-1/2"
