@@ -54,9 +54,9 @@ export default {
 		localStorage: false,
 		redirect: {
 			login: '/login',
-			logout: '/login',
+			logout: '/welcome',
 			callback: '/login',
-			home: '/home'
+			home: '/welcome'
 		},
 		strategies: {
 			local: {

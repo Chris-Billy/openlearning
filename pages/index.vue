@@ -12,6 +12,11 @@
 
 <script>
 export default {
-	async asyncData({ $axios }) {}
+	middleware({ store, redirect }) {
+		// Si l'utilisateur n'est pas authentifié
+		if (!store.state.isAuthenticated) {
+			return redirect('/welcome')
+		}
+	}
 }
 </script>
