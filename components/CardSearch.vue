@@ -23,9 +23,9 @@
 <script>
 export default {
 	props: {
-		id: { type: Number, default: 0 },
+		id: { type: String, default: '' },
 		title: { type: String, default: '' },
-		stars: { type: String, default: '' },
+		stars: { type: Number, default: 0 },
 		source: { type: String, default: '' }
 	}
 }

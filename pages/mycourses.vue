@@ -46,7 +46,7 @@
 			>
 				<CardCourses
 					v-for="course in unfinishedCourses"
-					:id="course.id"
+					:id="course._id"
 					:key="course.id"
 					:card-title="course.title"
 					:nb-star="course.star"
@@ -64,7 +64,7 @@
 				<div v-else>
 					<CardCourses
 						v-for="course in doneCourses"
-						:id="course.id"
+						:id="course._id"
 						:key="course.id"
 						:card-title="course.title"
 						:nb-star="course.star"
@@ -83,14 +83,14 @@ export default {
 	async asyncData({ $axios }) {
 		// Appel ajax simple via axios à notre api backend express
 		const user = await $axios.$get('/user')
-		const mycourses = await $axios.$get('/user/' + user.id + '/courses')
+		const mycourses = await $axios.$get('/user/' + user._id + '/courses')
 		const unfinishedCourses = await $axios.$post(
 			'/courses/actuals',
-			user.myfavoritecoursesId
+			user.favoriteCoursesId
 		)
 		const doneCourses = await $axios.$post(
 			'/courses/done',
-			user.myfavoritecoursesId
+			user.favoriteCoursesId
 		)
 		return {
 			user,

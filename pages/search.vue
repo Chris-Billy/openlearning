@@ -69,7 +69,7 @@
 							<div class="flex flex-row p-5">
 								<CardSearch
 									v-for="course in mostRatedCourses"
-									:id="course.id"
+									:id="course._id"
 									:key="course.id"
 									:title="course.title"
 									:stars="course.star"
@@ -84,7 +84,7 @@
 							<div class="flex flex-row p-5">
 								<CardSearch
 									v-for="course in mostPopularCourses"
-									:id="course.id"
+									:id="course._id"
 									:key="course.id"
 									:title="course.title"
 									:stars="course.star"
@@ -99,7 +99,7 @@
 							<div class="flex flex-row p-5">
 								<CardSearch
 									v-for="course in mostRecentCourses"
-									:id="course.id"
+									:id="course._id"
 									:key="course.id"
 									:title="course.title"
 									:stars="course.star"
@@ -119,7 +119,7 @@
 							<div class="flex flex-row p-5">
 								<CardSearch
 									v-for="course in jobResult.data"
-									:id="course.id"
+									:id="course._id"
 									:key="course.id"
 									:title="course.title"
 									:stars="course.star"
@@ -134,7 +134,7 @@
 							<div class="flex flex-row p-5">
 								<CardSearch
 									v-for="course in skillResult.data"
-									:id="course.id"
+									:id="course._id"
 									:key="course.id"
 									:title="course.title"
 									:stars="course.star"

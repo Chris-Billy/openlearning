@@ -44,10 +44,10 @@ export default {
 	name: 'RecommandedCards',
 	props: {
 		cardTitle: { type: String, default: '' },
-		nbStar: { type: String, default: '' },
+		nbStar: { type: Number, default: 0 },
 		owner: { type: String, default: '' },
 		category: { type: String, default: '' },
-		id: { type: Number, default: 0 }
+		id: { type: String, default: '' }
 	}
 }
 </script>

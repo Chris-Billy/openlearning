@@ -113,7 +113,6 @@
 						</p>
 					</div>
 				</div>
-				<pre><p>{{ myCourse }}</p></pre>
 			</div>
 
 			<div

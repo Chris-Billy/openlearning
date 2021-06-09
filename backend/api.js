@@ -91,681 +91,681 @@ const medias = [
 	}
 ]
 
-const courses = [
-	{
-		id: 818,
-		title: 'The Basics of IOS dev',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '5',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 0,
-		createdAt: 1611134752,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 84,
-		title: 'The Basics of IOS dev (2)',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '4.5',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Skill', // type de parcours métier ou compétence
-		nbFav: 90,
-		createdAt: 1620518400,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 74,
-		title: 'The Basics of JS (3)',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '4.1',
-		category: 'Javascript',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 80,
-		createdAt: 1620604800,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 94,
-		title: 'The Basics of IOS dev (4)',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '4.9',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Skill', // type de parcours métier ou compétence
-		nbFav: 70,
-		createdAt: 1620691200,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 841,
-		title: 'The Basics of IOS dev (5)',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '2.1',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Skill', // type de parcours métier ou compétence
-		nbFav: 60,
-		createdAt: 1620777600,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 811,
-		title: 'The Basics of IOS dev (6)',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '5',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 50,
-		createdAt: 1620864000,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 89,
-		title: 'The Basics of IOS dev (7)',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '4',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 40,
-		createdAt: 1620950400,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 1,
-		title: 'The Basics of IOS dev (8)',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '1',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Skill', // type de parcours métier ou compétence
-		nbFav: 30,
-		createdAt: 1621036800,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 12,
-		title: 'The Basics of IOS dev (9)',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '4.5',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 20,
-		createdAt: 1621123200,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 22,
-		title: 'The Basics of IOS dev (10)',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '3.1',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Skill', // type de parcours métier ou compétence
-		nbFav: 10,
-		createdAt: 1621209600,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 10,
-		title: 'The Basics of IOS dev',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '4.2',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 0,
-		createdAt: 1611134752,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 14,
-		title: 'The Basics of IOS dev',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '1.6',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Skill', // type de parcours métier ou compétence
-		nbFav: 0,
-		createdAt: 1611134752,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 4,
-		title: 'The Basics of IOS dev',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '0.5',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 0,
-		createdAt: 1611134752,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 819,
-		title: 'The Basics of IOS dev',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '5',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 0,
-		createdAt: 1611134752,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 817,
-		title: 'The Basics of IOS dev',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '5',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 0,
-		createdAt: 1611134752,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 816,
-		title: 'The Basics of IOS dev',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '5',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 0,
-		createdAt: 1611134752,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 815,
-		title: 'The Basics of IOS dev',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '5',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 0,
-		createdAt: 1611134752,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 814,
-		title: 'The Basics of IOS dev',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '5',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 0,
-		createdAt: 1611134752,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 813,
-		title: 'The Basics of IOS dev',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '5',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 0,
-		createdAt: 1611134752,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 812,
-		title: 'The Basics of IOS dev',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '5',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 0,
-		createdAt: 1611134752,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 822,
-		title: 'The Basics of IOS dev',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '5',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 0,
-		createdAt: 1611134752,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 821,
-		title: 'The Basics of IOS dev',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '5',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 0,
-		createdAt: 1611134752,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 890,
-		title: 'The Basics of IOS dev',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '5',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 0,
-		createdAt: 1611134752,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 891,
-		title: 'The Basics of IOS dev',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '5',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 0,
-		createdAt: 1611134752,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 893,
-		title: 'The Basics of IOS dev',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '5',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 0,
-		createdAt: 1611134752,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 895,
-		title: 'The Basics of IOS dev',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '5',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 0,
-		createdAt: 1611134752,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 899,
-		title: 'The Basics of IOS dev',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '5',
-		category: 'Swift',
-		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Job', // type de parcours métier ou compétence
-		nbFav: 0,
-		createdAt: 1611134752,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios'
-		]
-	},
-	{
-		id: 127,
-		title: 'How to learn Agile with André (1)',
-		img: '',
-		description:
-			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
-		star: '4.7',
-		category: 'Agile',
-		mediasId: [2, 7, 3], // Ici on a que 2 médias pour le cours ci-dessus
-		source: 'openlearning', // openlearning ou contributeur externe
-		theme: 'Skill', // type de parcours métier ou compétence
-		nbFav: 100,
-		createdAt: 1620259200,
-		keyWord: [
-			'vuejs',
-			'nodejs',
-			'swift',
-			'javascript',
-			'html',
-			'css',
-			'mobile',
-			'ios',
-			'test'
-		]
-	}
-]
+// const courses = [
+// 	{
+// 		id: 818,
+// 		title: 'The Basics of IOS dev',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '5',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 0,
+// 		createdAt: 1611134752,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 84,
+// 		title: 'The Basics of IOS dev (2)',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '4.5',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Skill', // type de parcours métier ou compétence
+// 		nbFav: 90,
+// 		createdAt: 1620518400,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 74,
+// 		title: 'The Basics of JS (3)',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '4.1',
+// 		category: 'Javascript',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 80,
+// 		createdAt: 1620604800,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 94,
+// 		title: 'The Basics of IOS dev (4)',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '4.9',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Skill', // type de parcours métier ou compétence
+// 		nbFav: 70,
+// 		createdAt: 1620691200,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 841,
+// 		title: 'The Basics of IOS dev (5)',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '2.1',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Skill', // type de parcours métier ou compétence
+// 		nbFav: 60,
+// 		createdAt: 1620777600,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 811,
+// 		title: 'The Basics of IOS dev (6)',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '5',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 50,
+// 		createdAt: 1620864000,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 89,
+// 		title: 'The Basics of IOS dev (7)',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '4',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 40,
+// 		createdAt: 1620950400,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 1,
+// 		title: 'The Basics of IOS dev (8)',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '1',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Skill', // type de parcours métier ou compétence
+// 		nbFav: 30,
+// 		createdAt: 1621036800,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 12,
+// 		title: 'The Basics of IOS dev (9)',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '4.5',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 20,
+// 		createdAt: 1621123200,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 22,
+// 		title: 'The Basics of IOS dev (10)',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '3.1',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Skill', // type de parcours métier ou compétence
+// 		nbFav: 10,
+// 		createdAt: 1621209600,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 10,
+// 		title: 'The Basics of IOS dev',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '4.2',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 0,
+// 		createdAt: 1611134752,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 14,
+// 		title: 'The Basics of IOS dev',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '1.6',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Skill', // type de parcours métier ou compétence
+// 		nbFav: 0,
+// 		createdAt: 1611134752,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 4,
+// 		title: 'The Basics of IOS dev',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '0.5',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 0,
+// 		createdAt: 1611134752,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 819,
+// 		title: 'The Basics of IOS dev',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '5',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 0,
+// 		createdAt: 1611134752,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 817,
+// 		title: 'The Basics of IOS dev',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '5',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 0,
+// 		createdAt: 1611134752,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 816,
+// 		title: 'The Basics of IOS dev',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '5',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 0,
+// 		createdAt: 1611134752,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 815,
+// 		title: 'The Basics of IOS dev',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '5',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 0,
+// 		createdAt: 1611134752,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 814,
+// 		title: 'The Basics of IOS dev',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '5',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 0,
+// 		createdAt: 1611134752,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 813,
+// 		title: 'The Basics of IOS dev',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '5',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 0,
+// 		createdAt: 1611134752,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 812,
+// 		title: 'The Basics of IOS dev',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '5',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 0,
+// 		createdAt: 1611134752,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 822,
+// 		title: 'The Basics of IOS dev',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '5',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 0,
+// 		createdAt: 1611134752,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 821,
+// 		title: 'The Basics of IOS dev',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '5',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 0,
+// 		createdAt: 1611134752,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 890,
+// 		title: 'The Basics of IOS dev',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '5',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 0,
+// 		createdAt: 1611134752,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 891,
+// 		title: 'The Basics of IOS dev',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '5',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 0,
+// 		createdAt: 1611134752,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 893,
+// 		title: 'The Basics of IOS dev',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '5',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 0,
+// 		createdAt: 1611134752,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 895,
+// 		title: 'The Basics of IOS dev',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '5',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 0,
+// 		createdAt: 1611134752,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 899,
+// 		title: 'The Basics of IOS dev',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '5',
+// 		category: 'Swift',
+// 		mediasId: [340, 7], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Job', // type de parcours métier ou compétence
+// 		nbFav: 0,
+// 		createdAt: 1611134752,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios'
+// 		]
+// 	},
+// 	{
+// 		id: 127,
+// 		title: 'How to learn Agile with André (1)',
+// 		img: '',
+// 		description:
+// 			'Pandente itaque viam fatorum sorte tristissima, qua praestitutum erat eum vita et imperio spoliari, itineribus interiectis permutatione iumentorum emensis venit Petobionem oppidum Noricorum, ubi reseratae sunt insidiarum latebrae omnes, et Barbatio repente apparuit comes, qui sub eo domesticis praefuit, cum Apodemio agente in rebus milites ducens, quos beneficiis suis oppigneratos elegerat imperator certus nec praemiis nec miseratione ulla posse deflecti.',
+// 		star: '4.7',
+// 		category: 'Agile',
+// 		mediasId: [2, 7, 3], // Ici on a que 2 médias pour le cours ci-dessus
+// 		source: 'openlearning', // openlearning ou contributeur externe
+// 		theme: 'Skill', // type de parcours métier ou compétence
+// 		nbFav: 100,
+// 		createdAt: 1620259200,
+// 		keyWord: [
+// 			'vuejs',
+// 			'nodejs',
+// 			'swift',
+// 			'javascript',
+// 			'html',
+// 			'css',
+// 			'mobile',
+// 			'ios',
+// 			'test'
+// 		]
+// 	}
+// ]
 
 // const user = {
 // 	id: 150, // id bidon pour répliquer le comportement d'une bdd nosql
@@ -969,11 +969,6 @@ app.get('/course/:id', (req, res) => {
 	Courses.findOne({ _id: req.params.id })
 		.then((course) => res.status(201).json(course))
 		.catch((error) => res.status(400).json({ error }))
-	// courses.forEach((course) => {
-	// 	if (req.params.id == course.id) {
-	// 		return res.json(course)
-	// 	}
-	// })
 })
 
 // Route vers les médias d'un cours sélectionné
@@ -998,102 +993,130 @@ app.post('/medias', (req, res) => {
 })
 
 app.post('/courses/actuals', (req, res) => {
-	const allCourses = []
-	const idsCourses = req.body
-	courses.forEach((cours) => {
-		idsCourses.forEach((pos) => {
-			if (cours.id == pos.id && !pos.done) {
-				allCourses.push(cours)
-			}
+	Courses.find()
+		.then((courses) => {
+			const allCourses = []
+			const idsCourses = req.body
+			courses.forEach((cours) => {
+				idsCourses.forEach((pos) => {
+					if (cours.id == pos.id && !pos.done) {
+						allCourses.push(cours)
+					}
+				})
+			})
+			return res.status(201).json(allCourses)
 		})
-	})
-	return res.json(allCourses)
+		.catch((error) => res.status(400).json({ error }))
 })
 
 app.post('/courses/done', (req, res) => {
-	const allCourses = []
-	const idsCourses = req.body
-	courses.forEach((cours) => {
-		idsCourses.forEach((pos) => {
-			if (cours.id == pos.id && pos.done) {
-				allCourses.push(cours)
-			}
+	Courses.find()
+		.then((courses) => {
+			const allCourses = []
+			const idsCourses = req.body
+			courses.forEach((cours) => {
+				idsCourses.forEach((pos) => {
+					if (cours.id == pos.id && pos.done) {
+						allCourses.push(cours)
+					}
+				})
+			})
+			return res.status(201).json(allCourses)
 		})
-	})
-	return res.json(allCourses)
+		.catch((error) => res.status(400).json({ error }))
 })
 
 // Get the 10 most rated courses
 app.get('/mostRatedCourses', (req, res) => {
-	const rated = courses
-		.slice()
-		.sort((a, b) => {
-			return b.star - a.star
+	Courses.find()
+		.then((courses) => {
+			const rated = courses
+				.slice()
+				.sort((a, b) => {
+					return b.star - a.star
+				})
+				.slice(0, 10)
+			return res.status(201).json(rated)
 		})
-		.slice(0, 10)
-	return res.json(rated)
+		.catch((error) => res.status(400).json({ error }))
 })
 
 // Get the 10 most popular courses
 app.get('/mostPopularCourses', (req, res) => {
-	const popular = courses
-		.slice()
-		.sort((a, b) => {
-			return b.nbFav - a.nbFav
+	Courses.find()
+		.then((courses) => {
+			const popular = courses
+				.slice()
+				.sort((a, b) => {
+					return b.nbFav - a.nbFav
+				})
+				.slice(0, 10)
+			return res.status(201).json(popular)
 		})
-		.slice(0, 10)
-	return res.json(popular)
+		.catch((error) => res.status(400).json({ error }))
 })
 
 // Get the 10 most recent courses
 app.get('/mostRecentCourses', (req, res) => {
-	const recent = courses
-		.slice()
-		.sort((a, b) => {
-			return new Date(b.createdAt * 1000) - new Date(a.createdAt * 1000)
+	Courses.find()
+		.then((courses) => {
+			const recent = courses
+				.slice()
+				.sort((a, b) => {
+					return new Date(b.createdAt * 1000) - new Date(a.createdAt * 1000)
+				})
+				.slice(0, 10)
+			return res.status(201).json(recent)
 		})
-		.slice(0, 10)
-	return res.json(recent)
+		.catch((error) => res.status(400).json({ error }))
 })
 
 app.post('/searchByJob', (req, res) => {
-	// Initialisation d'un objet qui contiendra tous les médias
-	const jobResult = []
-	// On envoie chaque média dans la catégorie qui lui correspond
-	const input = Object.keys(req.body)
-	const jobCourses = []
-	courses.forEach((x) => {
-		if (x.theme.includes('Job')) {
-			jobCourses.push(x)
-		}
-	})
-	jobCourses.forEach((course) => {
-		// console.log(course.keyWord)
-		if (course.keyWord.includes(input[0].toLowerCase())) {
-			jobResult.push(course)
-		}
-	})
-	return res.json(jobResult)
+	Crouses.find()
+		.then((courses) => {
+			// Initialisation d'un objet qui contiendra tous les médias
+			const jobResult = []
+			// On envoie chaque média dans la catégorie qui lui correspond
+			const input = Object.keys(req.body)
+			const jobCourses = []
+			courses.forEach((x) => {
+				if (x.theme.includes('Job')) {
+					jobCourses.push(x)
+				}
+			})
+			jobCourses.forEach((course) => {
+				// console.log(course.keyWord)
+				if (course.keyWord.includes(input[0].toLowerCase())) {
+					jobResult.push(course)
+				}
+			})
+			return res.status(201).json(jobResult)
+		})
+		.catch((error) => res.status(400).json({ error }))
 })
 
 app.post('/searchBySkill', (req, res) => {
-	// Initialisation d'un objet qui contiendra tous les médias
-	const skillResult = []
-	// On envoie chaque média dans la catégorie qui lui correspond
-	const input = Object.keys(req.body)
-	const skillCourses = []
-	courses.forEach((x) => {
-		if (x.theme.includes('Skill')) {
-			skillCourses.push(x)
-		}
-	})
-	skillCourses.forEach((course) => {
-		// console.log(course.keyWord)
-		if (course.keyWord.includes(input[0].toLowerCase())) {
-			skillResult.push(course)
-		}
-	})
-	return res.json(skillResult)
+	Courses.find()
+		.then((courses) => {
+			// Initialisation d'un objet qui contiendra tous les médias
+			const skillResult = []
+			// On envoie chaque média dans la catégorie qui lui correspond
+			const input = Object.keys(req.body)
+			const skillCourses = []
+			courses.forEach((x) => {
+				if (x.theme.includes('Skill')) {
+					skillCourses.push(x)
+				}
+			})
+			skillCourses.forEach((course) => {
+				// console.log(course.keyWord)
+				if (course.keyWord.includes(input[0].toLowerCase())) {
+					skillResult.push(course)
+				}
+			})
+			return res.status(201).json(skillResult)
+		})
+		.catch((error) => res.status(400).json({ error }))
 })
 
 module.exports = app
