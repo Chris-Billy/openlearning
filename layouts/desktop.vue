@@ -1,5 +1,5 @@
 <template>
-	<div class="nologin-page example bg-primary w-screen">
+	<div class="h-screen overflow-x-hidden overflow-y-scroll bg-primary w-screen">
 		<Nuxt />
 	</div>
 </template>
@@ -8,18 +8,4 @@
 export default {}
 </script>
 
-<style>
-.nologin-page {
-	height: 2800px;
-}
-/* Hide scrollbar for Chrome, Safari and Opera */
-.example::-webkit-scrollbar {
-	display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.example {
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
-}
-</style>
+<style></style>
