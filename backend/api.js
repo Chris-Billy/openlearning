@@ -830,8 +830,13 @@ app.post('/login', (req, res) => {
 				const token = jwt.sign(
 					{
 						userid: user.id,
+						email: user.email,
+						password: user.password,
 						firstname: user.firstname,
-						lastname: user.lastname
+						lastname: user.lastname,
+						favoriteCoursesId: user.favoriteCoursesId,
+						learnedMediasId: user.learnedMediasId,
+						language: user.language
 					},
 					secret,
 					{ expiresIn: '3 hours' }
@@ -932,16 +937,43 @@ app.get('/mediasType', (req, res) => {
 		.catch((error) => res.status(400).json({ error }))
 })
 
+// Create a course
+app.post('/course', (req, res) => {
+	const course = new Courses({
+		...req.body
+	})
+	course
+		.save()
+		.then(() => res.status(201).json({ message: 'Cours créé !' }))
+		.catch((error) => res.status(400).json({ error }))
+})
+
+// Get all courses
+app.get('/courses', (req, res) => {
+	Courses.find()
+		.then((courses) => res.status(201).json(courses))
+		.catch((error) => res.status(400).json({ error }))
+})
+
+// Delete a course
+app.delete('/course', (req, res) => {
+	Courses.remove({
+		_id: req.body.id
+	})
+		.then(() => res.status(201).json({ message: 'Cours supprimé !' }))
+		.catch((error) => res.status(400).json({ error }))
+})
+
 // Route vers un cours sélectionné
 app.get('/course/:id', (req, res) => {
-	// Courses.findOne({ _id: req.params.id })
-	// 	.then((course) => res.status(201).json(course))
-	// 	.catch((error) => res.status(400).json({ error }))
-	courses.forEach((course) => {
-		if (req.params.id == course.id) {
-			return res.json(course)
-		}
-	})
+	Courses.findOne({ _id: req.params.id })
+		.then((course) => res.status(201).json(course))
+		.catch((error) => res.status(400).json({ error }))
+	// courses.forEach((course) => {
+	// 	if (req.params.id == course.id) {
+	// 		return res.json(course)
+	// 	}
+	// })
 })
 
 // Route vers les médias d'un cours sélectionné
@@ -1062,10 +1094,6 @@ app.post('/searchBySkill', (req, res) => {
 		}
 	})
 	return res.json(skillResult)
-})
-
-app.get('/allCourses', (req, res) => {
-	return res.json(courses)
 })
 
 module.exports = app
