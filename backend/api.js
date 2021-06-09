@@ -38,9 +38,9 @@ try {
 }
 
 // Import de nos Schémas mongoose
-// const TypeMedia = require('./models/MediasType')
-// const Medias = require('./models/Medias')
-// const Courses = require('./models/Courses')
+const TypeMedia = require('./models/MediasType')
+const Medias = require('./models/Medias')
+const Courses = require('./models/Courses')
 const User = require('./models/User')
 
 const typeMedia = [
@@ -829,7 +829,9 @@ app.post('/login', (req, res) => {
 				// If ids ok, generate token and user data
 				const token = jwt.sign(
 					{
-						userid: user.id
+						userid: user.id,
+						firstname: user.firstname,
+						lastname: user.lastname
 					},
 					secret,
 					{ expiresIn: '3 hours' }
@@ -856,7 +858,7 @@ app.get('/userauth', checkToken, (req, res) => {
 	return res.json({ user: decoded })
 })
 
-// Create user in database
+// Create a user in database
 app.post('/user', (req, res) => {
 	const user = new User({
 		email: req.body.email,
@@ -895,30 +897,46 @@ app.get('/users', (req, res) => {
 		.catch((error) => res.status(400).json({ error }))
 })
 
+// Delete a user in database
+app.delete('/user', (req, res) => {
+	User.remove({ _id: req.body.id }).then(() =>
+		res
+			.status(201)
+			.json({ message: 'Utilisateur supprimé' })
+			.catch((error) => res.status(400).json({ error }))
+	)
+})
+
 // api route to get all user favorite courses from the user connected
 app.get('/user/:id/courses', checkToken, (req, res) => {
 	User.findOne({ _id: req.params.id })
-		.then((user) => {
-			// Get token
-			const token =
-				req.headers.authorization && extractBearerToken(req.headers.authorization)
-			// Decode token to retrieve id of user connected
-			const decoded = jwt.decode(token, { complete: false })
-			// query mongodb with decoded.userid to retrieve all user favorite courses
-			if (req.params.id == decoded.userid) {
-				// TODO mongoose query, for now just a mock from courses
-				return res.status(201).json(user.learnedMediasId)
-			} else {
-				return res.json({
-					message: 'No favorites courses found for this user id in database'
-				})
-			}
-		})
-		.catch(res.status(400).json({ error }))
+		.then((user) => res.status(201).json(user.learnedMediasId))
+		.catch((error) => res.status(400).json({ error }))
+})
+
+// Create a media type
+app.post('/mediaType', (req, res) => {
+	const mediaType = new TypeMedia({
+		type: req.body.type
+	})
+	mediaType
+		.save()
+		.then(() => res.status(201).json({ message: 'Type de média créé !' }))
+		.catch((error) => res.status(400).json({ error }))
+})
+
+// Get all media type
+app.get('/mediasType', (req, res) => {
+	TypeMedia.find()
+		.then((mediasType) => res.status(201).json(mediasType))
+		.catch((error) => res.status(400).json({ error }))
 })
 
 // Route vers un cours sélectionné
 app.get('/course/:id', (req, res) => {
+	// Courses.findOne({ _id: req.params.id })
+	// 	.then((course) => res.status(201).json(course))
+	// 	.catch((error) => res.status(400).json({ error }))
 	courses.forEach((course) => {
 		if (req.params.id == course.id) {
 			return res.json(course)
@@ -928,14 +946,15 @@ app.get('/course/:id', (req, res) => {
 
 // Route vers les médias d'un cours sélectionné
 app.post('/medias', (req, res) => {
+	const typeMedia = req.body.typeMedia
 	// Initialisation d'un objet qui contiendra tous les médias
 	const allMedias = {}
 	// On ajoute tous les types de médias
 	typeMedia.forEach((type) => {
-		allMedias[type] = []
+		allMedias[type.type] = []
 	})
 	// On envoie chaque média dans la catégorie qui lui correspond
-	const idsMedias = req.body
+	const idsMedias = req.body.mediasId
 	idsMedias.forEach((id) => {
 		medias.forEach((media) => {
 			if (id == media.id) {
