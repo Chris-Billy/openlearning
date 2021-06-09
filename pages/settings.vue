@@ -34,7 +34,8 @@
 			<div
 				class="h-full w-11/12 flex flex-col flex items-center scrollbars flex overflow-x-auto"
 			>
-				<form class="w-full h-full" action="">
+				{{ loggedInUser }}
+				<form class="w-full h-full" method="PuT" @submit.prevent="updateUser">
 					<div class="w-full">
 						<div class="text-black flex flex-col justify-center w-full text-lg">
 							<p>Paramètres du compte</p>
@@ -45,19 +46,20 @@
 							>
 								<label class="w-full bg-transparent mt-4">Nom</label>
 								<input
+									v-model="nom"
 									class="w-full border-l border-r bg-transparent border-black outline-none p-2 mb-4"
 									type="text"
-									name="name"
-									:placeholder="user.lastname"
+									:placeholder="user.nom"
 								/>
 								<label class="w-full bg-transparent mt-4">Prénom</label>
 								<input
+									v-model="prenom"
 									class="w-full border-l border-r bg-transparent border-black outline-none p-2 mb-4"
 									type="text"
-									name="email"
-									:placeholder="user.firstname"
+									:placeholder="user.prenom"
 								/>
 								<select
+									v-model="language"
 									class="w-full border-l border-r bg-transparent border-black outline-none p-2 mb-4 mt-4"
 								>
 									<option value="">Langues</option>
@@ -80,6 +82,7 @@
 							>
 								<label class="w-full bg-transparent mt-4">Mail</label>
 								<input
+									v-model="email"
 									class="w-full border-l border-r bg-transparent border-black outline-none p-2 mb-4"
 									type="text"
 									name="e-mail"
@@ -101,6 +104,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex' // vuex here only used for nuxt auth, otherwise, we use composition api for global store
 export default {
 	name: 'Settings',
 	middleware: 'auth',
@@ -109,6 +113,33 @@ export default {
 		const user = await $axios.$get('/user')
 		return {
 			user
+		}
+	},
+	data() {
+		return {
+			nom: '',
+			prenom: '',
+			language: '',
+			email: ''
+		}
+	},
+	computed: {
+		...mapGetters(['isAuthenticated', 'loggedInUser'])
+	},
+	methods: {
+		updateUser() {
+			try {
+				this.$axios.$put('/user', {
+					nom: this.nom,
+					prenom: this.prenom,
+					language: this.language,
+					email: this.email
+				})
+				console.log('Utilisateur modifié')
+				this.$router.push('/settings')
+			} catch (e) {
+				this.error = e.response.data.message
+			}
 		}
 	}
 }
