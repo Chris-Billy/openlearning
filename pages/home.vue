@@ -13,7 +13,7 @@
 						<div class="h-1/2">
 							<p class="wb text-white">Heureux de vous revoir,</p>
 							<p class="names text-white font-bold">
-								{{ user.firstname }} {{ user.lastname }}
+								{{ this.$auth.user.firstname }} {{ this.$auth.user.lastname }}
 							</p>
 						</div>
 					</div>
@@ -30,8 +30,6 @@
 				:card-title="'Lorem ipsum dolor sit ametLorem ipsum dolor sit amet'"
 				:percentage="'10'"
 			/>
-			<pre>
-			<p>{{ user }}</p></pre>
 			<div class="h-3/4 flex flex-col">
 				<p class="text-lg font-medium m-5">Recommandations</p>
 				<div class="h-3/4 w-full overflow-scroll flex flex-col">
@@ -55,15 +53,15 @@ import { mapGetters } from 'vuex' // vuex here only used for nuxt auth, otherwis
 export default {
 	name: 'LoginPage',
 	middleware: 'auth',
-	async asyncData({ $axios }) {
+	async asyncData({ store, $axios }) {
 		// Appel ajax simple via axios à notre api backend express
-		const user = await $axios.$get('/user')
-		// const mycourses = await $axios.$get('/user/' + user._id + '/courses')
-		// const allCourses = await $axios.$get('/allCourses')
+		const mycourses = await $axios.$get(
+			'/user/' + store.state.auth.user.userid + '/courses'
+		)
+		const allCourses = await $axios.$get('/allCourses')
 		return {
-			user
-			// mycourses
-			// allCourses
+			mycourses,
+			allCourses
 		}
 	},
 	computed: {

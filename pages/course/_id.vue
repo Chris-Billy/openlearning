@@ -113,6 +113,7 @@
 						</p>
 					</div>
 				</div>
+				<pre><p>{{ myCourse }}</p></pre>
 			</div>
 
 			<div
@@ -165,8 +166,10 @@
 import { mapGetters } from 'vuex'
 export default {
 	async asyncData({ params, $axios }) {
+		const user = await $axios.$get('/user')
 		const myCourse = await $axios.$get('/course/' + params.id)
 		return {
+			user,
 			myCourse
 		}
 	},
@@ -177,7 +180,7 @@ export default {
 			learnedMedias: '',
 			message: false,
 			selectedLanguage: 'fr-en',
-			test: '<img class="h-4 w-4" src="@/static/star.png" />'
+			allMediasType: ''
 		}
 	},
 	computed: {
@@ -187,11 +190,14 @@ export default {
 		async checkAccess() {
 			if (this.defaulttab !== false) {
 				if (this.isAuthenticated) {
-					this.allMedias = await this.$axios.$post(
-						'/medias',
-						this.myCourse.mediasId
+					this.allMediasType = await this.$axios.$get('/mediasType')
+					this.allMedias = await this.$axios.$post('/medias', {
+						typeMedia: this.allMediasType,
+						mediasId: this.myCourse.mediasId
+					})
+					this.learnedMedias = await this.$axios.get(
+						'/user/' + this.user._id + '/courses'
 					)
-					this.learnedMedias = await this.$axios.get('/user/150/courses')
 				} else {
 					this.message =
 						'Merci de vous connecter pour accéder aux détails du cours.'
