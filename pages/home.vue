@@ -58,7 +58,7 @@ export default {
 		const mycourses = await $axios.$get(
 			'/user/' + store.state.auth.user.userid + '/courses'
 		)
-		const allCourses = await $axios.$get('/allCourses')
+		const allCourses = await $axios.$get('/courses')
 		return {
 			mycourses,
 			allCourses
