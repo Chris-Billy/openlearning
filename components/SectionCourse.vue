@@ -26,21 +26,27 @@ export default {
 	props: {
 		title: { type: String, default: '' },
 		category: { type: String, default: '' },
-		idMedia: { type: Number, default: 0 },
-		learnedMedias: { type: Array, default: null },
+		idMedia: { type: String, default: '' },
+		learnedMedias: { type: Array, default: () => [] },
 		language: { type: String, default: '' },
 		selectedLanguage: { type: String, default: '' }
 	},
 	methods: {
-		changeStatus(idMedia) {
+		async changeStatus(idMedia) {
 			const learnedMedias = this.learnedMedias
 
 			if (this.learnedMedias.includes(idMedia)) {
 				learnedMedias.splice(this.learnedMedias.indexOf(idMedia), 1)
 				this.$emit('update:learnedMedias', learnedMedias)
+				await this.$axios.$put('/user/' + this.$auth.user.userid, {
+					learnedMediasId: learnedMedias
+				})
 			} else {
 				learnedMedias.push(idMedia)
 				this.$emit('update:learnedMedias', learnedMedias)
+				await this.$axios.$put('/user/' + this.$auth.user.userid, {
+					learnedMediasId: learnedMedias
+				})
 			}
 		}
 	}

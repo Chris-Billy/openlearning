@@ -43,53 +43,53 @@ const Medias = require('./models/Medias')
 const Courses = require('./models/Courses')
 const User = require('./models/User')
 
-const typeMedia = [
-	'video',
-	'cours',
-	'article',
-	'audio',
-	'ivy league',
-	'livre',
-	'exercice',
-	'cheat sheet',
-	'outil'
-]
+// const typeMedia = [
+// 	'video',
+// 	'cours',
+// 	'article',
+// 	'audio',
+// 	'ivy league',
+// 	'livre',
+// 	'exercice',
+// 	'cheat sheet',
+// 	'outil'
+// ]
 
 // for testing purposes / mock tests @todo @fixme
-const medias = [
-	{
-		id: 2,
-		type: typeMedia[0], // cas possibles : audio, video, book, cheatsheet,...
-		title: 'How to make french croissants',
-		link: 'https://www.youtube.com/watch?v=yw-4zNOYTjI',
-		language: 'fr',
-		level: 0
-	},
-	{
-		id: 3,
-		type: typeMedia[1], // cas possibles : audio, video, book, cheatsheet,...
-		title: 'How to learn Python',
-		link: 'https://courspython.com/introduction-python.html',
-		language: 'en',
-		level: 1
-	},
-	{
-		id: 7,
-		type: typeMedia[2], // cas possibles : audio, video, book, cheatsheet,...
-		title: 'All about Python',
-		link: 'https://www.lebigdata.fr/python-langage-definition',
-		language: 'fr',
-		level: 2
-	},
-	{
-		id: 340,
-		type: typeMedia[1], // cas possibles : audio, video, book, cheatsheet,...
-		title: 'How to learn Python',
-		link: 'https://courspython.com/introduction-python.html',
-		language: 'en',
-		level: 1
-	}
-]
+// const medias = [
+// 	{
+// 		id: 2,
+// 		type: typeMedia[0], // cas possibles : audio, video, book, cheatsheet,...
+// 		title: 'How to make french croissants',
+// 		link: 'https://www.youtube.com/watch?v=yw-4zNOYTjI',
+// 		language: 'fr',
+// 		level: 0
+// 	},
+// 	{
+// 		id: 3,
+// 		type: typeMedia[1], // cas possibles : audio, video, book, cheatsheet,...
+// 		title: 'How to learn Python',
+// 		link: 'https://courspython.com/introduction-python.html',
+// 		language: 'en',
+// 		level: 1
+// 	},
+// 	{
+// 		id: 7,
+// 		type: typeMedia[2], // cas possibles : audio, video, book, cheatsheet,...
+// 		title: 'All about Python',
+// 		link: 'https://www.lebigdata.fr/python-langage-definition',
+// 		language: 'fr',
+// 		level: 2
+// 	},
+// 	{
+// 		id: 340,
+// 		type: typeMedia[1], // cas possibles : audio, video, book, cheatsheet,...
+// 		title: 'How to learn Python',
+// 		link: 'https://courspython.com/introduction-python.html',
+// 		language: 'en',
+// 		level: 1
+// 	}
+// ]
 
 // const courses = [
 // 	{
@@ -866,8 +866,7 @@ app.get('/userauth', checkToken, (req, res) => {
 // Create a user in database
 app.post('/user', (req, res) => {
 	const user = new User({
-		email: req.body.email,
-		password: sha256(req.body.password)
+		...req.body
 	})
 	user
 		.save()
@@ -899,6 +898,13 @@ app.get('/user', checkToken, (req, res) => {
 app.get('/users', (req, res) => {
 	User.find()
 		.then((users) => res.status(200).json(users))
+		.catch((error) => res.status(400).json({ error }))
+})
+
+// Update a user
+app.put('/user/:id', (req, res) => {
+	User.updateOne({ _id: req.params.id }, { ...req.body })
+		.then(() => res.status(201).json({ message: 'Utilisateur modifié !' }))
 		.catch((error) => res.status(400).json({ error }))
 })
 
@@ -955,6 +961,13 @@ app.get('/courses', (req, res) => {
 		.catch((error) => res.status(400).json({ error }))
 })
 
+// Update a course
+app.put('/course/:id', (req, res) => {
+	Courses.updateOne({ _id: req.params.id }, { ...req.body })
+		.then(() => res.status(201).json({ message: 'Cours modifié !' }))
+		.catch((error) => req.status(400).json({ error }))
+})
+
 // Delete a course
 app.delete('/course', (req, res) => {
 	Courses.remove({
@@ -971,25 +984,58 @@ app.get('/course/:id', (req, res) => {
 		.catch((error) => res.status(400).json({ error }))
 })
 
-// Route vers les médias d'un cours sélectionné
-app.post('/medias', (req, res) => {
-	const typeMedia = req.body.typeMedia
-	// Initialisation d'un objet qui contiendra tous les médias
-	const allMedias = {}
-	// On ajoute tous les types de médias
-	typeMedia.forEach((type) => {
-		allMedias[type.type] = []
+// Create a media
+app.post('/media', (req, res) => {
+	const media = new Medias({
+		...req.body
 	})
-	// On envoie chaque média dans la catégorie qui lui correspond
-	const idsMedias = req.body.mediasId
-	idsMedias.forEach((id) => {
-		medias.forEach((media) => {
-			if (id == media.id) {
-				allMedias[media.type].push(media)
-			}
+	media
+		.save()
+		.then(() => {
+			res.status(201).json({ message: 'Média Créé !' })
 		})
+		.catch((error) => res.status(400).json({ error }))
+})
+
+// Get all medias
+app.get('/medias', (req, res) => {
+	Medias.find()
+		.then((medias) => res.status(201).json(medias))
+		.catch((error) => res.status(400).json({ error }))
+})
+
+// Delete a media
+app.delete('/media', (req, res) => {
+	Medias.remove({
+		_id: req.body.id
 	})
-	return res.json(allMedias)
+		.then(() => res.status(201).json({ message: 'Média supprimé !' }))
+		.catch((error) => res.status(400).json({ error }))
+})
+
+// Route vers les médias d'un cours sélectionné
+app.post('/allMedias', (req, res) => {
+	Medias.find()
+		.then((medias) => {
+			const typeMedia = req.body.typeMedia
+			// Initialisation d'un objet qui contiendra tous les médias
+			const allMedias = {}
+			// On ajoute tous les types de médias
+			typeMedia.forEach((type) => {
+				allMedias[type.type] = []
+			})
+			// On envoie chaque média dans la catégorie qui lui correspond
+			const idsMedias = req.body.mediasId
+			idsMedias.forEach((id) => {
+				medias.forEach((media) => {
+					if (id == media._id) {
+						allMedias[media.type].push(media)
+					}
+				})
+			})
+			return res.status(201).json(allMedias)
+		})
+		.catch((error) => res.status(400).json({ error }))
 })
 
 app.post('/courses/actuals', (req, res) => {
@@ -1085,7 +1131,6 @@ app.post('/searchByJob', (req, res) => {
 				}
 			})
 			jobCourses.forEach((course) => {
-				// console.log(course.keyWord)
 				if (course.keyWord.includes(input[0].toLowerCase())) {
 					jobResult.push(course)
 				}
@@ -1109,7 +1154,6 @@ app.post('/searchBySkill', (req, res) => {
 				}
 			})
 			skillCourses.forEach((course) => {
-				// console.log(course.keyWord)
 				if (course.keyWord.includes(input[0].toLowerCase())) {
 					skillResult.push(course)
 				}
