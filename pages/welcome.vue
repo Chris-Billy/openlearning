@@ -2,10 +2,26 @@
 	<div class="content h-full w-full">
 		<header class="body-font bg-gray-900">
 			<div
-				class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+				class="
+					container
+					mx-auto
+					flex flex-wrap
+					p-5
+					flex-col
+					md:flex-row
+					items-center
+				"
 			>
 				<a
-					class="flex title-font font-medium items-center text-white mb-4 md:mb-0"
+					class="
+						flex
+						title-font
+						font-medium
+						items-center
+						text-white
+						mb-4
+						md:mb-0
+					"
 				>
 					<svg
 						width="95"
@@ -45,38 +61,92 @@
 					<span class="ml-3 text-xl">OpenLearning</span>
 				</a>
 				<nav
-					class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+					class="
+						md:ml-auto
+						flex flex-wrap
+						items-center
+						text-base
+						justify-center
+					"
 				>
-					<a
-						class="mr-5 bg-white rounded-full h-10 w-10 flex justify-center items-center hover:text-white"
-						><svg
-							width="22"
-							height="22"
-							viewBox="0 0 22 22"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								d="M21 21.2882L15.9706 16.0074M18.5608 9.78039C18.5608 14.6297 14.6297 18.5608 9.78038 18.5608C4.93111 18.5608 1 14.6297 1 9.78039C1 4.93111 4.93111 1 9.78038 1C14.6297 1 18.5608 4.93111 18.5608 9.78039Z"
-								stroke="#020B2A"
-								stroke-width="2"
-							/>
-						</svg>
-					</a>
+					<NuxtLink to="/search"
+						><a
+							class="
+								mr-5
+								bg-white
+								rounded-full
+								h-10
+								w-10
+								flex
+								justify-center
+								items-center
+								hover:text-white
+							"
+							><svg
+								width="22"
+								height="22"
+								viewBox="0 0 22 22"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M21 21.2882L15.9706 16.0074M18.5608 9.78039C18.5608 14.6297 14.6297 18.5608 9.78038 18.5608C4.93111 18.5608 1 14.6297 1 9.78039C1 4.93111 4.93111 1 9.78038 1C14.6297 1 18.5608 4.93111 18.5608 9.78039Z"
+									stroke="#020B2A"
+									stroke-width="2"
+								/>
+							</svg> </a
+					></NuxtLink>
 				</nav>
-				<button
-					class="inline-flex items-center bg-white border-0 py-1 px-3 h-10 text-black focus:outline-none hover:bg-gray-100 rounded-full text-base mt-4 md:mt-0"
+
+				<NuxtLink to="/login"
+					><button
+						class="
+							inline-flex
+							items-center
+							bg-white
+							border-0
+							py-1
+							px-3
+							h-10
+							text-black
+							focus:outline-none
+							hover:bg-gray-100
+							rounded-full
+							text-base
+							mt-4
+							md:mt-0
+						"
+					>
+						Connectez-vous
+					</button></NuxtLink
 				>
-					Connectez-vous
-				</button>
 			</div>
 		</header>
 		<section class="img-bg text-white body-font">
 			<div
-				class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center"
+				class="
+					container
+					mx-auto
+					flex
+					px-5
+					py-24
+					md:flex-row
+					flex-col
+					items-center
+				"
 			>
 				<div
-					class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center"
+					class="
+						lg:flex-grow
+						md:w-1/2
+						lg:pl-24
+						md:pl-16
+						flex flex-col
+						md:items-start
+						md:text-left
+						items-center
+						text-center
+					"
 				>
 					<h1 class="title-font sm:text-5xl text-4xl mb-4 font-medium">
 						L'accès au savoir
@@ -88,21 +158,55 @@
 						publiés par les plus grands experts.
 					</p>
 					<div class="flex justify-center">
-						<button
-							class="inline-flex text-black font-semibold bg-white border-0 py-2 px-6 focus:outline-none hover:bg-gray-600 hover:text-white rounded-lg text-lg"
+						<NuxtLink to="/signup"
+							><button
+								class="
+									inline-flex
+									text-black
+									font-semibold
+									bg-white
+									border-0
+									py-2
+									px-6
+									focus:outline-none
+									hover:bg-gray-600
+									hover:text-white
+									rounded-lg
+									text-lg
+								"
+							>
+								Inscrivez-vous dès maintenant !
+							</button></NuxtLink
 						>
-							Inscrivez-vous dès maintenant !
-						</button>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section class="text-gray-400 bg-gray-900 body-font">
 			<div
-				class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center"
+				class="
+					container
+					mx-auto
+					flex
+					px-5
+					py-24
+					md:flex-row
+					flex-col
+					items-center
+				"
 			>
 				<div
-					class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center"
+					class="
+						lg:flex-grow
+						md:w-1/2
+						lg:pl-24
+						md:pl-16
+						flex flex-col
+						md:items-start
+						md:text-left
+						items-center
+						text-center
+					"
 				>
 					<h1
 						class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white"
@@ -120,26 +224,55 @@
 								id="hero-field"
 								name="hero-field"
 								placeholder="Mots-clés ou catégories"
-								class="w-full bg-white rounded-lg border-none text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+								class="
+									w-full
+									bg-white
+									rounded-lg
+									border-none
+									text-base
+									outline-none
+									text-black
+									py-1
+									px-3
+									leading-8
+									transition-colors
+									duration-200
+									ease-in-out
+								"
 							/>
 						</div>
-						<button
-							class="inline-flex text-white bg-white border-0 h-10 w-10 focus:outline-none hover:bg-gray-200 rounded-full text-lg flex justify-center items-center"
-						>
-							<svg
-								width="22"
-								height="22"
-								viewBox="0 0 22 22"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
+						<NuxtLink to="/search"
+							><button
+								class="
+									inline-flex
+									text-white
+									bg-white
+									border-0
+									h-10
+									w-10
+									focus:outline-none
+									hover:bg-gray-200
+									rounded-full
+									text-lg
+									flex
+									justify-center
+									items-center
+								"
 							>
-								<path
-									d="M21 21.2882L15.9706 16.0074M18.5608 9.78039C18.5608 14.6297 14.6297 18.5608 9.78038 18.5608C4.93111 18.5608 1 14.6297 1 9.78039C1 4.93111 4.93111 1 9.78038 1C14.6297 1 18.5608 4.93111 18.5608 9.78039Z"
-									stroke="#020B2A"
-									stroke-width="2"
-								/>
-							</svg>
-						</button>
+								<svg
+									width="22"
+									height="22"
+									viewBox="0 0 22 22"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M21 21.2882L15.9706 16.0074M18.5608 9.78039C18.5608 14.6297 14.6297 18.5608 9.78038 18.5608C4.93111 18.5608 1 14.6297 1 9.78039C1 4.93111 4.93111 1 9.78038 1C14.6297 1 18.5608 4.93111 18.5608 9.78039Z"
+										stroke="#020B2A"
+										stroke-width="2"
+									/>
+								</svg></button
+						></NuxtLink>
 					</div>
 				</div>
 			</div>
@@ -156,7 +289,22 @@
 					/>
 				</div>
 				<div
-					class="bubble lg:flex-grow md:w-1/2 lg:pl-10 md:pl-10 py-5 mb-4 flex flex-col md:items-start md:text-left items-center text-center bg-white rounded-lg"
+					class="
+						bubble
+						lg:flex-grow
+						md:w-1/2
+						lg:pl-10
+						md:pl-10
+						py-5
+						mb-4
+						flex flex-col
+						md:items-start
+						md:text-left
+						items-center
+						text-center
+						bg-white
+						rounded-lg
+					"
 				>
 					<h1
 						class="title-font sm:text-4xl text-3xl mb-4 font-medium text-black"
@@ -169,7 +317,18 @@
 					</p>
 					<div class="flex justify-center">
 						<button
-							class="inline-flex text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg"
+							class="
+								inline-flex
+								text-white
+								bg-yellow-500
+								border-0
+								py-2
+								px-6
+								focus:outline-none
+								hover:bg-yellow-600
+								rounded
+								text-lg
+							"
 						>
 							Je veux devenir enseignant !
 						</button>
@@ -193,7 +352,14 @@
 						<div class="h-full flex flex-col items-center text-center">
 							<img
 								alt="team"
-								class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+								class="
+									flex-shrink-0
+									rounded-lg
+									w-full
+									h-56
+									object-cover object-center
+									mb-4
+								"
 								src="https://dummyimage.com/200x200"
 							/>
 							<div class="w-full">
@@ -234,8 +400,15 @@
 						<div class="h-full flex flex-col items-center text-center">
 							<img
 								alt="team"
-								class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-								src="https://dummyimage.com/200x200"
+								class="
+									flex-shrink-0
+									rounded-lg
+									w-auto
+									h-56
+									object-cover object-center
+									mb-4
+								"
+								src="~/static/chris.jpg"
 							/>
 							<div class="w-full">
 								<h2 class="title-font font-medium text-lg text-white">
@@ -275,8 +448,15 @@
 						<div class="h-full flex flex-col items-center text-center">
 							<img
 								alt="team"
-								class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-								src="https://dummyimage.com/200x200"
+								class="
+									flex-shrink-0
+									rounded-lg
+									w-auto
+									h-56
+									object-cover object-center
+									mb-4
+								"
+								src="~/static/mael.jpg"
 							/>
 							<div class="w-full">
 								<h2 class="title-font font-medium text-lg text-white">
@@ -316,8 +496,15 @@
 						<div class="h-full flex flex-col items-center text-center">
 							<img
 								alt="team"
-								class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-								src="https://dummyimage.com/200x200"
+								class="
+									flex-shrink-0
+									rounded-lg
+									w-auto
+									h-56
+									object-cover object-center
+									mb-4
+								"
+								src="~/static/walid.jpeg"
 							/>
 							<div class="w-full">
 								<h2 class="title-font font-medium text-lg text-white">

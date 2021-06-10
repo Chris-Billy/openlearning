@@ -113,7 +113,6 @@
 						</p>
 					</div>
 				</div>
-				<pre><p>{{ myCourse }}</p></pre>
 			</div>
 
 			<div
@@ -150,7 +149,7 @@
 							:key="media.id"
 							:title="media.title"
 							:category="key"
-							:id-media="media.id"
+							:id-media="media._id"
 							:learned-medias="learnedMedias.data"
 							:language="media.language"
 							:selected-language="selectedLanguage"
@@ -191,7 +190,7 @@ export default {
 			if (this.defaulttab !== false) {
 				if (this.isAuthenticated) {
 					this.allMediasType = await this.$axios.$get('/mediasType')
-					this.allMedias = await this.$axios.$post('/medias', {
+					this.allMedias = await this.$axios.$post('/allMedias', {
 						typeMedia: this.allMediasType,
 						mediasId: this.myCourse.mediasId
 					})
