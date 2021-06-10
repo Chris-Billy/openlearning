@@ -866,7 +866,8 @@ app.get('/userauth', checkToken, (req, res) => {
 // Create a user in database
 app.post('/user', (req, res) => {
 	const user = new User({
-		...req.body
+		...req.body,
+		password: sha256(req.body.password)
 	})
 	user
 		.save()
