@@ -912,6 +912,36 @@ app.delete('/user', (req, res) => {
 	)
 })
 
+app.put('/user', (req, res, next) => {
+	console.log(req.body)
+	User.updateOne(
+		{ _id: req.body.userid },
+		{ ...req.body, _id: req.body.userid }
+	)
+		.then(() => res.status(200).json({ message: 'Utilisateur modifié !' }))
+		.catch((error) => res.status(400).json({ error }))
+
+	// const token =
+	// 	req.headers.authorization && extractBearerToken(req.headers.authorization)
+	// // Decode token to retrieve id of user connected
+	// const decoded = jwt.decode(token, { complete: false })
+	// User.findOne({ _id: decoded.userid })
+	// 	.then((user) => {
+	// 		if (user.id === decoded.userid) {
+	// 			user.lastname = req.body.lastName
+	// 			user.firstname = req.body.firstname
+	// 			user.language = req.body.language
+	// 			user.email = req.body.email
+	// 			user.update()
+	// 			// TODO mongoose query, for now just a mock from user
+	// 			return res.status(201).json(user)
+	// 		} else {
+	// 			return res.json({ message: 'This user id does not exist in database' })
+	// 		}
+	// 	})
+	// 	.catch((error) => res.status.apply(401).json({ error }))
+})
+
 // api route to get all user favorite courses from the user connected
 app.get('/user/:id/courses', checkToken, (req, res) => {
 	User.findOne({ _id: req.params.id })

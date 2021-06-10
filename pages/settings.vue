@@ -34,7 +34,6 @@
 			<div
 				class="h-full w-11/12 flex flex-col flex items-center scrollbars flex overflow-x-auto"
 			>
-				{{ loggedInUser }}
 				<form class="w-full h-full" method="PuT" @submit.prevent="updateUser">
 					<div class="w-full">
 						<div class="text-black flex flex-col justify-center w-full text-lg">
@@ -46,23 +45,25 @@
 							>
 								<label class="w-full bg-transparent mt-4">Nom</label>
 								<input
-									v-model="nom"
+									v-model="lastname"
 									class="w-full border-l border-r bg-transparent border-black outline-none p-2 mb-4"
 									type="text"
-									:placeholder="user.nom"
+									value="lastname"
+									:placeholder="lastname"
 								/>
 								<label class="w-full bg-transparent mt-4">Prénom</label>
 								<input
-									v-model="prenom"
+									v-model="firstname"
 									class="w-full border-l border-r bg-transparent border-black outline-none p-2 mb-4"
 									type="text"
-									:placeholder="user.prenom"
+									value="firstname"
+									:placeholder="firstname"
 								/>
 								<select
 									v-model="language"
 									class="w-full border-l border-r bg-transparent border-black outline-none p-2 mb-4 mt-4"
 								>
-									<option value="">Langues</option>
+									<option value="language">Langues</option>
 									<option>Français</option>
 									<option>Anglais</option>
 									<option>Espagnol</option>
@@ -86,7 +87,8 @@
 									class="w-full border-l border-r bg-transparent border-black outline-none p-2 mb-4"
 									type="text"
 									name="e-mail"
-									:placeholder="user.email"
+									:placeholder="email"
+									value="email"
 								/>
 							</div>
 						</div>
@@ -108,19 +110,13 @@ import { mapGetters } from 'vuex' // vuex here only used for nuxt auth, otherwis
 export default {
 	name: 'Settings',
 	middleware: 'auth',
-	async asyncData({ $axios }) {
-		// Appel ajax simple via axios à notre api backend express
-		const user = await $axios.$get('/user')
-		return {
-			user
-		}
-	},
 	data() {
 		return {
-			nom: '',
-			prenom: '',
-			language: '',
-			email: ''
+			userid: this.$auth.user.userid,
+			lastname: this.$auth.user.lastname,
+			firstname: this.$auth.user.firstname,
+			language: this.$auth.user.language,
+			email: this.$auth.user.email
 		}
 	},
 	computed: {
@@ -130,8 +126,9 @@ export default {
 		updateUser() {
 			try {
 				this.$axios.$put('/user', {
-					nom: this.nom,
-					prenom: this.prenom,
+					userid: this.$auth.user.userid,
+					lastname: this.lastname,
+					firstname: this.firstname,
 					language: this.language,
 					email: this.email
 				})
